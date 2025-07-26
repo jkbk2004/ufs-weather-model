@@ -6,7 +6,7 @@ import yaml
 import shutil
 import subprocess
 
-def update_testyaml(input_list):
+def update_testyaml(input_list,output_yaml_file):
     """Generates temporary test YAML based on list of tests received
 
     Args:
@@ -19,7 +19,7 @@ def update_testyaml(input_list):
         rt_yaml = yaml.full_load(file_yaml)
         for apps, jobs in rt_yaml.items():
             app_temp    = None
-            build_temp  = None            
+            build_temp  = None
             for key, val in jobs.items():
                 if (str(key) == 'build'):
                     #--- build information ---
@@ -29,6 +29,7 @@ def update_testyaml(input_list):
                     #--- serach for test cases given with -n or -b option ---
                     test_list   = []
                     temp_list   = []
+                    cross_dep   = []
                     app_temp    = None
                     build_temp  = None
                     test_temp   = None
@@ -50,6 +51,9 @@ def update_testyaml(input_list):
                                 if 'dependency' in config.keys():
                                     if not str(config['dependency']) in temp_list:
                                         test_temp_dep = get_testdep(str(config['dependency']),val)
+                                        if test_temp_dep is None:
+                                            cross_depcase = config['dependency'] + ' ' + build_val['compiler']
+                                            cross_dep.append(cross_depcase)
                             i+=1
                         #--- pop input_list element if a test case is found ---
                         if not ilist is None:
@@ -74,10 +78,11 @@ def update_testyaml(input_list):
         except NameError:
             print("*** Test cases given with runtime options -n or -b are not found in ufs_test.yaml! ***")
         else:
-            with open(r'ufs_test_temp.yaml', 'w') as yaml_file:
+            with open(output_yaml_file, 'w') as yaml_file:
                 outputs = yaml.dump(new_yaml, yaml_file)
                 yaml_file.close()
         file_yaml.close()
+        return cross_dep
 
 def update_testyaml_n():
     """Updates test YAML file for a single test specified in ``-n <test_name> <compiler>``
@@ -88,7 +93,7 @@ def update_testyaml_n():
     except NameError:
         print("*** SRT_NAME or SRT_COMPILER are not given with runtime option -n! ***")
     input_list=[SRT_NAME+" "+SRT_COMPILER]
-    update_testyaml(input_list)
+    cross_dep_list = update_testyaml(input_list,'ufs_test_temp.yaml')
 
 def update_testyaml_b():
     """Updates test YAML file for tests specified in ``-b <file>``
@@ -101,7 +106,22 @@ def update_testyaml_b():
             line=line.strip()
             input_list.append(str(line))
         input_file.close()
-    update_testyaml(input_list)
+    if os.path.isfile('ufs_test_temp.yaml'):
+        os.remove("ufs_test_temp.yaml")
+    cross_dep_list = update_testyaml(input_list,'ufs_test_temp.yaml')
+    if cross_dep_list is not None:
+        update_testyaml(cross_dep_list,'ufs_test_dep.yaml')
+        if os.path.isfile('ufs_test_dep.yaml') and os.path.isfile('ufs_test_temp.yaml'):
+            dep_file  = open('ufs_test_dep.yaml', 'r')
+            temp_file = open('ufs_test_temp.yaml', 'r')
+            content_dep = dep_file.read()
+            content_temp= temp_file.read()
+            dep_file.close()
+            temp_file.close()
+            concat_file = open('ufs_test_temp.yaml', 'w')
+            concat_file.write(content_temp + content_dep)
+            concat_file.close()
+            os.remove("ufs_test_dep.yaml")
 
 def string_clean(str_in):
     """Strips out RUN or COMPILE whitespace and separates with commas.
@@ -151,7 +171,7 @@ def create_yaml():
                     off_machine = string_clean(off_machine)
                 if (machine.find('+') != -1):
                     on_machine = machine.replace("+", "").strip()
-                    on_machine = string_clean(on_machine)                
+                    on_machine = string_clean(on_machine)
                 yaml_file.write(f"{apps}_{build[2].strip()}:\n")
                 yaml_file.write(f"  build: \n")
                 yaml_file.write(f"    compiler: {compiler}\n")
@@ -173,14 +193,14 @@ def create_yaml():
                 if baseline and depend:
                     baseline_creation = True
                 if not baseline and not depend:
-                    baseline_creation = False                    
+                    baseline_creation = False
                 if (machine.find('-') != -1):
                     off_machine = machine.replace("-", "").strip()
                     off_machine = string_clean(off_machine)
                 if (machine.find('+') != -1):
                     on_machine = machine.replace("+", "").strip()
                     on_machine = string_clean(on_machine)
-                tests = f"    - {test}: {{'project':['daily']"                    
+                tests = f"    - {test}: {{'project':['daily']"
                 if baseline_creation:
                     tests += f",'baseline': 'True'"
                 if depend and depend.strip():
@@ -188,19 +208,19 @@ def create_yaml():
                 if not (off_machine is None):
                     tests += f",'turnoff':[{off_machine}]"
                 if not (on_machine is None):
-                    tests += f",'turnon':[{on_machine}]"                    
+                    tests += f",'turnon':[{on_machine}]"
                 if prev_line == "COMPILE":
                     yaml_file.write("  tests: \n")
                 yaml_file.write(tests+"}\n")
                 prev_line = 'RUN'
 
-    yaml_file.close(); conf_file.close()    
+    yaml_file.close(); conf_file.close()
 
 def sync_testscripts():
     """Symlinks sharable ``rt.sh`` test scripts
     """
     dst= os.getcwd()
-    src= os.path.split(os.getcwd())[0]+'/tests'    
+    src= os.path.split(os.getcwd())[0]+'/tests'
     for name in os.listdir(src):
         src_name= src +'/'+ name
         dst_name= dst +'/'+ name
@@ -225,7 +245,7 @@ def sync_testscripts():
             dst_name= dst_conf +'/'+ name
             shutil.copyfile(dst_name, src_name)
             #subprocess.call(['chmod', '755', src_name])
-                
+
 def machine_check_off(machine_id, val):
     """Checks turned-off machine from YAML configuration
 
@@ -250,18 +270,18 @@ def delete_files(deletefiles):
     Args:
         deletefiles (str): filepath to remove, e.g., ``tests/rocoto.*``
     """
-    fileList = glob.glob(deletefiles, recursive=True)    
+    fileList = glob.glob(deletefiles, recursive=True)
     for filePath in fileList:
         try:
             os.remove(filePath)
         except OSError:
             print("Error while deleting ",deletefiles)
-        
+
 def link_new_baselines():
     """Creates symlinks for newly generated baselines
-    """ 
+    """
     USER = str(os.environ.get('USER'))
-    MACHINE_ID = os.getenv('MACHINE_ID')        
+    MACHINE_ID = os.getenv('MACHINE_ID')
     PATHRT     = os.getenv('PATHRT')
     with open("baseline_setup.yaml", 'r') as f:
         exp_config = yaml.load(f) #, Loader=yaml.FullLoader)
@@ -276,7 +296,7 @@ def link_new_baselines():
     logfile    = PATHRT+'/logs/RegressionTests_'+MACHINE_ID+'.log'
     with open(logfile,'r') as flog:
         logheads= flog.readlines()
-        for line in logheads:   
+        for line in logheads:
             if "BASELINE DIRECTORY:" in line:
                 NEW_BASELINE=line.split(" ")[1]
                 break
@@ -286,7 +306,7 @@ def link_new_baselines():
     os.environ["NEW_BASELINE"] = NEW_BASELINE
     symlink_baselines = subprocess.Popen(['bash', '-c', '. ufs_test_utils.sh; link_new_baselines'])
     symlink_baselines.wait()
-    
+
 def get_testdep(casename,val):
     """Retrieves test case dependencies
 
@@ -296,7 +316,7 @@ def get_testdep(casename,val):
 
     Returns:
         test_dep: Dictionary with test case and configuration for the specified dependency
-    """    
+    """
     test_dep = None
     for test in val:
         case, config = get_testcase(test)
@@ -319,7 +339,7 @@ def get_testcase(test):
         case_name=case
         case_config=configs
     return case_name, case_config
-    
+
 def write_logfile(logfile, openmod, output="", subproc=""):
     """Appends given output into log file
 
