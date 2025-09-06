@@ -1,0 +1,7496 @@
+{
+  "cpld_control_p8_mixedmode_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 618,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 437,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 352,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 841,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 526,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 695,
+      "anomaly": null
+    }
+  ],
+  "cpld_control_gefs_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 3557,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 2034,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 2059,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 2245,
+      "anomaly": null
+    }
+  ],
+  "cpld_restart_gefs_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 1447,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 1237,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 986,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 1830,
+      "anomaly": null
+    }
+  ],
+  "cpld_control_gfsv17_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 1646,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 1230,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 777,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 1322,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 833,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 1256,
+      "anomaly": null
+    }
+  ],
+  "cpld_control_gfsv17_iau_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 1403,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 1003,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 867,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 1505,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 959,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 1393,
+      "anomaly": null
+    }
+  ],
+  "cpld_restart_gfsv17_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 845,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 651,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 465,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 607,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 473,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 815,
+      "anomaly": null
+    }
+  ],
+  "cpld_restart_gfsv17_iau_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 923,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 532,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 417,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 662,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 478,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 861,
+      "anomaly": null
+    }
+  ],
+  "cpld_mpi_gfsv17_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 2073,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 1295,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 826,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 1611,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 1312,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 1334,
+      "anomaly": null
+    }
+  ],
+  "cpld_control_sfs_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 1538,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 869,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 763,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 1360,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 874,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 1246,
+      "anomaly": null
+    }
+  ],
+  "cpld_debug_gfsv17_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 1449,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 1338,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 904,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 1426,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 895,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 1556,
+      "anomaly": null
+    }
+  ],
+  "cpld_control_p8_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 961,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 552,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 487,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 909,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 650,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 762,
+      "anomaly": null
+    }
+  ],
+  "cpld_control_p8.v2.sfc_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 1116,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 540,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 487,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 910,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 775,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 784,
+      "anomaly": null
+    }
+  ],
+  "cpld_restart_p8_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 893,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 358,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 528,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 590,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 421,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 630,
+      "anomaly": null
+    }
+  ],
+  "cpld_control_qr_p8_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 718,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 547,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 419,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 967,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 534,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 752,
+      "anomaly": null
+    }
+  ],
+  "cpld_restart_qr_p8_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 1109,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 367,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 425,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 610,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 350,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 594,
+      "anomaly": null
+    }
+  ],
+  "cpld_2threads_p8_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 911,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 867,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 481,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 788,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 1126,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 687,
+      "anomaly": null
+    }
+  ],
+  "cpld_decomp_p8_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 718,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 501,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 419,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 967,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 645,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 744,
+      "anomaly": null
+    }
+  ],
+  "cpld_mpi_p8_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 609,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 437,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 419,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 842,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 947,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 656,
+      "anomaly": null
+    }
+  ],
+  "cpld_control_ciceC_p8_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 739,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 541,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 419,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 909,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 533,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 795,
+      "anomaly": null
+    }
+  ],
+  "cpld_control_p8_lnd_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 1170,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 551,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 420,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 909,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 594,
+      "anomaly": null
+    }
+  ],
+  "cpld_restart_p8_lnd_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 926,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 357,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 566,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 609,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 415,
+      "anomaly": null
+    }
+  ],
+  "cpld_s2sa_p8_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 729,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 668,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 420,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 598,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 1612,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 777,
+      "anomaly": null
+    }
+  ],
+  "cpld_control_noaero_p8_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 511,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 635,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 274,
+      "anomaly": "drop"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 825,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 1237,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 519,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 556,
+      "anomaly": null
+    }
+  ],
+  "cpld_control_nowave_noaero_p8_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 659,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 759,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 395,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 535,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 1069,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 694,
+      "anomaly": null
+    }
+  ],
+  "cpld_control_noaero_p8_agrid_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 537,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 647,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 336,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 411,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 334,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 347,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 559,
+      "anomaly": null
+    }
+  ],
+  "cpld_control_p8_faster_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 973,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 527,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 403,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 907,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 531,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 769,
+      "anomaly": null
+    }
+  ],
+  "cpld_control_pdlib_p8_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 1566,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 1177,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 838,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 1187,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 823,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 1289,
+      "anomaly": null
+    }
+  ],
+  "cpld_restart_pdlib_p8_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 830,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 618,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 409,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 599,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 475,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 746,
+      "anomaly": null
+    }
+  ],
+  "cpld_mpi_pdlib_p8_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 2119,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 1269,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 940,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 1368,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 1122,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 1403,
+      "anomaly": null
+    }
+  ],
+  "cpld_control_c48_5deg_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 948,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 365,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 453,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 576,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 391,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 718,
+      "anomaly": null
+    }
+  ],
+  "cpld_warmstart_c48_5deg_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 704,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 147,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 276,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 279,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 211,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 473,
+      "anomaly": "spike"
+    }
+  ],
+  "cpld_restart_c48_5deg_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 325,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 108,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 151,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 214,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 149,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 339,
+      "anomaly": "spike"
+    }
+  ],
+  "cpld_control_c24_5deg_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 609,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 82,
+      "anomaly": "drop"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 202,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 215,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 146,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 428,
+      "anomaly": "spike"
+    }
+  ],
+  "cpld_warmstart_c24_5deg_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 547,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 57,
+      "anomaly": "drop"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 204,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 155,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 151,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 377,
+      "anomaly": "spike"
+    }
+  ],
+  "cpld_restart_c24_5deg_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 351,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 50,
+      "anomaly": "drop"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 145,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 152,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 147,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 239,
+      "anomaly": "spike"
+    }
+  ],
+  "cpld_control_c24_9deg_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 609,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 81,
+      "anomaly": "drop"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 202,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 214,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 146,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 377,
+      "anomaly": "spike"
+    }
+  ],
+  "cpld_warmstart_c24_9deg_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 609,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 57,
+      "anomaly": "drop"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 203,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 154,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 146,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 377,
+      "anomaly": "spike"
+    }
+  ],
+  "cpld_restart_c24_9deg_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 289,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 52,
+      "anomaly": "drop"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 145,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 150,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 146,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 239,
+      "anomaly": "spike"
+    }
+  ],
+  "cpld_control_c12_9deg_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 547,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 59,
+      "anomaly": "drop"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 203,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 152,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 146,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 374,
+      "anomaly": "spike"
+    }
+  ],
+  "cpld_warmstart_c12_9deg_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 547,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 52,
+      "anomaly": "drop"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 141,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 150,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 145,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 375,
+      "anomaly": "spike"
+    }
+  ],
+  "cpld_restart_c12_9deg_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 291,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 46,
+      "anomaly": "drop"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 143,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 151,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 154,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 363,
+      "anomaly": "spike"
+    }
+  ],
+  "cpld_debug_pdlib_p8_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 1610,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 1602,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 1125,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 1786,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 1423,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 1702,
+      "anomaly": null
+    }
+  ],
+  "control_flake_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 761,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 220,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 394,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 321,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 196,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 259,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 404,
+      "anomaly": null
+    }
+  ],
+  "control_CubedSphereGrid_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 826,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 431,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 329,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 262,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 251,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 259,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 346,
+      "anomaly": null
+    }
+  ],
+  "control_CubedSphereGrid_parallel_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 769,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 152,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 270,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 263,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 261,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 360,
+      "anomaly": null
+    }
+  ],
+  "control_latlon_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 760,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 141,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 267,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 261,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 260,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 259,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 282,
+      "anomaly": null
+    }
+  ],
+  "control_wrtGauss_netcdf_parallel_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 899,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 153,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 272,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 267,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 248,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 201,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 354,
+      "anomaly": null
+    }
+  ],
+  "control_c48_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 585,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 365,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 512,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 623,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 1669,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 380,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 538,
+      "anomaly": null
+    }
+  ],
+  "control_c48.v2.sfc_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 585,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 335,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 391,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 545,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 1140,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 379,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 540,
+      "anomaly": null
+    }
+  ],
+  "control_c48_lnd_iau_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 772,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 363,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 511,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 621,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 380,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 533,
+      "anomaly": null
+    }
+  ],
+  "control_c192_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 1022,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 402,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 516,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 574,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 448,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 679,
+      "anomaly": null
+    }
+  ],
+  "control_c384_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 1705,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 494,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 847,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 692,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 979,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 485,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 836,
+      "anomaly": null
+    }
+  ],
+  "control_c384gdas_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 2354,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 597,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 1086,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 743,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 592,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 956,
+      "anomaly": null
+    }
+  ],
+  "control_stochy_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 701,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 101,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 204,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 199,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 95,
+      "anomaly": "drop"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 196,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 279,
+      "anomaly": null
+    }
+  ],
+  "control_stochy_restart_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 336,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 67,
+      "anomaly": "drop"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 199,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 140,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 437,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 284,
+      "anomaly": null
+    }
+  ],
+  "control_lndp_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 638,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 92,
+      "anomaly": "drop"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 204,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 198,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 94,
+      "anomaly": "drop"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 196,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 282,
+      "anomaly": null
+    }
+  ],
+  "control_iovr4_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 642,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 143,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 206,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 380,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 135,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 197,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 339,
+      "anomaly": "spike"
+    }
+  ],
+  "control_iovr4_gfdlmpv3_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 662,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 206,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 260,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 271,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 834,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 273,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 420,
+      "anomaly": "spike"
+    }
+  ],
+  "control_iovr5_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 642,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 143,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 206,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 365,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 144,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 197,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 341,
+      "anomaly": "spike"
+    }
+  ],
+  "control_p8_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 614,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 249,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 412,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 373,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 274,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 449,
+      "anomaly": null
+    }
+  ],
+  "control_p8.v2.sfc_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 676,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 248,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 365,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 354,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 278,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 526,
+      "anomaly": null
+    }
+  ],
+  "control_p8_ugwpv1_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 674,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 256,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 338,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 399,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 212,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 509,
+      "anomaly": null
+    }
+  ],
+  "control_p8_ugwpv1_tempo_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 617,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 257,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 216,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 283,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 996,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 281,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 518,
+      "anomaly": "spike"
+    }
+  ],
+  "control_p8_ugwpv1_tempo_aerosol_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 645,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 270,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 221,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 284,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 1009,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 282,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 512,
+      "anomaly": "spike"
+    }
+  ],
+  "control_p8_ugwpv1_tempo_aerosol_hail_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 528,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 210,
+      "anomaly": "drop"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 220,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 285,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 800,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 763,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 422,
+      "anomaly": null
+    }
+  ],
+  "control_restart_p8_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 370,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 169,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 206,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 337,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 212,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 391,
+      "anomaly": null
+    }
+  ],
+  "control_noqr_p8_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 584,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 247,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 444,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 464,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 270,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 405,
+      "anomaly": null
+    }
+  ],
+  "control_restart_noqr_p8_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 399,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 161,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 211,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 236,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 578,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 383,
+      "anomaly": null
+    }
+  ],
+  "control_decomp_p8_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 640,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 250,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 208,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 640,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 269,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 461,
+      "anomaly": null
+    }
+  ],
+  "control_2threads_p8_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 638,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 351,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 266,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 703,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 269,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 408,
+      "anomaly": null
+    }
+  ],
+  "control_p8_lndp_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 723,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 329,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 324,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 458,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 428,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 330,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 548,
+      "anomaly": null
+    }
+  ],
+  "control_p8_rrtmgp_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 736,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 310,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 275,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 521,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 274,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 567,
+      "anomaly": null
+    }
+  ],
+  "control_p8_mynn_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 605,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 272,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 219,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 466,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 274,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 506,
+      "anomaly": null
+    }
+  ],
+  "merra2_thompson_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 578,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 295,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 278,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 463,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 272,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 536,
+      "anomaly": null
+    }
+  ],
+  "merra2_hf_thompson_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 681,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 334,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 333,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 571,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 348,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 620,
+      "anomaly": null
+    }
+  ],
+  "regional_control_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 413,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 289,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 324,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 465,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 375,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 339,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 552,
+      "anomaly": null
+    }
+  ],
+  "regional_restart_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 291,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 171,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 204,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 275,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 210,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 373,
+      "anomaly": "spike"
+    }
+  ],
+  "regional_decomp_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 470,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 301,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 328,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 644,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 328,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 549,
+      "anomaly": null
+    }
+  ],
+  "regional_2threads_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 408,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 268,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 524,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 266,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 418,
+      "anomaly": null
+    }
+  ],
+  "regional_noquilt_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 474,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 289,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 322,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 587,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 367,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 326,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 485,
+      "anomaly": null
+    }
+  ],
+  "regional_2dwrtdecomp_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 470,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 288,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 325,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 584,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 364,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 329,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 476,
+      "anomaly": null
+    }
+  ],
+  "regional_wofs_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 531,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 369,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 387,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 701,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 453,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 391,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 597,
+      "anomaly": null
+    }
+  ],
+  "rap_control_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 765,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 266,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 281,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 515,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 431,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 267,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 505,
+      "anomaly": null
+    }
+  ],
+  "regional_spp_sppt_shum_skeb_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 1230,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 279,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 279,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 535,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 357,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 292,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 446,
+      "anomaly": null
+    }
+  ],
+  "rap_decomp_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 754,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 270,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 267,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 403,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 268,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 472,
+      "anomaly": null
+    }
+  ],
+  "rap_2threads_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 752,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 428,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 322,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 403,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 268,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 468,
+      "anomaly": null
+    }
+  ],
+  "rap_restart_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 437,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 175,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 210,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 273,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 205,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 402,
+      "anomaly": "spike"
+    }
+  ],
+  "rap_sfcdiff_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 516,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 265,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 266,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 393,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 330,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 475,
+      "anomaly": null
+    }
+  ],
+  "rap_sfcdiff_decomp_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 512,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 271,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 323,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 390,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 327,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 463,
+      "anomaly": null
+    }
+  ],
+  "rap_sfcdiff_restart_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 627,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 175,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 210,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 273,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 205,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 424,
+      "anomaly": "spike"
+    }
+  ],
+  "hrrr_control_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 510,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 258,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 271,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 333,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 267,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 471,
+      "anomaly": "spike"
+    }
+  ],
+  "hrrr_control_decomp_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 506,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 267,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 265,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 390,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 263,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 454,
+      "anomaly": null
+    }
+  ],
+  "hrrr_control_2threads_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 462,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 412,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 330,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 387,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 266,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 447,
+      "anomaly": null
+    }
+  ],
+  "hrrr_control_restart_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 520,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 124,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 202,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 260,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 198,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 306,
+      "anomaly": null
+    }
+  ],
+  "rrfs_v1beta_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 737,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 424,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 397,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 573,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 414,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 385,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 703,
+      "anomaly": "spike"
+    }
+  ],
+  "rrfs_v1nssl_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 765,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 485,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 440,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 680,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 538,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 498,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 774,
+      "anomaly": null
+    }
+  ],
+  "rrfs_v1nssl_nohailnoccn_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 764,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 472,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 443,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 620,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 506,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 498,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 716,
+      "anomaly": null
+    }
+  ],
+  "control_csawmg_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 716,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 395,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 384,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 514,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 403,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 613,
+      "anomaly": null
+    }
+  ],
+  "control_ras_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 514,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 185,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 257,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 319,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 256,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 335,
+      "anomaly": null
+    }
+  ],
+  "control_wam_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 1032,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 654,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 573,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 822,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 633,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 939,
+      "anomaly": null
+    }
+  ],
+  "control_p8_faster_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 491,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 244,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 215,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 282,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 287,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 516,
+      "anomaly": "spike"
+    }
+  ],
+  "regional_control_faster_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 534,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 277,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 333,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 392,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 280,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 331,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 544,
+      "anomaly": "spike"
+    }
+  ],
+  "control_CubedSphereGrid_debug_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 582,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 444,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 200,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 267,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 207,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 293,
+      "anomaly": null
+    }
+  ],
+  "control_wrtGauss_netcdf_parallel_debug_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 653,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 151,
+      "anomaly": "drop"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 203,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 272,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 389,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 353,
+      "anomaly": null
+    }
+  ],
+  "control_stochy_debug_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 455,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 187,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 197,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 325,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 263,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 395,
+      "anomaly": null
+    }
+  ],
+  "control_lndp_debug_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 392,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 167,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 198,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 325,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 196,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 334,
+      "anomaly": null
+    }
+  ],
+  "control_csawmg_debug_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 656,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 303,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 332,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 396,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 327,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 489,
+      "anomaly": null
+    }
+  ],
+  "control_ras_debug_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 393,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 170,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 199,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 325,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 196,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 345,
+      "anomaly": null
+    }
+  ],
+  "control_diag_debug_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 398,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 179,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 202,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 334,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 203,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 356,
+      "anomaly": null
+    }
+  ],
+  "control_debug_p8_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 536,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 212,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 203,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 340,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 207,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 433,
+      "anomaly": "spike"
+    }
+  ],
+  "regional_debug_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 1207,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 981,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 811,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 1174,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 806,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 1295,
+      "anomaly": null
+    }
+  ],
+  "rap_control_debug_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 639,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 296,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 322,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 381,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 317,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 469,
+      "anomaly": null
+    }
+  ],
+  "hrrr_control_debug_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 640,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 285,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 321,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 381,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 324,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 551,
+      "anomaly": "spike"
+    }
+  ],
+  "hrrr_gf_debug_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 639,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 297,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 320,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 381,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 321,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 545,
+      "anomaly": "spike"
+    }
+  ],
+  "hrrr_c3_debug_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 578,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 290,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 319,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 380,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 316,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 476,
+      "anomaly": null
+    }
+  ],
+  "rap_unified_drag_suite_debug_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 636,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 303,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 318,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 381,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 316,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 543,
+      "anomaly": "spike"
+    }
+  ],
+  "rap_diag_debug_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 712,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 322,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 324,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 451,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 325,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 550,
+      "anomaly": null
+    }
+  ],
+  "rap_cires_ugwp_debug_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 701,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 301,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 320,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 380,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 317,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 537,
+      "anomaly": "spike"
+    }
+  ],
+  "rap_unified_ugwp_debug_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 763,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 297,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 318,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 440,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 316,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 517,
+      "anomaly": null
+    }
+  ],
+  "rap_lndp_debug_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 763,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 292,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 321,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 440,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 317,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 528,
+      "anomaly": null
+    }
+  ],
+  "rap_progcld_thompson_debug_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 760,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 296,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 322,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 381,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 317,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 465,
+      "anomaly": null
+    }
+  ],
+  "rap_noah_debug_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 698,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 289,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 321,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 382,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 317,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 461,
+      "anomaly": null
+    }
+  ],
+  "rap_sfcdiff_debug_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 760,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 292,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 322,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 381,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 317,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 462,
+      "anomaly": null
+    }
+  ],
+  "rap_noah_sfcdiff_cires_ugwp_debug_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 943,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 475,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 439,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 620,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 437,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 654,
+      "anomaly": null
+    }
+  ],
+  "rap_clm_lake_debug_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 762,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 301,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 320,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 441,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 319,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 532,
+      "anomaly": null
+    }
+  ],
+  "rap_flake_debug_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 760,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 290,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 318,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 500,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 623,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 533,
+      "anomaly": null
+    }
+  ],
+  "gnv1_c96_no_nest_debug_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 1115,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 552,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 467,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 693,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 453,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 849,
+      "anomaly": null
+    }
+  ],
+  "control_wam_debug_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 1274,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 771,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 628,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 936,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 632,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 1054,
+      "anomaly": null
+    }
+  ],
+  "regional_spp_sppt_shum_skeb_dyn32_phy32_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 681,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 258,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 289,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 414,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 283,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 467,
+      "anomaly": null
+    }
+  ],
+  "rap_control_dyn32_phy32_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 675,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 231,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 291,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 330,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 261,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 469,
+      "anomaly": "spike"
+    }
+  ],
+  "hrrr_control_dyn32_phy32_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 674,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 255,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 275,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 328,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 261,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 526,
+      "anomaly": "spike"
+    }
+  ],
+  "rap_2threads_dyn32_phy32_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 688,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 370,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 273,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 330,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 204,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 451,
+      "anomaly": null
+    }
+  ],
+  "hrrr_control_2threads_dyn32_phy32_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 659,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 383,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 274,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 330,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 203,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 568,
+      "anomaly": "spike"
+    }
+  ],
+  "hrrr_control_decomp_dyn32_phy32_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 650,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 265,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 266,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 329,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 260,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 486,
+      "anomaly": "spike"
+    }
+  ],
+  "rap_restart_dyn32_phy32_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 368,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 155,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 209,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 210,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 203,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 392,
+      "anomaly": "spike"
+    }
+  ],
+  "hrrr_control_restart_dyn32_phy32_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 396,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 108,
+      "anomaly": "drop"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 207,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 200,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 558,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 290,
+      "anomaly": null
+    }
+  ],
+  "conus13km_control_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 320,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 189,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 224,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 290,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 220,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 408,
+      "anomaly": "spike"
+    }
+  ],
+  "conus13km_2threads_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 420,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 134,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 148,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 221,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 157,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 249,
+      "anomaly": null
+    }
+  ],
+  "conus13km_decomp_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 360,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 182,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 213,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 279,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 210,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 371,
+      "anomaly": "spike"
+    }
+  ],
+  "conus13km_restart_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 301,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 120,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 167,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 225,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 151,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 330,
+      "anomaly": "spike"
+    }
+  ],
+  "rap_control_dyn64_phy32_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 599,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 245,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 266,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 392,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 266,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 443,
+      "anomaly": null
+    }
+  ],
+  "rap_control_debug_dyn32_phy32_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 698,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 287,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 318,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 379,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 317,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 458,
+      "anomaly": null
+    }
+  ],
+  "hrrr_control_debug_dyn32_phy32_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 640,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 281,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 317,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 379,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 317,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 488,
+      "anomaly": null
+    }
+  ],
+  "conus13km_debug_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 1650,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 1278,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 952,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 1419,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 996,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 1655,
+      "anomaly": null
+    }
+  ],
+  "conus13km_debug_qr_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 1658,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 1278,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 994,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 1478,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 995,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 1641,
+      "anomaly": null
+    }
+  ],
+  "conus13km_debug_2threads_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 1035,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 1336,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 892,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 1302,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 633,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 1008,
+      "anomaly": null
+    }
+  ],
+  "conus13km_debug_decomp_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 1643,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 1279,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 998,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 1542,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 999,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 1682,
+      "anomaly": null
+    }
+  ],
+  "conus13km_radar_tten_debug_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 1584,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 1257,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 940,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 1477,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 997,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 1610,
+      "anomaly": null
+    }
+  ],
+  "rap_control_dyn64_phy32_debug_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 517,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 299,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 323,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 380,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 318,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 542,
+      "anomaly": "spike"
+    }
+  ],
+  "hafs_regional_atm_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 525,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 328,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 419,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 491,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 331,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 343,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 616,
+      "anomaly": null
+    }
+  ],
+  "hafs_regional_atm_gfdlmpv3_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 788,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 362,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 436,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 502,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 350,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 647,
+      "anomaly": null
+    }
+  ],
+  "hafs_regional_atm_thompson_gfdlsf_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 891,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 198,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 270,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 326,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 360,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 263,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 422,
+      "anomaly": null
+    }
+  ],
+  "hafs_regional_atm_ocn_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 727,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 443,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 432,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 552,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 463,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 409,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 710,
+      "anomaly": "spike"
+    }
+  ],
+  "hafs_regional_atm_wav_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 902,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 662,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 606,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 1930,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 1575,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 2085,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 990,
+      "anomaly": null
+    }
+  ],
+  "hafs_regional_atm_ocn_wav_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 1640,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 744,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 679,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 1496,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 1104,
+      "anomaly": null
+    }
+  ],
+  "hafs_regional_1nest_atm_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 616,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 316,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 375,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 649,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 335,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 543,
+      "anomaly": null
+    }
+  ],
+  "hafs_regional_telescopic_2nests_atm_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 849,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 405,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 425,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 796,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 405,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 683,
+      "anomaly": null
+    }
+  ],
+  "hafs_global_1nest_atm_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 1043,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 170,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 219,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 455,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 206,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 395,
+      "anomaly": null
+    }
+  ],
+  "hafs_global_multiple_4nests_atm_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 1376,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 473,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 525,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 826,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 418,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 841,
+      "anomaly": null
+    }
+  ],
+  "hafs_regional_specified_moving_1nest_atm_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 666,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 227,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 345,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 581,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 268,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 461,
+      "anomaly": null
+    }
+  ],
+  "hafs_regional_storm_following_1nest_atm_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 675,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 221,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 285,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 581,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 271,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 481,
+      "anomaly": null
+    }
+  ],
+  "hafs_regional_storm_following_1nest_atm_ocn_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 1542,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 257,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 358,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 467,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 272,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 520,
+      "anomaly": null
+    }
+  ],
+  "hafs_global_storm_following_1nest_atm_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 948,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 82,
+      "anomaly": "drop"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 207,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 385,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 140,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 289,
+      "anomaly": null
+    }
+  ],
+  "gnv1_nested_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 551,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 311,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 298,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 491,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 289,
+      "anomaly": null
+    }
+  ],
+  "hafs_regional_storm_following_1nest_atm_ocn_debug_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 2200,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 747,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 638,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 1002,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 630,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 1050,
+      "anomaly": null
+    }
+  ],
+  "hafs_regional_storm_following_1nest_atm_ocn_wav_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 1721,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 418,
+      "anomaly": "drop"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 404,
+      "anomaly": "drop"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 1189,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 1773,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 640,
+      "anomaly": null
+    }
+  ],
+  "hafs_regional_storm_following_1nest_atm_ocn_wav_inline_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 1785,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 421,
+      "anomaly": "drop"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 465,
+      "anomaly": "drop"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 1259,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 1718,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 725,
+      "anomaly": null
+    }
+  ],
+  "hafs_regional_storm_following_1nest_atm_ocn_wav_mom6_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 1740,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 351,
+      "anomaly": "drop"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 484,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 986,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 1221,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 618,
+      "anomaly": null
+    }
+  ],
+  "hafs_regional_docn_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 711,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 389,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 407,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 672,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 402,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 674,
+      "anomaly": null
+    }
+  ],
+  "hafs_regional_docn_oisst_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 710,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 390,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 414,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 616,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 402,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 601,
+      "anomaly": null
+    }
+  ],
+  "hafs_regional_datm_cdeps_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 1177,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 1002,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 819,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 1129,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 822,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 1200,
+      "anomaly": null
+    }
+  ],
+  "datm_cdeps_control_cfsr_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 326,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 177,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 263,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 319,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 152,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 1099,
+      "anomaly": "spike"
+    }
+  ],
+  "datm_cdeps_restart_cfsr_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 268,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 117,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 201,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 198,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 196,
+      "anomaly": null
+    }
+  ],
+  "datm_cdeps_control_gefs_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 325,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 165,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 196,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 258,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 146,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 194,
+      "anomaly": null
+    }
+  ],
+  "datm_cdeps_iau_gefs_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 326,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 169,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 195,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 259,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 151,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 795,
+      "anomaly": "spike"
+    }
+  ],
+  "datm_cdeps_stochy_gefs_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 325,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 169,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 196,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 257,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 150,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 194,
+      "anomaly": null
+    }
+  ],
+  "datm_cdeps_ciceC_cfsr_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 326,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 178,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 195,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 318,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 739,
+      "anomaly": "spike"
+    }
+  ],
+  "datm_cdeps_bulk_cfsr_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 326,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 179,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 322,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 319,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 197,
+      "anomaly": null
+    }
+  ],
+  "datm_cdeps_bulk_gefs_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 264,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 165,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 260,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 257,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 198,
+      "anomaly": null
+    }
+  ],
+  "datm_cdeps_mx025_cfsr_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 752,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 449,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 476,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 605,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 475,
+      "anomaly": null
+    }
+  ],
+  "datm_cdeps_mx025_gefs_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 684,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 437,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 470,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 681,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 473,
+      "anomaly": null
+    }
+  ],
+  "datm_cdeps_multiple_files_cfsr_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 324,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 176,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 255,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 255,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 193,
+      "anomaly": null
+    }
+  ],
+  "datm_cdeps_3072x1536_cfsr_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 449,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 308,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 379,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 380,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 316,
+      "anomaly": null
+    }
+  ],
+  "datm_cdeps_gfs_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 510,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 307,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 320,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 378,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 315,
+      "anomaly": null
+    }
+  ],
+  "datm_cdeps_control_cfsr_faster_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 327,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 176,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 200,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 257,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 150,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 196,
+      "anomaly": null
+    }
+  ],
+  "datm_cdeps_lnd_gswp3_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 219,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 80,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 146,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 147,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 124,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 144,
+      "anomaly": null
+    }
+  ],
+  "datm_cdeps_lnd_era5_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 274,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 59,
+      "anomaly": "drop"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 171,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 142,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 90,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 141,
+      "anomaly": null
+    }
+  ],
+  "datm_cdeps_lnd_era5_rst_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 337,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 50,
+      "anomaly": "drop"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 153,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 144,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 140,
+      "anomaly": null
+    }
+  ],
+  "atm_ds2s_docn_pcice_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 453,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 512,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 281,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 408,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 281,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 562,
+      "anomaly": null
+    }
+  ],
+  "control_p8_atmlnd_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 499,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 686,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 284,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 345,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 277,
+      "anomaly": null
+    }
+  ],
+  "control_restart_p8_atmlnd_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 301,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 316,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 473,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 278,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 209,
+      "anomaly": null
+    }
+  ],
+  "control_p8_atmlnd_debug_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 745,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 673,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 377,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 464,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 335,
+      "anomaly": null
+    }
+  ],
+  "atmwav_control_noaero_p8_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 368,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 199,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 224,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 280,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 126,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 214,
+      "anomaly": null
+    }
+  ],
+  "atmaero_control_p8_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 471,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 309,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 277,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 407,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 340,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 570,
+      "anomaly": "spike"
+    }
+  ],
+  "atmaero_control_p8_rad_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 575,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 302,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 390,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 396,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 330,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 606,
+      "anomaly": "spike"
+    }
+  ],
+  "atmaero_control_p8_rad_micro_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 650,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 310,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 339,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 397,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 331,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 607,
+      "anomaly": "spike"
+    }
+  ],
+  "regional_atmaq_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 1318,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 916,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 1031,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 1110,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 868,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 1402,
+      "anomaly": null
+    }
+  ],
+  "regional_atmaq_canopy_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 1549,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 1053,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 1143,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 1292,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 907,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 1579,
+      "anomaly": null
+    }
+  ],
+  "regional_atmaq_debug_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 2831,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 2113,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 1762,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 2472,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 1747,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 2857,
+      "anomaly": null
+    }
+  ],
+  "cpld_control_c192_p8_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 669,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 541,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 1136,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 1481,
+      "anomaly": "spike"
+    }
+  ],
+  "cpld_restart_c192_p8_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 510,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 813,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 982,
+      "anomaly": null
+    }
+  ],
+  "cpld_debug_p8_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 834,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 780,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 967,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 651,
+      "anomaly": null
+    }
+  ],
+  "cpld_debug_noaero_p8_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 553,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 458,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 533,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 410,
+      "anomaly": null
+    }
+  ],
+  "regional_netcdf_parallel_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 289,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 328,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 469,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 357,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 327,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 489,
+      "anomaly": null
+    }
+  ],
+  "datm_cdeps_debug_cfsr_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 350,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 319,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 499,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 315,
+      "anomaly": null
+    }
+  ],
+  "atm_ds2s_docn_dice_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 611,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 353,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 462,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 334,
+      "anomaly": null
+    }
+  ],
+  "cpld_regional_atm_fbh_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 498,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 464,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 804,
+      "anomaly": "spike"
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 501,
+      "anomaly": null
+    }
+  ],
+  "cpld_dcp_gefs_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 2034,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 2604,
+      "anomaly": null
+    }
+  ],
+  "datm_cdeps_lm4_gswp3_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 148,
+      "anomaly": null
+    }
+  ],
+  "datm_cdeps_lm4_gswp3_rst_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 149,
+      "anomaly": null
+    }
+  ],
+  "rap_control_dyn32_phy32_intelllvm": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 388,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 265,
+      "anomaly": null
+    }
+  ],
+  "rap_control_dyn64_phy32_intelllvm": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 392,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 266,
+      "anomaly": null
+    }
+  ],
+  "control_c48_gnu": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 684,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 441,
+      "anomaly": null
+    }
+  ],
+  "control_stochy_gnu": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 258,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 196,
+      "anomaly": null
+    }
+  ],
+  "control_ras_gnu": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 377,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 256,
+      "anomaly": null
+    }
+  ],
+  "control_p8_gnu": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 406,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 274,
+      "anomaly": null
+    }
+  ],
+  "control_p8_ugwpv1_gnu": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 404,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 274,
+      "anomaly": null
+    }
+  ],
+  "control_flake_gnu": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 500,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 318,
+      "anomaly": null
+    }
+  ],
+  "rap_control_gnu": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 514,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 323,
+      "anomaly": null
+    }
+  ],
+  "rap_decomp_gnu": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 511,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 323,
+      "anomaly": null
+    }
+  ],
+  "rap_2threads_gnu": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 573,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 266,
+      "anomaly": null
+    }
+  ],
+  "rap_restart_gnu": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 277,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 205,
+      "anomaly": null
+    }
+  ],
+  "rap_sfcdiff_gnu": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 512,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 325,
+      "anomaly": null
+    }
+  ],
+  "rap_sfcdiff_decomp_gnu": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 513,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 322,
+      "anomaly": null
+    }
+  ],
+  "rap_sfcdiff_restart_gnu": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 333,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 206,
+      "anomaly": null
+    }
+  ],
+  "hrrr_control_gnu": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 453,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 321,
+      "anomaly": null
+    }
+  ],
+  "hrrr_control_noqr_gnu": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 449,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 321,
+      "anomaly": null
+    }
+  ],
+  "hrrr_control_2threads_gnu": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 569,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 264,
+      "anomaly": null
+    }
+  ],
+  "hrrr_control_decomp_gnu": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 450,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 321,
+      "anomaly": null
+    }
+  ],
+  "hrrr_control_restart_gnu": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 263,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 198,
+      "anomaly": null
+    }
+  ],
+  "hrrr_control_restart_noqr_gnu": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 263,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 198,
+      "anomaly": null
+    }
+  ],
+  "rrfs_v1beta_gnu": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 812,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 505,
+      "anomaly": null
+    }
+  ],
+  "control_csawmg_gnu": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 630,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 446,
+      "anomaly": null
+    }
+  ],
+  "control_diag_debug_gnu": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 207,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 203,
+      "anomaly": null
+    }
+  ],
+  "regional_debug_gnu": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 635,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 448,
+      "anomaly": null
+    }
+  ],
+  "rap_control_debug_gnu": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 260,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 197,
+      "anomaly": null
+    }
+  ],
+  "hrrr_control_debug_gnu": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 260,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 196,
+      "anomaly": null
+    }
+  ],
+  "hrrr_gf_debug_gnu": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 259,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 196,
+      "anomaly": null
+    }
+  ],
+  "hrrr_c3_debug_gnu": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 259,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 196,
+      "anomaly": null
+    }
+  ],
+  "rap_diag_debug_gnu": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 270,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 203,
+      "anomaly": null
+    }
+  ],
+  "rap_noah_sfcdiff_cires_ugwp_debug_gnu": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 319,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 257,
+      "anomaly": null
+    }
+  ],
+  "rap_progcld_thompson_debug_gnu": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 259,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 197,
+      "anomaly": null
+    }
+  ],
+  "control_ras_debug_gnu": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 198,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 196,
+      "anomaly": null
+    }
+  ],
+  "control_stochy_debug_gnu": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 199,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 196,
+      "anomaly": null
+    }
+  ],
+  "control_debug_p8_gnu": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 213,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 207,
+      "anomaly": null
+    }
+  ],
+  "rap_flake_debug_gnu": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 259,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 197,
+      "anomaly": null
+    }
+  ],
+  "rap_clm_lake_debug_gnu": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 259,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 197,
+      "anomaly": null
+    }
+  ],
+  "gnv1_c96_no_nest_debug_gnu": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 393,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 266,
+      "anomaly": null
+    }
+  ],
+  "control_wam_debug_gnu": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 519,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 394,
+      "anomaly": null
+    }
+  ],
+  "control_csawmg_debug_gnu": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 272,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 206,
+      "anomaly": null
+    }
+  ],
+  "rap_control_dyn32_phy32_gnu": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 388,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 321,
+      "anomaly": null
+    }
+  ],
+  "hrrr_control_dyn32_phy32_gnu": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 389,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 320,
+      "anomaly": null
+    }
+  ],
+  "rap_2threads_dyn32_phy32_gnu": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 569,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 263,
+      "anomaly": null
+    }
+  ],
+  "hrrr_control_2threads_dyn32_phy32_gnu": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 568,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 262,
+      "anomaly": null
+    }
+  ],
+  "hrrr_control_decomp_dyn32_phy32_gnu": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 386,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 260,
+      "anomaly": null
+    }
+  ],
+  "rap_restart_dyn32_phy32_gnu": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 267,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 202,
+      "anomaly": null
+    }
+  ],
+  "hrrr_control_restart_dyn32_phy32_gnu": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 259,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 197,
+      "anomaly": null
+    }
+  ],
+  "conus13km_control_gnu": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 407,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 281,
+      "anomaly": null
+    }
+  ],
+  "conus13km_2threads_gnu": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 280,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 214,
+      "anomaly": null
+    }
+  ],
+  "conus13km_decomp_gnu": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 460,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 572,
+      "anomaly": null
+    }
+  ],
+  "conus13km_restart_gnu": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 275,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 212,
+      "anomaly": null
+    }
+  ],
+  "rap_control_dyn64_phy32_gnu": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 452,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 326,
+      "anomaly": null
+    }
+  ],
+  "rap_control_debug_dyn32_phy32_gnu": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 260,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 197,
+      "anomaly": null
+    }
+  ],
+  "hrrr_control_debug_dyn32_phy32_gnu": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 260,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 196,
+      "anomaly": null
+    }
+  ],
+  "conus13km_debug_gnu": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 820,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 1485,
+      "anomaly": null
+    }
+  ],
+  "conus13km_debug_qr_gnu": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 759,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 575,
+      "anomaly": null
+    }
+  ],
+  "conus13km_debug_2threads_gnu": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 640,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 333,
+      "anomaly": null
+    }
+  ],
+  "conus13km_debug_decomp_gnu": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 815,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 572,
+      "anomaly": null
+    }
+  ],
+  "conus13km_radar_tten_debug_gnu": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 755,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 513,
+      "anomaly": null
+    }
+  ],
+  "rap_control_dyn64_phy32_debug_gnu": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 260,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 197,
+      "anomaly": null
+    }
+  ],
+  "cpld_control_p8_gnu": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 795,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 594,
+      "anomaly": null
+    }
+  ],
+  "cpld_control_nowave_noaero_p8_gnu": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 719,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 526,
+      "anomaly": null
+    }
+  ],
+  "cpld_debug_p8_gnu": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 539,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 407,
+      "anomaly": null
+    }
+  ],
+  "cpld_control_pdlib_p8_gnu": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 1192,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 641,
+      "anomaly": null
+    }
+  ],
+  "cpld_debug_pdlib_p8_gnu": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 767,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 518,
+      "anomaly": null
+    }
+  ],
+  "datm_cdeps_control_cfsr_gnu": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 317,
+      "anomaly": null
+    },
+    {
+      "date": "2025-09-06",
+      "wall_time": 254,
+      "anomaly": null
+    }
+  ],
+  "control_gfs_mpas_gnu": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 146,
+      "anomaly": null
+    }
+  ],
+  "pm_ideal_supercell_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 211,
+      "anomaly": null
+    }
+  ],
+  "cpld_control_c48_intel": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 986,
+      "anomaly": null
+    }
+  ],
+  "cpld_control_gfsv17_intelllvm": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 825,
+      "anomaly": null
+    }
+  ],
+  "cpld_debug_gfsv17_intelllvm": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 941,
+      "anomaly": null
+    }
+  ],
+  "cpld_control_sfs_intelllvm": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 877,
+      "anomaly": null
+    }
+  ],
+  "cpld_control_p8_intelllvm": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 595,
+      "anomaly": null
+    }
+  ],
+  "hafs_regional_storm_following_1nest_atm_ocn_intelllvm": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 278,
+      "anomaly": null
+    }
+  ],
+  "hafs_regional_storm_following_1nest_atm_ocn_debug_intelllvm": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 633,
+      "anomaly": null
+    }
+  ],
+  "datm_cdeps_control_cfsr_intelllvm": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 195,
+      "anomaly": null
+    }
+  ],
+  "datm_cdeps_debug_cfsr_intelllvm": [
+    {
+      "date": "2025-09-06",
+      "wall_time": 1096,
+      "anomaly": null
+    }
+  ]
+}
