@@ -1,26 +1,3 @@
-"""
-build_rocotoxml.py
-
-Generates a Rocoto-compatible XML workflow file for UFS regression testing.
-
-Supports multiple input modes:
-- --user_yaml: Use a custom YAML file directly
-- --name_case: Target a specific test_name + compiler pair
-- --changes_list: Filter tests based on a test_changes.list file
-- --manifest: Merge app YAMLs listed in a manifest file
-
-Additional features:
-- --dry_run: Preview matched tests without writing XML
-- --project: Filter tests by project tag
-- --output: Specify output XML filename
-- --machine: Target machine for partition and entity resolution
-
-Example usage:
-    python build_rocotoxml.py --machine orion --name_case "control_gfs intel" --output workflow.xml
-
-Author: Jong Kim
-"""
-
 import argparse
 import yaml
 from pathlib import Path
