@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!DOCTYPE workflow [
+  <!ENTITY PATHRT         "{{ PATHRT }}">
+  <!ENTITY LOG            "{{ LOG }}">
+  <!ENTITY PATHTR         "{{ PATHTR }}">
+  <!ENTITY RTPWD          "{{ RTPWD }}">
+  <!ENTITY INPUTDATA_ROOT "{{ INPUTDATA_ROOT }}">
+  <!ENTITY INPUTDATA_ROOT_WW3 "{{ INPUTDATA_ROOT_WW3 }}">
+  <!ENTITY INPUTDATA_ROOT_BMIC "{{ INPUTDATA_ROOT_BMIC }}">
+  <!ENTITY INPUTDATA_ROOT_LM4 "{{ INPUTDATA_ROOT_LM4 }}">
+  <!ENTITY RUNDIR_ROOT    "{{ RUNDIR_ROOT }}">
+  <!ENTITY NEW_BASELINE   "{{ NEW_BASELINE }}">
+]>
+<workflow realtime="F" scheduler="{{ scheduler }}">
+  <cycledef group="forecast" start="{{ start }}" end="{{ end }}" interval="{{ interval }}"/>
+
+  {% for test in tests %}
+    {% set label = test.id ~ '_' ~ test.compiler %}
+
+    <task name="build_{{ label }}" cycle="forecast">
+      <command>&PATHRT;/scripts/build.sh {{ test.id }} {{ test.compiler }}</command>
+      <jobname>build_{{ label }}</jobname>
+      <account>{{ account }}</account>
+    </task>
+
+    <task name="run_{{ label }}" cycle="forecast">
+      <command>&PATHRT;/scripts/run.sh {{ test.id }} {{ test.compiler }}</command>
+      <jobname>run_{{ label }}</jobname>
+      <account>{{ account }}</account>
+      <dependency>
+        <taskdep task="build_{{ label }}"/>
+      </dependency>
+    </task>
+
+    <task name="compare_{{ label }}" cycle="forecast">
+      <command>&PATHRT;/scripts/compare.sh {{ test.id }} {{ test.compiler }}</command>
+      <jobname>compare_{{ label }}</jobname>
+      <account>{{ account }}</account>
+      <dependency>
+        <taskdep task="run_{{ label }}"/>
+      </dependency>
+    </task>
+  {% endfor %}
+</workflow>
