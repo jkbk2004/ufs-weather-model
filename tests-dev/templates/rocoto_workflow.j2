@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<!DOCTYPE workflow [
+  <!ENTITY PATHRT "{{ PATHRT }}">
+  <!ENTITY LOG "{{ LOG }}">
+  <!ENTITY PATHTR "{{ PATHTR }}">
+  <!ENTITY RTPWD "{{ RTPWD }}">
+  <!ENTITY RUNDIR_ROOT "{{ RUNDIR_ROOT }}">
+  <!ENTITY NEW_BASELINE "{{ NEW_BASELINE }}">
+  {% for key, value in machine_config.items() if key.startswith("INPUTDATA_ROOT") %}
+  <!ENTITY {{ key }} "{{ value }}">
+  {% endfor %}
+]>
+
+<workflow realtime="F" scheduler="{{ machine_config.SCHEDULER }}" taskthrottle="10">
+  <cycledef>197001010000 197001010000 01:00:00</cycledef>
+  <log>&LOG;/workflow.log</log>
+
+  {# Compile tasks #}
+  {% for task in TESTS if task.type == "compile" %}
+  <task name="{{ task.name }}" maxtries="3">
+    <command>{{ task.command | replace("2>&1", "2>&amp;1") }}</command>
+    <jobname>{{ task.jobname }}</jobname>
+    <account>{{ task.account }}</account>
+    <queue>{{ task.queue }}</queue>
+    <partition>{{ task.partition }}</partition>
+    <nodes>{{ task.nodes }}</nodes>
+    <walltime>{{ task.walltime }}</walltime>
+    <join>{{ task.join }}</join>
+  </task>
+  {% endfor %}
+
+  {# Metatask blocks for each compile group #}
+  {% for compile in TESTS if compile.type == "compile" %}
+  <metatask name="{{ compile.name }}_tasks">
+    <var name="zero">0</var>
+    {% for task in TESTS if task.type == "run" and task.parent == compile.id %}
+    <task name="{{ task.name }}" maxtries="3">
+      <dependency>
+        {% if task.dependency %}
+        <and>
+          <taskdep task="{{ compile.name }}"/>
+          <taskdep task="{{ task.dependency }}_{{ task.compiler }}"/>
+        </and>
+        {% else %}
+        <taskdep task="{{ compile.name }}"/>
+        {% endif %}
+      </dependency>
+      <command>{{ task.command | replace("2>&1", "2>&amp;1") }}</command>
+      <jobname>{{ task.jobname }}</jobname>
+      <account>{{ task.account }}</account>
+      <queue>{{ task.queue }}</queue>
+      <partition>{{ task.partition }}</partition>
+      <nodes>{{ task.nodes }}</nodes>
+      <walltime>{{ task.walltime }}</walltime>
+      <join>{{ task.join }}</join>
+    </task>
+    {% endfor %}
+  </metatask>
+  {% endfor %}
+</workflow>
