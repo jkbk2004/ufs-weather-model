@@ -45,7 +45,8 @@ class RocotoXMLBuilder:
             "BL_DATE": self.bl_date,
             "USER": self.user_literal,
             "DRY_RUN": self.dry_run,
-            "machine_config": self.machine_config
+            "machine_config": self.machine_config,
+            "machine": self.machine
         }
 
         self.xml_content = template.render(context)

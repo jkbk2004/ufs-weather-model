@@ -5,8 +5,34 @@ from pathlib import Path
 from test_loader import TestLoader
 from xmlbuilder_rocoto import RocotoXMLBuilder
 
+def enrich_test_context(tests, machine_config, machine):
+    for test in tests:
+        if test["type"] == "compile":
+            test["name"] = f"compile_{test['id']}"
+            test["jobname"] = test["name"]
+            test["command"] = (
+                f"&PATHRT;/run_compile.sh &PATHRT; &RUNDIR_ROOT; \"{test['option']}\" {test['id']} "
+                f"2>&1 | tee &LOG;/{test['name']}.log"
+            )
+            test["nodes"] = "1:ppn=8"
+            test["walltime"] = "01:00:00"
+        elif test["type"] == "run":
+            test["name"] = f"{test['id']}_{test['compiler']}"
+            test["jobname"] = test["name"]
+            test["command"] = (
+                f"bash -c 'set -xe -o pipefail ; &PATHRT;/run_test.sh &PATHRT; &RUNDIR_ROOT; "
+                f"{test['id']} {test['name']} {test['parent']} 2>&1 | tee &LOG;/run_{test['name']}.log'"
+            )
+            test["nodes"] = "8:ppn=40"
+            test["walltime"] = "00:30:00"
+
+        test["account"] = machine_config.get("ACCOUNT", "epic")
+        test["queue"] = machine_config.get("QUEUE", "batch")
+        test["partition"] = machine
+        test["join"] = f"&RUNDIR_ROOT;/{test['name']}.log"
+
 def main():
-    parser = argparse.ArgumentParser(description="Build Rocoto XML workflow")
+    parser = argparse.ArgumentParser()
     parser.add_argument("--machine", required=True)
     parser.add_argument("--manifest", required=True)
     parser.add_argument("--output", required=True)
@@ -14,45 +40,26 @@ def main():
     parser.add_argument("--dry-run", action="store_true")
     args = parser.parse_args()
 
-    # Load machine config
     config_path = Path("machine_config") / f"baseline_{args.machine}.yaml"
-    if not config_path.exists():
-        raise FileNotFoundError(f"Missing machine config: {config_path}")
     with open(config_path) as f:
         machine_config = yaml.safe_load(f)
 
-    # Validate required keys
-    required_keys = ["RUNDIR_PATH", "BASELINE_PATH", "NEW_BASELINE_PATH"]
-    missing = [key for key in required_keys if key not in machine_config]
-    if missing:
-        raise KeyError(f"Missing keys in machine config: {missing}")
-
-    # Resolve {{USER}} placeholders if not in dry-run mode
     if not args.dry_run:
         username = os.environ.get("USER", "unknown")
         for key, value in machine_config.items():
             if isinstance(value, str):
                 machine_config[key] = value.replace("{{USER}}", username)
 
-    # Load baseline date
-    bl_date_path = Path("bl_date.conf")
-    if not bl_date_path.exists():
-        raise FileNotFoundError("Missing bl_date.conf")
-    with open(bl_date_path) as f:
+    with open("bl_date.conf") as f:
         bl_date = f.read().strip()
 
-    # Load and enrich test entries
     loader = TestLoader(args.manifest, args.yamls_dir, bl_date)
     loader.load_manifest()
-    loader.inject_baseline_tag()
     loader.attach_yaml_configs()
     tests = loader.get_tests()
 
-    # Inject default compiler if missing
-    for test in tests:
-        test.setdefault("compiler", machine_config.get("DEFAULT_COMPILER", "unknown"))
+    enrich_test_context(tests, machine_config, args.machine)
 
-    # Initialize builder
     builder = RocotoXMLBuilder(
         machine=args.machine,
         machine_config=machine_config,

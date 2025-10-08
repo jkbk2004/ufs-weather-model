@@ -1,44 +1,52 @@
-import yaml
 from pathlib import Path
+import yaml
 
 class TestLoader:
-    def __init__(self, manifest_path, yamls_dir=None, bl_date=None):
-        self.manifest_path = Path(manifest_path)
-        self.yamls_dir = Path(yamls_dir) if yamls_dir else None
+    def __init__(self, manifest_path, yamls_dir, bl_date):
+        self.manifest_path = manifest_path
+        self.yamls_dir = yamls_dir
         self.bl_date = bl_date
         self.tests = []
+        self.selected_apps = []
 
     def load_manifest(self):
         with open(self.manifest_path) as f:
             manifest = yaml.safe_load(f)
-
-        apps = manifest.get("apps", [])
-        if isinstance(apps, dict):
-            for app_id, config in apps.items():
-                if isinstance(config, dict) and config.get("enabled", True):
-                    config["id"] = app_id
-                    self.tests.append(config)
-        elif isinstance(apps, list):
-            self.tests = [{"id": app, "enabled": True} for app in apps]
-        else:
-            raise ValueError("Invalid 'apps' format in manifest")
-
-    def inject_baseline_tag(self):
-        if self.bl_date:
-            for test in self.tests:
-                test["BL_DATE"] = self.bl_date
+        self.selected_apps = manifest.get("apps", [])
 
     def attach_yaml_configs(self):
-        if not self.yamls_dir:
-            return
-        for test in self.tests:
-            yaml_path = self.yamls_dir / f"{test['id']}.yaml"
-            if yaml_path.exists():
-                with open(yaml_path) as f:
-                    config = yaml.safe_load(f)
-                test.update(config)
-            else:
-                print(f"⚠️ Missing config for {test['id']}: {yaml_path}")
+        for yaml_file in Path(self.yamls_dir).glob("*.yaml"):
+            with open(yaml_file) as f:
+                app_yaml = yaml.safe_load(f)
+
+            for build_id, block in app_yaml.items():
+                app_prefix = build_id.split("_")[0]
+                if app_prefix not in self.selected_apps:
+                    continue
+
+                build_info = block.get("build", {})
+                compiler = build_info.get("compiler", "intel")
+                option = build_info.get("option", "")
+                turnoff = build_info.get("turnoff", [])
+
+                # Compile task
+                self.tests.append({
+                    "id": build_id,
+                    "compiler": compiler,
+                    "option": option,
+                    "type": "compile"
+                })
+
+                # Run tasks
+                for test_entry in block.get("tests", []):
+                    for test_id, test_meta in test_entry.items():
+                        self.tests.append({
+                            "id": test_id,
+                            "compiler": compiler,
+                            "parent": build_id,
+                            "dependency": test_meta.get("dependency"),
+                            "type": "run"
+                        })
 
     def get_tests(self):
         return self.tests
