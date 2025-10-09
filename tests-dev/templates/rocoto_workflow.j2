@@ -15,23 +15,21 @@
   <cycledef>197001010000 197001010000 01:00:00</cycledef>
   <log>&LOG;/workflow.log</log>
 
-  {# Compile tasks #}
-  {% for task in TESTS if task.type == "compile" %}
-  <task name="{{ task.name }}" maxtries="3">
-    <command>{{ task.command | replace("2>&1", "2>&amp;1") }}</command>
-    <jobname>{{ task.jobname }}</jobname>
-    <account>{{ task.account }}</account>
-    <queue>{{ task.queue }}</queue>
-    <partition>{{ task.partition }}</partition>
-    <nodes>{{ task.nodes }}</nodes>
-    <walltime>{{ task.walltime }}</walltime>
-    <join>{{ task.join }}</join>
-  </task>
-  {% endfor %}
-
-  {# Metatask blocks for each compile group #}
   {% for compile in TESTS if compile.type == "compile" %}
-  <metatask name="{{ compile.name }}_tasks">
+  <!-- Compile task for {{ compile.id }} -->
+  <task name="{{ compile.name }}" maxtries="3">
+    <command>{{ compile.command | replace("2>&1", "2>&amp;1") }}</command>
+    <jobname>{{ compile.jobname }}</jobname>
+    <account>{{ compile.account }}</account>
+    <queue>{{ compile.queue }}</queue>
+    <partition>{{ compile.partition }}</partition>
+    <nodes>{{ compile.nodes }}</nodes>
+    <walltime>{{ compile.walltime }}</walltime>
+    <join>{{ compile.join }}</join>
+  </task>
+
+  <!-- Run tasks dependent on {{ compile.name }} -->
+  <metatask name="run_{{ compile.id }}_tasks">
     <var name="zero">0</var>
     {% for task in TESTS if task.type == "run" and task.parent == compile.id %}
     <task name="{{ task.name }}" maxtries="3">

@@ -16,6 +16,7 @@
   <cycledef>197001010000 197001010000 01:00:00</cycledef>
   <log>&LOG;/workflow.log</log>
 
+  <!-- Compile task for lnd_datm_cdeps_land_intel -->
   <task name="compile_lnd_datm_cdeps_land_intel" maxtries="3">
     <command>&PATHRT;/run_compile.sh &PATHRT; &RUNDIR_ROOT; "-DAPP=LND" lnd_datm_cdeps_land_intel 2>&amp;1 | tee &LOG;/compile_lnd_datm_cdeps_land_intel.log</command>
     <jobname>compile_lnd_datm_cdeps_land_intel</jobname>
@@ -26,18 +27,9 @@
     <walltime>01:00:00</walltime>
     <join>&RUNDIR_ROOT;/compile_lnd_datm_cdeps_land_intel.log</join>
   </task>
-  <task name="compile_lnd-lm4_datm_cdeps_lm4_intel" maxtries="3">
-    <command>&PATHRT;/run_compile.sh &PATHRT; &RUNDIR_ROOT; "-DAPP=LND-LM4" lnd-lm4_datm_cdeps_lm4_intel 2>&amp;1 | tee &LOG;/compile_lnd-lm4_datm_cdeps_lm4_intel.log</command>
-    <jobname>compile_lnd-lm4_datm_cdeps_lm4_intel</jobname>
-    <account>epic</account>
-    <queue>batch</queue>
-    <partition>orion</partition>
-    <nodes>1:ppn=8</nodes>
-    <walltime>01:00:00</walltime>
-    <join>&RUNDIR_ROOT;/compile_lnd-lm4_datm_cdeps_lm4_intel.log</join>
-  </task>
 
-  <metatask name="compile_lnd_datm_cdeps_land_intel_tasks">
+  <!-- Run tasks dependent on compile_lnd_datm_cdeps_land_intel -->
+  <metatask name="run_lnd_datm_cdeps_land_intel_tasks">
     <var name="zero">0</var>
     <task name="datm_cdeps_lnd_gswp3_intel" maxtries="3">
       <dependency>
@@ -82,7 +74,20 @@
       <join>&RUNDIR_ROOT;/datm_cdeps_lnd_era5_rst_intel.log</join>
     </task>
   </metatask>
-  <metatask name="compile_lnd-lm4_datm_cdeps_lm4_intel_tasks">
+  <!-- Compile task for lnd-lm4_datm_cdeps_lm4_intel -->
+  <task name="compile_lnd-lm4_datm_cdeps_lm4_intel" maxtries="3">
+    <command>&PATHRT;/run_compile.sh &PATHRT; &RUNDIR_ROOT; "-DAPP=LND-LM4" lnd-lm4_datm_cdeps_lm4_intel 2>&amp;1 | tee &LOG;/compile_lnd-lm4_datm_cdeps_lm4_intel.log</command>
+    <jobname>compile_lnd-lm4_datm_cdeps_lm4_intel</jobname>
+    <account>epic</account>
+    <queue>batch</queue>
+    <partition>orion</partition>
+    <nodes>1:ppn=8</nodes>
+    <walltime>01:00:00</walltime>
+    <join>&RUNDIR_ROOT;/compile_lnd-lm4_datm_cdeps_lm4_intel.log</join>
+  </task>
+
+  <!-- Run tasks dependent on compile_lnd-lm4_datm_cdeps_lm4_intel -->
+  <metatask name="run_lnd-lm4_datm_cdeps_lm4_intel_tasks">
     <var name="zero">0</var>
     <task name="datm_cdeps_lm4_gswp3_intel" maxtries="3">
       <dependency>
