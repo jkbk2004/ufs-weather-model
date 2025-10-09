@@ -11,8 +11,8 @@ apps:
 #  - hafs-all
 #  - hafs-mom6w
 #  - hafsw
-#  - lnd-lm4
   - lnd
+  - lnd-lm4
 #  - ng-godas
 #  - s2swal
 #  - s2swa
