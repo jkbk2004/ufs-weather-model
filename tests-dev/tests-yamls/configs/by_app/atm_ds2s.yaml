@@ -15,3 +15,10 @@ atm_ds2s_docn_dice_intel:
       - noaacloud
       - wcoss2
       - acorn
+      resources:
+        orion: {ppn: 40, nodes: 5, wlclk: 50}
+        hera: {ppn: 40, nodes: 5, wlclk: 50}
+        ursa: {ppn: 192, nodes: 1, wlclk: 30}
+        derecho: {ppn: 128, nodes: 2, wlclk: 30}
+        hercules: {ppn: 80, nodes: 3, wlclk: 50}
+        gaeac6: {ppn: 192, nodes: 1, wlclk: 30}

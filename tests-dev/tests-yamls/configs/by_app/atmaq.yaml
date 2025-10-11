@@ -1,4 +1,4 @@
-atmaq_default_intel:
+atmaq_intel:
   build:
     compiler: intel
     option: -DAPP=ATMAQ -DCCPP_SUITES=FV3_GFS_v16 -D32BIT=ON
@@ -11,12 +11,26 @@ atmaq_default_intel:
       baseline: 'True'
       turnoff:
       - s4
+      resources:
+        orion: {ppn: 40, nodes: 7, wlclk: 40}
+        hera: {ppn: 40, nodes: 7, wlclk: 30}
+        ursa: {ppn: 192, nodes: 2, wlclk: 30}
+        derecho: {ppn: 128, nodes: 3, wlclk: 30}
+        hercules: {ppn: 80, nodes: 4, wlclk: 30}
+        gaeac6: {ppn: 192, nodes: 2, wlclk: 30}
   - regional_atmaq_canopy:
       project:
       - daily
       baseline: 'True'
       turnoff:
       - s4
+      resources:
+        orion: {ppn: 40, nodes: 7, wlclk: 30}
+        hera: {ppn: 40, nodes: 7, wlclk: 30}
+        ursa: {ppn: 192, nodes: 2, wlclk: 30}
+        derecho: {ppn: 128, nodes: 3, wlclk: 30}
+        hercules: {ppn: 80, nodes: 4, wlclk: 30}
+        gaeac6: {ppn: 192, nodes: 2, wlclk: 30}
 atmaq_debug_intel:
   build:
     compiler: intel
@@ -32,3 +46,10 @@ atmaq_debug_intel:
       turnoff:
       - s4
       - noaacloud
+      resources:
+        orion: {ppn: 40, nodes: 7, wlclk: 45}
+        hera: {ppn: 40, nodes: 7, wlclk: 45}
+        ursa: {ppn: 192, nodes: 2, wlclk: 45}
+        derecho: {ppn: 128, nodes: 3, wlclk: 45}
+        hercules: {ppn: 80, nodes: 4, wlclk: 45}
+        gaeac6: {ppn: 192, nodes: 2, wlclk: 45}

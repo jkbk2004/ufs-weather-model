@@ -15,3 +15,10 @@ hafs-mom6w_hafs_mom6w_intel:
       turnoff:
       - s4
       - noaacloud
+      resources:
+        orion: {ppn: 40, nodes: 15, wlclk: 30}
+        hera: {ppn: 40, nodes: 15, wlclk: 30}
+        ursa: {ppn: 192, nodes: 4, wlclk: 30}
+        derecho: {ppn: 128, nodes: 5, wlclk: 30}
+        hercules: {ppn: 80, nodes: 8, wlclk: 30}
+        gaeac6: {ppn: 192, nodes: 4, wlclk: 30}

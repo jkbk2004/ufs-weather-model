@@ -37,7 +37,7 @@ def reclassify_and_rekey(data):
         grouped[dapp][new_key] = block
     return grouped
 
-def write_grouped_yaml(grouped, output_dir="tests-dev/configs/by_app"):
+def write_grouped_yaml(grouped, output_dir="tests-yamls/configs/by_app"):
     Path(output_dir).mkdir(parents=True, exist_ok=True)
     for dapp, entries in grouped.items():
         out_path = Path(output_dir) / f"{dapp}.yaml"

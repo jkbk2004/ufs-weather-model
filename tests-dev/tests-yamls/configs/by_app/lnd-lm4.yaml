@@ -13,6 +13,13 @@ lnd-lm4_datm_cdeps_lm4_intel:
       turnon:
       - hera
       - orion
+      resources:
+        orion: {ppn: 40, nodes: 1, wlclk: 30}
+        hera: {ppn: 40, nodes: 1, wlclk: 30}
+        ursa: {ppn: 192, nodes: 1, wlclk: 30}
+        derecho: {ppn: 128, nodes: 1, wlclk: 30}
+        hercules: {ppn: 80, nodes: 1, wlclk: 30}
+        gaeac6: {ppn: 192, nodes: 1, wlclk: 30}
   - datm_cdeps_lm4_gswp3_rst:
       project:
       - daily
@@ -20,3 +27,10 @@ lnd-lm4_datm_cdeps_lm4_intel:
       turnon:
       - hera
       - orion
+      resources:
+        orion: {ppn: 40, nodes: 1, wlclk: 30}
+        hera: {ppn: 40, nodes: 1, wlclk: 30}
+        ursa: {ppn: 192, nodes: 1, wlclk: 30}
+        derecho: {ppn: 128, nodes: 1, wlclk: 30}
+        hercules: {ppn: 80, nodes: 1, wlclk: 30}
+        gaeac6: {ppn: 192, nodes: 1, wlclk: 30}

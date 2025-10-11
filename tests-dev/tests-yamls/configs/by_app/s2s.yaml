@@ -7,7 +7,14 @@ s2s_aoflux_intel:
       project:
       - daily
       baseline: 'True'
-s2s_default_gnu:
+      resources:
+        orion: {ppn: 40, nodes: 5, wlclk: 30}
+        hera: {ppn: 40, nodes: 5, wlclk: 30}
+        ursa: {ppn: 192, nodes: 2, wlclk: 30}
+        derecho: {ppn: 128, nodes: 2, wlclk: 30}
+        hercules: {ppn: 80, nodes: 3, wlclk: 30}
+        gaeac6: {ppn: 192, nodes: 2, wlclk: 30}
+s2s_gnu:
   build:
     compiler: gnu
     option: -DAPP=S2S -DCCPP_SUITES=FV3_GFS_v17_coupled_p8_ugwpv1
@@ -24,3 +31,10 @@ s2s_default_gnu:
       - hera
       - hercules
       - ursa
+      resources:
+        orion: {ppn: 40, nodes: 5, wlclk: 30}
+        hera: {ppn: 40, nodes: 5, wlclk: 30}
+        ursa: {ppn: 192, nodes: 1, wlclk: 30}
+        derecho: {ppn: 128, nodes: 2, wlclk: 30}
+        hercules: {ppn: 80, nodes: 3, wlclk: 30}
+        gaeac6: {ppn: 192, nodes: 1, wlclk: 30}

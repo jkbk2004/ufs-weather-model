@@ -1,4 +1,4 @@
-atmaero_default_intel:
+atmaero_intel:
   build:
     compiler: intel
     option: -DAPP=ATMAERO -DCCPP_SUITES=FV3_GFS_v17_p8 -D32BIT=ON
@@ -11,15 +11,36 @@ atmaero_default_intel:
       baseline: 'True'
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: 40, nodes: 5, wlclk: 30}
+        hera: {ppn: 40, nodes: 5, wlclk: 30}
+        ursa: {ppn: 192, nodes: 2, wlclk: 30}
+        derecho: {ppn: 128, nodes: 2, wlclk: 30}
+        hercules: {ppn: 80, nodes: 3, wlclk: 30}
+        gaeac6: {ppn: 96, nodes: 3, wlclk: 30}
   - atmaero_control_p8_rad:
       project:
       - daily
       baseline: 'True'
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: 40, nodes: 4, wlclk: 30}
+        hera: {ppn: 40, nodes: 4, wlclk: 30}
+        ursa: {ppn: 192, nodes: 1, wlclk: 30}
+        derecho: {ppn: 128, nodes: 2, wlclk: 30}
+        hercules: {ppn: 80, nodes: 2, wlclk: 30}
+        gaeac6: {ppn: 192, nodes: 1, wlclk: 30}
   - atmaero_control_p8_rad_micro:
       project:
       - daily
       baseline: 'True'
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: 40, nodes: 4, wlclk: 30}
+        hera: {ppn: 40, nodes: 4, wlclk: 30}
+        ursa: {ppn: 192, nodes: 1, wlclk: 30}
+        derecho: {ppn: 128, nodes: 2, wlclk: 30}
+        hercules: {ppn: 80, nodes: 2, wlclk: 30}
+        gaeac6: {ppn: 192, nodes: 1, wlclk: 30}

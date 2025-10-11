@@ -1,4 +1,4 @@
-atmw_default_intel:
+atmw_intel:
   build:
     compiler: intel
     option: -DAPP=ATMW -DCCPP_SUITES=FV3_GFS_v17_p8 -D32BIT=ON
@@ -11,3 +11,10 @@ atmw_default_intel:
       baseline: 'True'
       turnoff:
       - wcoss2
+      resources:
+        orion: {ppn: 40, nodes: 5, wlclk: 30}
+        hera: {ppn: 40, nodes: 5, wlclk: 30}
+        ursa: {ppn: 192, nodes: 1, wlclk: 30}
+        derecho: {ppn: 128, nodes: 2, wlclk: 30}
+        hercules: {ppn: 80, nodes: 3, wlclk: 30}
+        gaeac6: {ppn: 192, nodes: 1, wlclk: 30}

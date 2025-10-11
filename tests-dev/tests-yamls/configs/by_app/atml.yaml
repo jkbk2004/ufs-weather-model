@@ -1,4 +1,4 @@
-atml_default_intel:
+atml_intel:
   build:
     compiler: intel
     option: -DAPP=ATML -DCCPP_SUITES=FV3_GFS_v16,FV3_GFS_v16_flake,FV3_GFS_v17_p8,FV3_GFS_v17_p8_rrtmgp,FV3_GFS_v15_thompson_mynn_lam3km,FV3_WoFS_v0,FV3_GFS_v17_p8_mynn,FV3_GFS_v17_p8_ugwpv1
@@ -11,6 +11,13 @@ atml_default_intel:
       turnoff:
       - noaacloud
       - wcoss2
+      resources:
+        orion: {ppn: 40, nodes: 8, wlclk: 30}
+        hera: {ppn: 40, nodes: 8, wlclk: 30}
+        ursa: {ppn: 192, nodes: 2, wlclk: 30}
+        derecho: {ppn: 128, nodes: 3, wlclk: 30}
+        hercules: {ppn: 80, nodes: 4, wlclk: 30}
+        gaeac6: {ppn: 192, nodes: 2, wlclk: 30}
   - control_restart_p8_atmlnd:
       project:
       - daily
@@ -18,6 +25,13 @@ atml_default_intel:
       turnoff:
       - noaacloud
       - wcoss2
+      resources:
+        orion: {ppn: 40, nodes: 8, wlclk: 30}
+        hera: {ppn: 40, nodes: 8, wlclk: 30}
+        ursa: {ppn: 192, nodes: 2, wlclk: 30}
+        derecho: {ppn: 128, nodes: 3, wlclk: 30}
+        hercules: {ppn: 80, nodes: 4, wlclk: 30}
+        gaeac6: {ppn: 192, nodes: 2, wlclk: 30}
 atml_debug_intel:
   build:
     compiler: intel
@@ -31,3 +45,10 @@ atml_debug_intel:
       turnoff:
       - noaacloud
       - wcoss2
+      resources:
+        orion: {ppn: 40, nodes: 8, wlclk: 30}
+        hera: {ppn: 40, nodes: 8, wlclk: 30}
+        ursa: {ppn: 192, nodes: 2, wlclk: 30}
+        derecho: {ppn: 128, nodes: 3, wlclk: 30}
+        hercules: {ppn: 80, nodes: 4, wlclk: 30}
+        gaeac6: {ppn: 192, nodes: 2, wlclk: 30}

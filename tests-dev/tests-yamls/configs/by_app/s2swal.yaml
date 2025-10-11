@@ -1,4 +1,4 @@
-s2swal_default_intel:
+s2swal_intel:
   build:
     compiler: intel
     option: -DAPP=S2SWAL -DCCPP_SUITES=FV3_GFS_v17_coupled_p8,FV3_GFS_v17_coupled_p8_ugwpv1
@@ -10,6 +10,13 @@ s2swal_default_intel:
       turnoff:
       - noaacloud
       - wcoss2
+      resources:
+        orion: {ppn: 40, nodes: 9, wlclk: 30}
+        hera: {ppn: 40, nodes: 9, wlclk: 30}
+        ursa: {ppn: 192, nodes: 2, wlclk: 30}
+        derecho: {ppn: 96, nodes: 4, wlclk: 30}
+        hercules: {ppn: 80, nodes: 5, wlclk: 30}
+        gaeac6: {ppn: 96, nodes: 4, wlclk: 30}
   - cpld_restart_p8_lnd:
       project:
       - daily
@@ -17,9 +24,23 @@ s2swal_default_intel:
       turnoff:
       - noaacloud
       - wcoss2
+      resources:
+        orion: {ppn: 40, nodes: 9, wlclk: 30}
+        hera: {ppn: 40, nodes: 9, wlclk: 30}
+        ursa: {ppn: 192, nodes: 2, wlclk: 30}
+        derecho: {ppn: 96, nodes: 4, wlclk: 30}
+        hercules: {ppn: 80, nodes: 5, wlclk: 30}
+        gaeac6: {ppn: 96, nodes: 4, wlclk: 30}
   - cpld_s2sa_p8:
       project:
       - daily
       baseline: 'True'
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: 40, nodes: 5, wlclk: 30}
+        hera: {ppn: 40, nodes: 5, wlclk: 30}
+        ursa: {ppn: 192, nodes: 1, wlclk: 30}
+        derecho: {ppn: 128, nodes: 2, wlclk: 30}
+        hercules: {ppn: 80, nodes: 3, wlclk: 30}
+        gaeac6: {ppn: 192, nodes: 1, wlclk: 30}

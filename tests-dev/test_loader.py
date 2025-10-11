@@ -20,7 +20,8 @@ class TestLoader:
                 app_yaml = yaml.safe_load(f)
 
             for build_id, block in app_yaml.items():
-                if not any(build_id.startswith(app) for app in self.selected_apps):
+                app_prefix = build_id.split("_")[0]
+                if app_prefix not in self.selected_apps:
                     continue
 
                 build_info = block.get("build", {})
@@ -28,6 +29,7 @@ class TestLoader:
                 option = build_info.get("option", "")
                 turnoff = build_info.get("turnoff", [])
 
+                # Compile task
                 self.tests.append({
                     "id": build_id,
                     "compiler": compiler,
@@ -35,10 +37,9 @@ class TestLoader:
                     "type": "compile"
                 })
 
+                # Run tasks
                 for test_entry in block.get("tests", []):
                     for test_id, test_meta in test_entry.items():
-                        if test_id in turnoff:
-                            continue
                         self.tests.append({
                             "id": test_id,
                             "compiler": compiler,
