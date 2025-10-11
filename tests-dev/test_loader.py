@@ -45,6 +45,7 @@ class TestLoader:
                             "compiler": compiler,
                             "parent": build_id,
                             "dependency": test_meta.get("dependency"),
+                            "resources": test_meta.get("resources", {}),
                             "type": "run"
                         })
 

@@ -12,10 +12,11 @@ def enrich_test_context(tests, machine_config, machine):
             test["jobname"] = test["name"]
             test["command"] = (
                 f"&PATHRT;/run_compile.sh &PATHRT; &RUNDIR_ROOT; \"{test['option']}\" {test['id']} "
-                f"2>&1 | tee &LOG;/{test['name']}.log"
+                f"2>&1 | tee &LOG;/compile_{test['id']}.log"
             )
             test["nodes"] = "1:ppn=8"
             test["walltime"] = "01:00:00"
+
         elif test["type"] == "run":
             test["name"] = f"{test['id']}_{test['compiler']}"
             test["jobname"] = test["name"]
@@ -23,8 +24,22 @@ def enrich_test_context(tests, machine_config, machine):
                 f"bash -c 'set -xe -o pipefail ; &PATHRT;/run_test.sh &PATHRT; &RUNDIR_ROOT; "
                 f"{test['id']} {test['name']} {test['parent']} 2>&1 | tee &LOG;/run_{test['name']}.log'"
             )
-            test["nodes"] = "8:ppn=40"
-            test["walltime"] = "00:30:00"
+
+            # Default values
+            ppn = 40
+            nodes = 8
+            wlclk = 30
+
+            # Override with YAML resources if available
+            resources = test.get("resources", {})
+            if machine in resources:
+                r = resources[machine]
+                ppn = r.get("ppn", ppn)
+                nodes = r.get("nodes", nodes)
+                wlclk = r.get("wlclk", wlclk)
+
+            test["nodes"] = f"{nodes}:ppn={ppn}"
+            test["walltime"] = f"00:{wlclk:02}:00"
 
         test["account"] = machine_config.get("ACCOUNT", "epic")
         test["queue"] = machine_config.get("QUEUE", "batch")
