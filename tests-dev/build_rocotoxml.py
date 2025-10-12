@@ -25,12 +25,9 @@ def enrich_test_context(tests, machine_config, machine):
                 f"{test['id']} {test['name']} {test['parent']} 2>&1 | tee &LOG;/run_{test['name']}.log'"
             )
 
-            # Default values
             ppn = 40
             nodes = 8
             wlclk = 30
-
-            # Override with YAML resources if available
             resources = test.get("resources", {})
             if machine in resources:
                 r = resources[machine]
@@ -45,6 +42,13 @@ def enrich_test_context(tests, machine_config, machine):
         test["queue"] = machine_config.get("QUEUE", "batch")
         test["partition"] = machine
         test["join"] = f"&RUNDIR_ROOT;/{test['name']}.log"
+
+def extract_bl_date(filepath="bl_date.conf"):
+    with open(filepath) as f:
+        for line in f:
+            if line.startswith("export BL_DATE="):
+                return line.split("=")[1].strip()
+    raise ValueError("BL_DATE not found in bl_date.conf")
 
 def main():
     parser = argparse.ArgumentParser()
@@ -65,8 +69,7 @@ def main():
             if isinstance(value, str):
                 machine_config[key] = value.replace("{{USER}}", username)
 
-    with open("bl_date.conf") as f:
-        bl_date = f.read().strip()
+    bl_date = extract_bl_date()
 
     loader = TestLoader(args.manifest, args.yamls_dir, bl_date)
     loader.load_manifest()
@@ -75,14 +78,20 @@ def main():
 
     enrich_test_context(tests, machine_config, args.machine)
 
+    pathrt = os.getcwd()
+    pathtro = str(Path(pathrt).parent)
+    log = f"{pathrt}/logs/log_{args.machine}"
+    rundir_root = f"{machine_config['RUNDIR_PATH']}/rt_{os.getpid()}"
+    rtpwd = f"{machine_config['BASELINE_PATH']}/NEMSfv3gfs/develop-{bl_date}"
+
     builder = RocotoXMLBuilder(
         machine=args.machine,
         machine_config=machine_config,
-        pathrt=machine_config["RUNDIR_PATH"],
-        pathtro=machine_config["RUNDIR_PATH"],
-        log=f"{machine_config['RUNDIR_PATH']}/logs",
-        rtpwd=machine_config["RUNDIR_PATH"],
-        rundir_root=f"{machine_config['RUNDIR_PATH']}/tests",
+        pathrt=pathrt,
+        pathtro=pathtro,
+        log=log,
+        rtpwd=rtpwd,
+        rundir_root=rundir_root,
         new_baseline=machine_config["NEW_BASELINE_PATH"],
         inputdata_entities=[
             "INPUTDATA_ROOT",

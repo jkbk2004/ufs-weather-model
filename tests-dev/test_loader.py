@@ -29,7 +29,6 @@ class TestLoader:
                 option = build_info.get("option", "")
                 turnoff = build_info.get("turnoff", [])
 
-                # Compile task
                 self.tests.append({
                     "id": build_id,
                     "compiler": compiler,
@@ -37,7 +36,6 @@ class TestLoader:
                     "type": "compile"
                 })
 
-                # Run tasks
                 for test_entry in block.get("tests", []):
                     for test_id, test_meta in test_entry.items():
                         self.tests.append({
