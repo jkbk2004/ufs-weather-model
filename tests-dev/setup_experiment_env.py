@@ -1,8 +1,7 @@
 import os
-import yaml
 import shutil
 from pathlib import Path
-from build_rocotoxml import extract_bl_date, TestLoader, enrich_test_context
+from shared_utils import extract_bl_date
 
 def rrmdir(path):
     shutil.rmtree(path)
@@ -20,12 +19,11 @@ def prepare_runtime_environment(pathrt, rundir_root, machine_id):
     os.makedirs(log_dir_path, exist_ok=True)
     return str(log_dir_path)
 
-def write_env_file(test, test_dir, env_filename, env_vars):
-    env_path = Path(test_dir) / env_filename
+def write_env_file(env_path, env_vars):
     with open(env_path, 'w') as f:
         for key, value in env_vars.items():
             f.write(f"{key}={value}\n")
-    print(f"📄 Wrote {env_filename} to {env_path}")
+    print(f"📄 Wrote {env_path.name} to {env_path}")
 
 def setup_experiment_env(tests, machine_config, machine_id, pathrt, bl_date, extra_vars):
     rundir_root = f"{machine_config['RUNDIR_PATH']}/rt_{os.getpid()}"
@@ -39,11 +37,9 @@ def setup_experiment_env(tests, machine_config, machine_id, pathrt, bl_date, ext
         test_dir = Path(rundir_root) / (f"compile_{test_id}" if test_type == "compile" else test_id)
         test_dir.mkdir(parents=True, exist_ok=True)
 
-        # 🧾 File naming convention
-        if test_type == "compile":
-            env_filename = f"compile_{test_id}.env"
-        else:
-            env_filename = f"run_test_{test_id}.env"
+        # 🧾 Place .env file directly under rundir_root
+        env_filename = f"compile_{test_id}.env" if test_type == "compile" else f"run_test_{test_id}.env"
+        env_path = Path(rundir_root) / env_filename
 
         res = test.get("resources", {}).get(machine_id, {})
         env_vars = {
@@ -77,6 +73,6 @@ def setup_experiment_env(tests, machine_config, machine_id, pathrt, bl_date, ext
             "RTVERBOSE": extra_vars.get("RTVERBOSE", "false")
         }
 
-        write_env_file(test, test_dir, env_filename, env_vars)
+        write_env_file(env_path, env_vars)
 
     return rundir_root, rtpwd, log_dir

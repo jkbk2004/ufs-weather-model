@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <!DOCTYPE workflow [
-  <!ENTITY PATHRT "/work/noaa/epic/jongkim/UFS-RT/orion/refactor/merge/ufs-weather-model/tests-dev">
-  <!ENTITY LOG "/work/noaa/epic/jongkim/UFS-RT/orion/refactor/merge/ufs-weather-model/tests-dev/logs/log_orion">
-  <!ENTITY PATHTR "/work/noaa/epic/jongkim/UFS-RT/orion/refactor/merge/ufs-weather-model">
+  <!ENTITY PATHRT "/work/noaa/epic/jongkim/UFS-RT/orion/refactor/merge/template-merge/tests-dev">
+  <!ENTITY LOG "/work/noaa/epic/jongkim/UFS-RT/orion/refactor/merge/template-merge/tests-dev/logs/log_orion">
+  <!ENTITY PATHTR "/work/noaa/epic/jongkim/UFS-RT/orion/refactor/merge/template-merge">
   <!ENTITY RTPWD "/work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/develop-20251002">
-  <!ENTITY RUNDIR_ROOT "/work/noaa/stmp/jongkim/FV3_RT/rt_3066409">
+  <!ENTITY RUNDIR_ROOT "/work/noaa/stmp/jongkim/FV3_RT/rt_945080">
   <!ENTITY NEW_BASELINE "/work/noaa/stmp/jongkim/FV3_RT/REGRESSION_TEST">
   <!ENTITY INPUTDATA_ROOT "/work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507">
   <!ENTITY INPUTDATA_ROOT_WW3 "/work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/WW3_input_data_20250807">
