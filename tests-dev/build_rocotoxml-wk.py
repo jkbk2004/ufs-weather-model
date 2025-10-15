@@ -4,7 +4,6 @@ import os
 from pathlib import Path
 from test_loader import TestLoader
 from xmlbuilder_rocoto import RocotoXMLBuilder
-from setup_experiment_env import setup_experiment_env
 
 def enrich_test_context(tests, machine_config, machine):
     for test in tests:
@@ -84,26 +83,6 @@ def main():
     log = f"{pathrt}/logs/log_{args.machine}"
     rundir_root = f"{machine_config['RUNDIR_PATH']}/rt_{os.getpid()}"
     rtpwd = f"{machine_config['BASELINE_PATH']}/NEMSfv3gfs/develop-{bl_date}"
-
-    # 🧪 Setup experiment environment
-    extra_vars = {
-        "CREATE_BASELINE": "false",
-        "RT_SUFFIX": "",
-        "BL_SUFFIX": "",
-        "SCHEDULER": machine_config.get("SCHEDULER", "slurm"),
-        "ACCNR": machine_config.get("ACCOUNT", "epic"),
-        "QUEUE": machine_config.get("QUEUE", "batch"),
-        "PARTITION": machine_config.get("PARTITION", args.machine),
-        "ROCOTO": "true",
-        "ECFLOW": "false",
-        "skip_check_results": "false",
-        "delete_rundir": "false",
-        "RTVERBOSE": "false"
-    }
-
-    setup_experiment_env(
-        tests, machine_config, args.machine, pathrt, bl_date, extra_vars
-    )
 
     builder = RocotoXMLBuilder(
         machine=args.machine,
