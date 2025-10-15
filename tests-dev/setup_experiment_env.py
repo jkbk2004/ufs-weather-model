@@ -24,7 +24,7 @@ def write_env_file(test, test_dir, env_filename, env_vars):
     env_path = Path(test_dir) / env_filename
     with open(env_path, 'w') as f:
         for key, value in env_vars.items():
-            f.write(f"export {key}={value}\n")
+            f.write(f"{key}={value}\n")
     print(f"📄 Wrote {env_filename} to {env_path}")
 
 def setup_experiment_env(tests, machine_config, machine_id, pathrt, bl_date, extra_vars):
@@ -39,7 +39,12 @@ def setup_experiment_env(tests, machine_config, machine_id, pathrt, bl_date, ext
         test_dir = Path(rundir_root) / (f"compile_{test_id}" if test_type == "compile" else test_id)
         test_dir.mkdir(parents=True, exist_ok=True)
 
-        env_filename = f"env_{test_type}_{test_id}"
+        # 🧾 File naming convention
+        if test_type == "compile":
+            env_filename = f"compile_{test_id}.env"
+        else:
+            env_filename = f"run_test_{test_id}.env"
+
         res = test.get("resources", {}).get(machine_id, {})
         env_vars = {
             "JOB_NR": i + 1,
