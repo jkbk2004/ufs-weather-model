@@ -1,0 +1,1621 @@
++ set -o pipefail
++ echo PID=146633
+PID=146633
++ SECONDS=0
++ trap '[ "$?" -eq 0 ] || write_fail_test' EXIT
++ trap 'echo "run_test.sh interrupted PID=$$"; cleanup' INT
++ trap 'echo "run_test.sh terminated PID=$$";  cleanup' TERM
++ [[ 5 != 5 ]]
++ export PATHRT=/work/noaa/epic/jongkim/UFS-RT/orion/refactor/merge/ufs-weather-model/tests-dev
++ PATHRT=/work/noaa/epic/jongkim/UFS-RT/orion/refactor/merge/ufs-weather-model/tests-dev
++ export RUNDIR_ROOT=/work/noaa/stmp/jongkim/stmp/jongkim/FV3_RT/rt_1396202
++ RUNDIR_ROOT=/work/noaa/stmp/jongkim/stmp/jongkim/FV3_RT/rt_1396202
++ export TEST_NAME=datm_cdeps_lnd_era5
++ TEST_NAME=datm_cdeps_lnd_era5
++ export TEST_ID=datm_cdeps_lnd_era5_intel
++ TEST_ID=datm_cdeps_lnd_era5_intel
++ export COMPILE_ID=datm_cdeps_land_intel
++ COMPILE_ID=datm_cdeps_land_intel
++ echo 'PATHRT: /work/noaa/epic/jongkim/UFS-RT/orion/refactor/merge/ufs-weather-model/tests-dev'
+PATHRT: /work/noaa/epic/jongkim/UFS-RT/orion/refactor/merge/ufs-weather-model/tests-dev
++ echo 'RUNDIR_ROOT: /work/noaa/stmp/jongkim/stmp/jongkim/FV3_RT/rt_1396202'
+RUNDIR_ROOT: /work/noaa/stmp/jongkim/stmp/jongkim/FV3_RT/rt_1396202
++ echo 'TEST_NAME: datm_cdeps_lnd_era5'
+TEST_NAME: datm_cdeps_lnd_era5
++ echo 'TEST_ID: datm_cdeps_lnd_era5_intel'
+TEST_ID: datm_cdeps_lnd_era5_intel
++ echo 'COMPILE_ID: datm_cdeps_land_intel'
+COMPILE_ID: datm_cdeps_land_intel
++ cd /work/noaa/epic/jongkim/UFS-RT/orion/refactor/merge/ufs-weather-model/tests-dev
++ unset MODEL_CONFIGURE
++ unset UFS_CONFIGURE
++ [[ -e /work/noaa/stmp/jongkim/stmp/jongkim/FV3_RT/rt_1396202/run_test_datm_cdeps_lnd_era5_intel.env ]]
++ source /work/noaa/stmp/jongkim/stmp/jongkim/FV3_RT/rt_1396202/run_test_datm_cdeps_lnd_era5_intel.env
+++ export JOB_NR=1
+++ JOB_NR=1
+++ export TEST_ID=datm_cdeps_lnd_era5_intel
+++ TEST_ID=datm_cdeps_lnd_era5_intel
+++ export MACHINE_ID=orion
+++ MACHINE_ID=orion
+++ export RT_COMPILER=intel
+++ RT_COMPILER=intel
+++ export RTPWD=/work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/develop-20251007
+++ RTPWD=/work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/develop-20251007
+++ export INPUTDATA_ROOT=/work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507
+++ INPUTDATA_ROOT=/work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507
+++ export INPUTDATA_ROOT_WW3=/work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/WW3_input_data_20250225
+++ INPUTDATA_ROOT_WW3=/work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/WW3_input_data_20250225
+++ export INPUTDATA_ROOT_BMIC=/work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/BM_IC-20220207
+++ INPUTDATA_ROOT_BMIC=/work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/BM_IC-20220207
+++ export INPUTDATA_LM4=/work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/LM4_input_data
+++ INPUTDATA_LM4=/work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/LM4_input_data
+++ export PATHRT=/work/noaa/epic/jongkim/UFS-RT/orion/refactor/merge/ufs-weather-model/tests-dev
+++ PATHRT=/work/noaa/epic/jongkim/UFS-RT/orion/refactor/merge/ufs-weather-model/tests-dev
+++ export PATHTR=/work/noaa/epic/jongkim/UFS-RT/orion/refactor/merge/ufs-weather-model
+++ PATHTR=/work/noaa/epic/jongkim/UFS-RT/orion/refactor/merge/ufs-weather-model
+++ export NEW_BASELINE=/work/noaa/stmp/jongkim/stmp/jongkim/FV3_RT/REGRESSION_TEST
+++ NEW_BASELINE=/work/noaa/stmp/jongkim/stmp/jongkim/FV3_RT/REGRESSION_TEST
+++ export CREATE_BASELINE=false
+++ CREATE_BASELINE=false
+++ export RT_SUFFIX=
+++ RT_SUFFIX=
+++ export BL_SUFFIX=
+++ BL_SUFFIX=
+++ export SCHEDULER=slurm
+++ SCHEDULER=slurm
+++ export ACCNR=epic
+++ ACCNR=epic
+++ export QUEUE=batch
+++ QUEUE=batch
+++ export PARTITION=orion
+++ PARTITION=orion
+++ export ROCOTO=true
+++ ROCOTO=true
+++ export ECFLOW=false
+++ ECFLOW=false
+++ export REGRESSIONTEST_LOG=/work/noaa/epic/jongkim/UFS-RT/orion/refactor/merge/ufs-weather-model/tests-dev/logs/RegressionTests_orion.log
+++ REGRESSIONTEST_LOG=/work/noaa/epic/jongkim/UFS-RT/orion/refactor/merge/ufs-weather-model/tests-dev/logs/RegressionTests_orion.log
+++ export LOG_DIR=/work/noaa/epic/jongkim/UFS-RT/orion/refactor/merge/ufs-weather-model/tests-dev/logs/log_orion
+++ LOG_DIR=/work/noaa/epic/jongkim/UFS-RT/orion/refactor/merge/ufs-weather-model/tests-dev/logs/log_orion
+++ export DEP_RUN=
+++ DEP_RUN=
+++ export skip_check_results=false
+++ skip_check_results=false
+++ export delete_rundir=false
+++ delete_rundir=false
+++ export WLCLK=30
+++ WLCLK=30
+++ export RTVERBOSE=false
+++ RTVERBOSE=false
++ source default_vars.sh
+++ THRD=1
+++ export INPES_atmaero=4
+++ INPES_atmaero=4
+++ export JNPES_atmaero=8
+++ JNPES_atmaero=8
+++ export WPG_atmaero=6
+++ WPG_atmaero=6
+++ export THRD_cpl_atmw=1
+++ THRD_cpl_atmw=1
+++ export INPES_cpl_atmw=3
+++ INPES_cpl_atmw=3
+++ export JNPES_cpl_atmw=8
+++ JNPES_cpl_atmw=8
+++ export WPG_cpl_atmw=6
+++ WPG_cpl_atmw=6
+++ export WAV_tasks_cpl_atmw=30
+++ WAV_tasks_cpl_atmw=30
+++ export WAV_thrds_cpl_atmw=1
+++ WAV_thrds_cpl_atmw=1
+++ export THRD_cpl_c48=1
+++ THRD_cpl_c48=1
+++ export INPES_cpl_c48=1
+++ INPES_cpl_c48=1
+++ export JNPES_cpl_c48=1
+++ JNPES_cpl_c48=1
+++ export WPG_cpl_c48=6
+++ WPG_cpl_c48=6
+++ export OCN_tasks_cpl_c48=4
+++ OCN_tasks_cpl_c48=4
+++ export ICE_tasks_cpl_c48=4
+++ ICE_tasks_cpl_c48=4
+++ export WAV_tasks_cpl_c48=4
+++ WAV_tasks_cpl_c48=4
+++ export THRD_cpl_dflt=1
+++ THRD_cpl_dflt=1
+++ export INPES_cpl_dflt=3
+++ INPES_cpl_dflt=3
+++ export JNPES_cpl_dflt=8
+++ JNPES_cpl_dflt=8
+++ export WPG_cpl_dflt=6
+++ WPG_cpl_dflt=6
+++ export OCN_tasks_cpl_dflt=20
+++ OCN_tasks_cpl_dflt=20
+++ export ICE_tasks_cpl_dflt=10
+++ ICE_tasks_cpl_dflt=10
+++ export WAV_tasks_cpl_dflt=20
+++ WAV_tasks_cpl_dflt=20
+++ export THRD_cpl_thrd=2
+++ THRD_cpl_thrd=2
+++ export INPES_cpl_thrd=3
+++ INPES_cpl_thrd=3
+++ export JNPES_cpl_thrd=4
+++ JNPES_cpl_thrd=4
+++ export WPG_cpl_thrd=6
+++ WPG_cpl_thrd=6
+++ export OCN_tasks_cpl_thrd=20
+++ OCN_tasks_cpl_thrd=20
+++ export OCN_thrds_cpl_thrd=1
+++ OCN_thrds_cpl_thrd=1
+++ export ICE_tasks_cpl_thrd=10
+++ ICE_tasks_cpl_thrd=10
+++ export ICE_thrds_cpl_thrd=1
+++ ICE_thrds_cpl_thrd=1
+++ export WAV_tasks_cpl_thrd=12
+++ WAV_tasks_cpl_thrd=12
+++ export WAV_thrds_cpl_thrd=2
+++ WAV_thrds_cpl_thrd=2
+++ export THRD_cpl_dcmp=1
+++ THRD_cpl_dcmp=1
+++ export INPES_cpl_dcmp=4
+++ INPES_cpl_dcmp=4
+++ export JNPES_cpl_dcmp=6
+++ JNPES_cpl_dcmp=6
+++ export WPG_cpl_dcmp=6
+++ WPG_cpl_dcmp=6
+++ export OCN_tasks_cpl_dcmp=20
+++ OCN_tasks_cpl_dcmp=20
+++ export ICE_tasks_cpl_dcmp=10
+++ ICE_tasks_cpl_dcmp=10
+++ export WAV_tasks_cpl_dcmp=20
+++ WAV_tasks_cpl_dcmp=20
+++ export THRD_cpl_mpi=1
+++ THRD_cpl_mpi=1
+++ export INPES_cpl_mpi=4
+++ INPES_cpl_mpi=4
+++ export JNPES_cpl_mpi=8
+++ JNPES_cpl_mpi=8
+++ export WPG_cpl_mpi=6
+++ WPG_cpl_mpi=6
+++ export OCN_tasks_cpl_mpi=34
+++ OCN_tasks_cpl_mpi=34
+++ export ICE_tasks_cpl_mpi=20
+++ ICE_tasks_cpl_mpi=20
+++ export WAV_tasks_cpl_mpi=28
+++ WAV_tasks_cpl_mpi=28
+++ export THRD_cpl_bmrk=2
+++ THRD_cpl_bmrk=2
+++ export INPES_cpl_bmrk=8
+++ INPES_cpl_bmrk=8
+++ export JNPES_cpl_bmrk=8
+++ JNPES_cpl_bmrk=8
+++ export WPG_cpl_bmrk=48
+++ WPG_cpl_bmrk=48
+++ export OCN_tasks_cpl_bmrk=120
+++ OCN_tasks_cpl_bmrk=120
+++ export OCN_thrds_cpl_bmrk=1
+++ OCN_thrds_cpl_bmrk=1
+++ export ICE_tasks_cpl_bmrk=48
+++ ICE_tasks_cpl_bmrk=48
+++ export ICE_thrds_cpl_bmrk=1
+++ ICE_thrds_cpl_bmrk=1
+++ export WAV_tasks_cpl_bmrk=120
+++ WAV_tasks_cpl_bmrk=120
+++ export WAV_thrds_cpl_bmrk=2
+++ WAV_thrds_cpl_bmrk=2
+++ export THRD_cpl_c192=2
+++ THRD_cpl_c192=2
+++ export INPES_cpl_c192=6
+++ INPES_cpl_c192=6
+++ export JNPES_cpl_c192=8
+++ JNPES_cpl_c192=8
+++ export WPG_cpl_c192=12
+++ WPG_cpl_c192=12
+++ export OCN_tasks_cpl_c192=60
+++ OCN_tasks_cpl_c192=60
+++ export ICE_tasks_cpl_c192=24
+++ ICE_tasks_cpl_c192=24
+++ export WAV_tasks_cpl_c192=80
+++ WAV_tasks_cpl_c192=80
+++ export ATM_compute_tasks_cdeps_100=12
+++ ATM_compute_tasks_cdeps_100=12
+++ export OCN_tasks_cdeps_100=16
+++ OCN_tasks_cdeps_100=16
+++ export ICE_tasks_cdeps_100=12
+++ ICE_tasks_cdeps_100=12
+++ export ATM_compute_tasks_cdeps_025=40
+++ ATM_compute_tasks_cdeps_025=40
+++ export OCN_tasks_cdeps_025=120
+++ OCN_tasks_cdeps_025=120
+++ export ICE_tasks_cdeps_025=48
+++ ICE_tasks_cdeps_025=48
+++ export INPES_aqm=33
+++ INPES_aqm=33
+++ export JNPES_aqm=8
+++ JNPES_aqm=8
+++ export THRD_cpl_unstr=1
+++ THRD_cpl_unstr=1
+++ export INPES_cpl_unstr=3
+++ INPES_cpl_unstr=3
+++ export JNPES_cpl_unstr=8
+++ JNPES_cpl_unstr=8
+++ export WPG_cpl_unstr=6
+++ WPG_cpl_unstr=6
+++ export OCN_tasks_cpl_unstr=20
+++ OCN_tasks_cpl_unstr=20
+++ export ICE_tasks_cpl_unstr=10
+++ ICE_tasks_cpl_unstr=10
+++ export WAV_tasks_cpl_unstr=60
+++ WAV_tasks_cpl_unstr=60
+++ export THRD_cpl_unstr_mpi=1
+++ THRD_cpl_unstr_mpi=1
+++ export INPES_cpl_unstr_mpi=4
+++ INPES_cpl_unstr_mpi=4
+++ export JNPES_cpl_unstr_mpi=8
+++ JNPES_cpl_unstr_mpi=8
+++ export WPG_cpl_unstr_mpi=6
+++ WPG_cpl_unstr_mpi=6
+++ export OCN_tasks_cpl_unstr_mpi=34
+++ OCN_tasks_cpl_unstr_mpi=34
+++ export ICE_tasks_cpl_unstr_mpi=20
+++ ICE_tasks_cpl_unstr_mpi=20
+++ export WAV_tasks_cpl_unstr_mpi=50
+++ WAV_tasks_cpl_unstr_mpi=50
+++ export aqm_omp_num_threads=1
+++ aqm_omp_num_threads=1
+++ export atm_omp_num_threads=1
+++ atm_omp_num_threads=1
+++ export chm_omp_num_threads=1
+++ chm_omp_num_threads=1
+++ export ice_omp_num_threads=1
+++ ice_omp_num_threads=1
+++ export lnd_omp_num_threads=1
+++ lnd_omp_num_threads=1
+++ export med_omp_num_threads=1
+++ med_omp_num_threads=1
+++ export ocn_omp_num_threads=1
+++ ocn_omp_num_threads=1
+++ export wav_omp_num_threads=1
+++ wav_omp_num_threads=1
+++ export fbh_omp_num_threads=1
+++ fbh_omp_num_threads=1
+++ export histaux_enabled=.false.
+++ histaux_enabled=.false.
+++ export BMIC=.false.
+++ BMIC=.false.
+++ [[ orion = wcoss2 ]]
+++ [[ orion = acorn ]]
+++ [[ orion = orion ]]
+++ export TPN=40
+++ TPN=40
+++ export INPES_dflt=3
+++ INPES_dflt=3
+++ export JNPES_dflt=8
+++ JNPES_dflt=8
+++ export INPES_thrd=3
+++ INPES_thrd=3
+++ export JNPES_thrd=4
+++ JNPES_thrd=4
+++ export INPES_c384=8
+++ INPES_c384=8
+++ export JNPES_c384=6
+++ JNPES_c384=6
+++ export THRD_c384=2
+++ THRD_c384=2
+++ export INPES_c768=8
+++ INPES_c768=8
+++ export JNPES_c768=16
+++ JNPES_c768=16
+++ export THRD_c768=2
+++ THRD_c768=2
+++ export THRD_cpl_atmw_gdas=2
+++ THRD_cpl_atmw_gdas=2
+++ export INPES_cpl_atmw_gdas=6
+++ INPES_cpl_atmw_gdas=6
+++ export JNPES_cpl_atmw_gdas=8
+++ JNPES_cpl_atmw_gdas=8
+++ export WPG_cpl_atmw_gdas=24
+++ WPG_cpl_atmw_gdas=24
+++ export WAV_tasks_atmw_gdas=248
+++ WAV_tasks_atmw_gdas=248
+++ export WLCLK_dflt=30
+++ WLCLK_dflt=30
+++ export WLCLK=30
+++ WLCLK=30
+++ export CMP_DATAONLY=false
+++ CMP_DATAONLY=false
+++ export nccmp_exclude=
+++ nccmp_exclude=
+++ export nccmp_exclude_attr=
+++ nccmp_exclude_attr=
+++ export esmf_logkind=ESMF_LOGKIND_MULTI
+++ esmf_logkind=ESMF_LOGKIND_MULTI
+++ export ESMF_THREADING=true
+++ ESMF_THREADING=true
+++ export DumpFields=false
+++ DumpFields=false
+++ export MED_history_n=1000000
+++ MED_history_n=1000000
+++ export 'RESTART_FH= '
+++ RESTART_FH=' '
++ [[ -e /work/noaa/stmp/jongkim/stmp/jongkim/FV3_RT/rt_1396202/run_test_datm_cdeps_lnd_era5_intel.env ]]
++ source /work/noaa/stmp/jongkim/stmp/jongkim/FV3_RT/rt_1396202/run_test_datm_cdeps_lnd_era5_intel.env
+++ export JOB_NR=1
+++ JOB_NR=1
+++ export TEST_ID=datm_cdeps_lnd_era5_intel
+++ TEST_ID=datm_cdeps_lnd_era5_intel
+++ export MACHINE_ID=orion
+++ MACHINE_ID=orion
+++ export RT_COMPILER=intel
+++ RT_COMPILER=intel
+++ export RTPWD=/work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/develop-20251007
+++ RTPWD=/work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/develop-20251007
+++ export INPUTDATA_ROOT=/work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507
+++ INPUTDATA_ROOT=/work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507
+++ export INPUTDATA_ROOT_WW3=/work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/WW3_input_data_20250225
+++ INPUTDATA_ROOT_WW3=/work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/WW3_input_data_20250225
+++ export INPUTDATA_ROOT_BMIC=/work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/BM_IC-20220207
+++ INPUTDATA_ROOT_BMIC=/work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/BM_IC-20220207
+++ export INPUTDATA_LM4=/work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/LM4_input_data
+++ INPUTDATA_LM4=/work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/LM4_input_data
+++ export PATHRT=/work/noaa/epic/jongkim/UFS-RT/orion/refactor/merge/ufs-weather-model/tests-dev
+++ PATHRT=/work/noaa/epic/jongkim/UFS-RT/orion/refactor/merge/ufs-weather-model/tests-dev
+++ export PATHTR=/work/noaa/epic/jongkim/UFS-RT/orion/refactor/merge/ufs-weather-model
+++ PATHTR=/work/noaa/epic/jongkim/UFS-RT/orion/refactor/merge/ufs-weather-model
+++ export NEW_BASELINE=/work/noaa/stmp/jongkim/stmp/jongkim/FV3_RT/REGRESSION_TEST
+++ NEW_BASELINE=/work/noaa/stmp/jongkim/stmp/jongkim/FV3_RT/REGRESSION_TEST
+++ export CREATE_BASELINE=false
+++ CREATE_BASELINE=false
+++ export RT_SUFFIX=
+++ RT_SUFFIX=
+++ export BL_SUFFIX=
+++ BL_SUFFIX=
+++ export SCHEDULER=slurm
+++ SCHEDULER=slurm
+++ export ACCNR=epic
+++ ACCNR=epic
+++ export QUEUE=batch
+++ QUEUE=batch
+++ export PARTITION=orion
+++ PARTITION=orion
+++ export ROCOTO=true
+++ ROCOTO=true
+++ export ECFLOW=false
+++ ECFLOW=false
+++ export REGRESSIONTEST_LOG=/work/noaa/epic/jongkim/UFS-RT/orion/refactor/merge/ufs-weather-model/tests-dev/logs/RegressionTests_orion.log
+++ REGRESSIONTEST_LOG=/work/noaa/epic/jongkim/UFS-RT/orion/refactor/merge/ufs-weather-model/tests-dev/logs/RegressionTests_orion.log
+++ export LOG_DIR=/work/noaa/epic/jongkim/UFS-RT/orion/refactor/merge/ufs-weather-model/tests-dev/logs/log_orion
+++ LOG_DIR=/work/noaa/epic/jongkim/UFS-RT/orion/refactor/merge/ufs-weather-model/tests-dev/logs/log_orion
+++ export DEP_RUN=
+++ DEP_RUN=
+++ export skip_check_results=false
+++ skip_check_results=false
+++ export delete_rundir=false
+++ delete_rundir=false
+++ export WLCLK=30
+++ WLCLK=30
+++ export RTVERBOSE=false
+++ RTVERBOSE=false
++ source tests/datm_cdeps_lnd_era5
+++ export 'TEST_DESCR=DATM_CDEPS_NOAHMP_ERA5 - control '
+++ TEST_DESCR='DATM_CDEPS_NOAHMP_ERA5 - control '
+++ export CNTL_DIR=datm_cdeps_lnd_era5
+++ CNTL_DIR=datm_cdeps_lnd_era5
+++ export 'LIST_FILES=ufs.cpld.lnd.out.2011-01-01-43200.tile1.nc                    ufs.cpld.lnd.out.2011-01-01-43200.tile2.nc                    ufs.cpld.lnd.out.2011-01-01-43200.tile3.nc                    ufs.cpld.lnd.out.2011-01-01-43200.tile4.nc                    ufs.cpld.lnd.out.2011-01-01-43200.tile5.nc                    ufs.cpld.lnd.out.2011-01-01-43200.tile6.nc'
+++ LIST_FILES='ufs.cpld.lnd.out.2011-01-01-43200.tile1.nc                    ufs.cpld.lnd.out.2011-01-01-43200.tile2.nc                    ufs.cpld.lnd.out.2011-01-01-43200.tile3.nc                    ufs.cpld.lnd.out.2011-01-01-43200.tile4.nc                    ufs.cpld.lnd.out.2011-01-01-43200.tile5.nc                    ufs.cpld.lnd.out.2011-01-01-43200.tile6.nc'
+++ export_datm_cdeps
+++ export FV3=false
+++ FV3=false
+++ export S2S=false
+++ S2S=false
+++ export HAFS=false
+++ HAFS=false
+++ export AQM=false
+++ AQM=false
+++ export FIRE_BEHAVIOR=false
+++ FIRE_BEHAVIOR=false
+++ export DATM_CDEPS=true
+++ DATM_CDEPS=true
+++ export DOCN_CDEPS=false
+++ DOCN_CDEPS=false
+++ export CDEPS_INLINE=false
+++ CDEPS_INLINE=false
+++ export DAYS=1
+++ DAYS=1
+++ export MODEL_CONFIGURE=datm_cdeps_configure.IN
+++ MODEL_CONFIGURE=datm_cdeps_configure.IN
+++ export SYEAR=2011
+++ SYEAR=2011
+++ export SMONTH=10
+++ SMONTH=10
+++ export SDAY=01
+++ SDAY=01
+++ export SHOUR=00
+++ SHOUR=00
+++ export FHMAX=24
+++ FHMAX=24
+++ export DT_ATMOS=900
+++ DT_ATMOS=900
+++ export FHROT=0
+++ FHROT=0
+++ export WARM_START=.false.
+++ WARM_START=.false.
+++ export CPLWAV=.false.
+++ CPLWAV=.false.
+++ export CPLCHM=.false.
+++ CPLCHM=.false.
+++ export IATM=1760
+++ IATM=1760
+++ export JATM=880
+++ JATM=880
+++ export ATM_NX_GLB=1760
+++ ATM_NX_GLB=1760
+++ export ATM_NY_GLB=880
+++ ATM_NY_GLB=880
+++ export ATMRES=1760x880
+++ ATMRES=1760x880
+++ export OCNRES=100
+++ OCNRES=100
+++ export ICERES=1.00
+++ ICERES=1.00
+++ export NX_GLB=360
+++ NX_GLB=360
+++ export NY_GLB=320
+++ NY_GLB=320
+++ export ATM_compute_tasks=12
+++ ATM_compute_tasks=12
+++ export OCN_tasks=16
+++ OCN_tasks=16
+++ export ICE_tasks=12
+++ ICE_tasks=12
+++ export_cice6
+++ SECS=0
+++ export SECS
+++ export DT_CICE=900
+++ DT_CICE=900
+++ export CICE_NPT=999
+++ CICE_NPT=999
+++ export CICE_RUNTYPE=initial
+++ CICE_RUNTYPE=initial
+++ export CICE_ICE_IC=cice_model.res.nc
+++ CICE_ICE_IC=cice_model.res.nc
+++ export CICE_RUNID=unknown
+++ CICE_RUNID=unknown
+++ export CICE_USE_RESTART_TIME=.false.
+++ CICE_USE_RESTART_TIME=.false.
+++ export CICE_RESTART_DIR=./RESTART/
+++ CICE_RESTART_DIR=./RESTART/
+++ export CICE_RESTART_FILE=iced
+++ CICE_RESTART_FILE=iced
+++ export OCNICE_WARMSTART=.false.
+++ OCNICE_WARMSTART=.false.
+++ export CICE_RESTART_FORMAT=pnetcdf2
+++ CICE_RESTART_FORMAT=pnetcdf2
+++ export CICE_RESTART_IOTASKS=-99
+++ CICE_RESTART_IOTASKS=-99
+++ export CICE_RESTART_REARR=box
+++ CICE_RESTART_REARR=box
+++ export CICE_RESTART_ROOT=-99
+++ CICE_RESTART_ROOT=-99
+++ export CICE_RESTART_STRIDE=-99
+++ CICE_RESTART_STRIDE=-99
+++ export CICE_RESTART_CHUNK=0,0
+++ CICE_RESTART_CHUNK=0,0
+++ export CICE_RESTART_DEFLATE=0
+++ CICE_RESTART_DEFLATE=0
+++ export CICE_HISTORY_FORMAT=pnetcdf2
+++ CICE_HISTORY_FORMAT=pnetcdf2
+++ export CICE_HISTORY_IOTASKS=-99
+++ CICE_HISTORY_IOTASKS=-99
+++ export CICE_HISTORY_REARR=box
+++ CICE_HISTORY_REARR=box
+++ export CICE_HISTORY_ROOT=-99
+++ CICE_HISTORY_ROOT=-99
+++ export CICE_HISTORY_STRIDE=-99
+++ CICE_HISTORY_STRIDE=-99
+++ export CICE_HISTORY_CHUNK=0,0
+++ CICE_HISTORY_CHUNK=0,0
+++ export CICE_HISTORY_DEFLATE=0
+++ CICE_HISTORY_DEFLATE=0
+++ export CICE_HISTORY_PREC=4
+++ CICE_HISTORY_PREC=4
+++ export CICE_DUMPFREQ=d
+++ CICE_DUMPFREQ=d
+++ export CICE_DUMPFREQ_N=1000
+++ CICE_DUMPFREQ_N=1000
+++ CICE_DIAGFREQ=96
+++ export CICE_DIAGFREQ
+++ export 'CICE_HISTFREQ_N=0, 0, 6, 0, 0'
+++ CICE_HISTFREQ_N='0, 0, 6, 0, 0'
+++ export 'CICE_hist_suffix='\''x'\'','\''x'\'','\''x'\'','\''x'\'','\''x'\'''
+++ CICE_hist_suffix=''\''x'\'','\''x'\'','\''x'\'','\''x'\'','\''x'\'''
+++ export CICE_HIST_AVG=.true.
+++ CICE_HIST_AVG=.true.
+++ export CICE_HISTORY_DIR=./history/
+++ CICE_HISTORY_DIR=./history/
+++ export CICE_INCOND_DIR=./history/
+++ CICE_INCOND_DIR=./history/
+++ export CICE_GRID=grid_cice_NEMS_mx100.nc
+++ CICE_GRID=grid_cice_NEMS_mx100.nc
+++ export CICE_MASK=kmtu_cice_NEMS_mx100.nc
+++ CICE_MASK=kmtu_cice_NEMS_mx100.nc
+++ export CICE_GRIDATM=A
+++ CICE_GRIDATM=A
+++ export CICE_GRIDOCN=A
+++ CICE_GRIDOCN=A
+++ export CICE_GRIDICE=B
+++ CICE_GRIDICE=B
+++ export CICE_TR_POND_LVL=.true.
+++ CICE_TR_POND_LVL=.true.
+++ export CICE_RESTART_POND_LVL=.false.
+++ CICE_RESTART_POND_LVL=.false.
+++ export CICE_FRAZIL_FWSALT=.true.
+++ CICE_FRAZIL_FWSALT=.true.
+++ export CICE_KTHERM=2
+++ CICE_KTHERM=2
+++ export CICE_TFREEZE_OPTION=mushy
+++ CICE_TFREEZE_OPTION=mushy
+++ export CICE_NPROC=12
+++ CICE_NPROC=12
+++ np2=6
+++ CICE_BLCKX=60
+++ CICE_BLCKY=160
+++ export np2
+++ export CICE_BLCKX
+++ export CICE_BLCKY
+++ export CICE_DECOMP=slenderX2
+++ CICE_DECOMP=slenderX2
+++ export MESH_DICE=none
+++ MESH_DICE=none
+++ export stream_files_dice=none
+++ stream_files_dice=none
+++ export CICE_PRESCRIBED=false
+++ CICE_PRESCRIBED=false
+++ export DICE_CDEPS=false
+++ DICE_CDEPS=false
+++ export CICE_KTHERM=1
+++ CICE_KTHERM=1
+++ export CICE_TFREEZE_OPTION=linear_salt
+++ CICE_TFREEZE_OPTION=linear_salt
+++ export_mom6
+++ export DT_DYNAM_MOM6=1800
+++ DT_DYNAM_MOM6=1800
+++ export DT_THERM_MOM6=3600
+++ DT_THERM_MOM6=3600
+++ export MOM6_INPUT=MOM_input_100.IN
+++ MOM6_INPUT=MOM_input_100.IN
+++ export MOM6_OUTPUT_DIR=./MOM6_OUTPUT
+++ MOM6_OUTPUT_DIR=./MOM6_OUTPUT
+++ export MOM6_OUTPUT_FH=6
+++ MOM6_OUTPUT_FH=6
+++ export MOM6_RESTART_DIR=./RESTART/
+++ MOM6_RESTART_DIR=./RESTART/
+++ export MOM6_RESTART_SETTING=n
+++ MOM6_RESTART_SETTING=n
+++ export MOM6_RIVER_RUNOFF=False
+++ MOM6_RIVER_RUNOFF=False
+++ export MOM6_FRUNOFF=
+++ MOM6_FRUNOFF=
+++ export MOM6_CHLCLIM=seawifs_1998-2006_smoothed_2X.nc
+++ MOM6_CHLCLIM=seawifs_1998-2006_smoothed_2X.nc
+++ export MOM6_USE_LI2016=True
+++ MOM6_USE_LI2016=True
+++ export MOM6_TOPOEDITS=
+++ MOM6_TOPOEDITS=
+++ export MOM6_THERMO_SPAN=False
+++ MOM6_THERMO_SPAN=False
+++ export MOM6_USE_WAVES=True
+++ MOM6_USE_WAVES=True
+++ export MOM6_ALLOW_LANDMASK_CHANGES=False
+++ MOM6_ALLOW_LANDMASK_CHANGES=False
+++ export MOM6_DIAG_COORD_DEF_Z_FILE=interpolate_zgrid_40L.nc
+++ MOM6_DIAG_COORD_DEF_Z_FILE=interpolate_zgrid_40L.nc
+++ export MOM6_DIAG_MISVAL=-1e34
+++ MOM6_DIAG_MISVAL=-1e34
+++ export ODA_INCUPD=False
+++ ODA_INCUPD=False
+++ export ODA_INCUPD_NHOURS=6
+++ ODA_INCUPD_NHOURS=6
+++ export 'ODA_TEMPINC_VAR='\''pt_inc'\'''
+++ ODA_TEMPINC_VAR=''\''pt_inc'\'''
+++ export 'ODA_SALTINC_VAR='\''s_inc'\'''
+++ ODA_SALTINC_VAR=''\''s_inc'\'''
+++ export 'ODA_THK_VAR='\''h_fg'\'''
+++ ODA_THK_VAR=''\''h_fg'\'''
+++ export ODA_INCUPD_UV=False
+++ ODA_INCUPD_UV=False
+++ export 'ODA_UINC_VAR='\''u_inc'\'''
+++ ODA_UINC_VAR=''\''u_inc'\'''
+++ export 'ODA_VINC_VAR='\''v_inc'\'''
+++ ODA_VINC_VAR=''\''v_inc'\'''
+++ export DO_OCN_SPPT=False
+++ DO_OCN_SPPT=False
+++ export PERT_EPBL=False
+++ PERT_EPBL=False
+++ export OCN_SPPT=-999.
+++ OCN_SPPT=-999.
+++ export EPBL=-999.
+++ EPBL=-999.
+++ export OCNICE_WARMSTART=.false.
+++ OCNICE_WARMSTART=.false.
+++ export MOM6_INIT_FROM_Z=True
+++ MOM6_INIT_FROM_Z=True
+++ export MOM6_INIT_UV=zero
+++ MOM6_INIT_UV=zero
+++ export MOM6_WARMSTART_FILE=none
+++ MOM6_WARMSTART_FILE=none
+++ export MOM6_USE_LI2016=False
+++ MOM6_USE_LI2016=False
+++ export MOM6_USE_WAVES=False
+++ MOM6_USE_WAVES=False
+++ export WW3_DOMAIN=
+++ WW3_DOMAIN=
+++ export_cmeps
+++ export UFS_CONFIGURE=ufs.configure.s2swa_fast.IN
+++ UFS_CONFIGURE=ufs.configure.s2swa_fast.IN
+++ export med_model=cmeps
+++ med_model=cmeps
+++ export atm_model=fv3
+++ atm_model=fv3
+++ export chm_model=gocart
+++ chm_model=gocart
+++ export ocn_model=mom6
+++ ocn_model=mom6
+++ export ice_model=cice6
+++ ice_model=cice6
+++ export wav_model=ww3
+++ wav_model=ww3
+++ export lnd_model=noahmp
+++ lnd_model=noahmp
+++ export coupling_interval_slow_sec=3600
+++ coupling_interval_slow_sec=3600
+++ export coupling_interval_fast_sec=900
+++ coupling_interval_fast_sec=900
+++ export MESH_OCN=mesh.mx100.nc
+++ MESH_OCN=mesh.mx100.nc
+++ export MESH_ICE=mesh.mx100.nc
+++ MESH_ICE=mesh.mx100.nc
+++ export MESH_WAV=mesh..nc
+++ MESH_WAV=mesh..nc
+++ export CPLMODE=ufs.frac
+++ CPLMODE=ufs.frac
+++ export CMEPS_PIO_FORMAT=pnetcdf
+++ CMEPS_PIO_FORMAT=pnetcdf
+++ export CMEPS_PIO_STRIDE=4
+++ CMEPS_PIO_STRIDE=4
+++ export CMEPS_PIO_IOTASKS=-99
+++ CMEPS_PIO_IOTASKS=-99
+++ export CMEPS_PIO_REARR=box
+++ CMEPS_PIO_REARR=box
+++ export CMEPS_PIO_ROOT=-99
+++ CMEPS_PIO_ROOT=-99
+++ export RUNTYPE=startup
+++ RUNTYPE=startup
+++ export RESTART_N=24
+++ RESTART_N=24
+++ export 'RESTART_FH= '
+++ RESTART_FH=' '
+++ export CMEPS_RESTART_DIR=./RESTART/
+++ CMEPS_RESTART_DIR=./RESTART/
+++ export cap_dbug_flag=0
+++ cap_dbug_flag=0
+++ export WRITE_ENDOFRUN_RESTART=.false.
+++ WRITE_ENDOFRUN_RESTART=.false.
+++ export use_coldstart=false
+++ use_coldstart=false
+++ export use_mommesh=true
+++ use_mommesh=true
+++ export eps_imesh=1.0e-1
+++ eps_imesh=1.0e-1
+++ export flux_convergence=0.0
+++ flux_convergence=0.0
+++ export flux_iteration=2
+++ flux_iteration=2
+++ export flux_scheme=0
+++ flux_scheme=0
+++ export ocean_albedo_limit=0.06
+++ ocean_albedo_limit=0.06
+++ export use_mean_albedos=.false.
+++ use_mean_albedos=.false.
+++ export MAPUV3D=true
+++ MAPUV3D=true
+++ export MAPUV3D=false
+++ MAPUV3D=false
+++ export UFS_CONFIGURE=ufs.configure.datm_cdeps.IN
+++ UFS_CONFIGURE=ufs.configure.datm_cdeps.IN
+++ export atm_model=datm
+++ atm_model=datm
+++ export CPLMODE=ufs.nfrac.aoflux
+++ CPLMODE=ufs.nfrac.aoflux
+++ export INPUT_NML=input.mom6.nml.IN
+++ INPUT_NML=input.mom6.nml.IN
+++ export DIAG_TABLE=diag_table_template
+++ DIAG_TABLE=diag_table_template
+++ export DATM_SRC=CFSR
+++ DATM_SRC=CFSR
+++ export FILEBASE_DATM=cfsr
+++ FILEBASE_DATM=cfsr
+++ export MESH_ATM=mesh.datm.1760x880.nc
+++ MESH_ATM=mesh.datm.1760x880.nc
+++ export atm_datamode=GEFS
+++ atm_datamode=GEFS
+++ export stream_files=INPUT/cfsr.201110.nc
+++ stream_files=INPUT/cfsr.201110.nc
+++ export EXPORT_ALL=.false.
+++ EXPORT_ALL=.false.
+++ export STREAM_OFFSET=0
+++ STREAM_OFFSET=0
+++ export BL_SUFFIX=
+++ BL_SUFFIX=
+++ export RT_SUFFIX=
+++ RT_SUFFIX=
+++ export SYEAR=2011
+++ SYEAR=2011
+++ export SMONTH=01
+++ SMONTH=01
+++ export SDAY=01
+++ SDAY=01
+++ export SHOUR=00
+++ SHOUR=00
+++ export FHMAX=12
+++ FHMAX=12
+++ export DATM_IN_CONFIGURE=datm_in.IN
+++ DATM_IN_CONFIGURE=datm_in.IN
+++ export MESH_ATM=ERA5_mesh.nc
+++ MESH_ATM=ERA5_mesh.nc
+++ export atm_datamode=ERA5
+++ atm_datamode=ERA5
+++ export ATM_NX_GLB=1440
+++ ATM_NX_GLB=1440
+++ export ATM_NY_GLB=721
+++ ATM_NY_GLB=721
+++ export EXPORT_ALL=.true.
+++ EXPORT_ALL=.true.
+++ export DATM_STREAM_CONFIGURE=datm.streams.era5.IN
+++ DATM_STREAM_CONFIGURE=datm.streams.era5.IN
+++ export MESH_ATM_DATA=ERA5_mesh.nc
+++ MESH_ATM_DATA=ERA5_mesh.nc
+++ export SDATE=2010
+++ SDATE=2010
+++ export EDATE=2011
+++ EDATE=2011
+++ export 'DATA_ATM01="INPUT/ERA5_forcing_2010-12-31_fix.nc" "INPUT/ERA5_forcing_2011-01-01_fix.nc" "INPUT/ERA5_forcing_2011-01-02_fix.nc"'
+++ DATA_ATM01='"INPUT/ERA5_forcing_2010-12-31_fix.nc" "INPUT/ERA5_forcing_2011-01-01_fix.nc" "INPUT/ERA5_forcing_2011-01-02_fix.nc"'
+++ export UFS_CONFIGURE=ufs.configure.atm_lnd.IN
+++ UFS_CONFIGURE=ufs.configure.atm_lnd.IN
+++ export med_model=cmeps
+++ med_model=cmeps
+++ export atm_model=datm
+++ atm_model=datm
+++ export lnd_model=noahmp
+++ lnd_model=noahmp
+++ export samegrid_atmlnd=.false.
+++ samegrid_atmlnd=.false.
+++ export CPLMODE=ufs.nfrac.aoflux
+++ CPLMODE=ufs.nfrac.aoflux
+++ export RUNTYPE=startup
+++ RUNTYPE=startup
+++ export READRESTART=.false.
+++ READRESTART=.false.
+++ export TASKS=288
+++ TASKS=288
+++ export ATM_compute_tasks=144
+++ ATM_compute_tasks=144
+++ export LND_tasks=144
+++ LND_tasks=144
+++ export lnd_ic_type=custom
+++ lnd_ic_type=custom
+++ export lnd_input_dir=INPUT/
+++ lnd_input_dir=INPUT/
+++ export lnd_fixed_dir=INPUT/
+++ lnd_fixed_dir=INPUT/
+++ export CALC_SNET=.true.
+++ CALC_SNET=.true.
+++ export layout_x=3
+++ layout_x=3
+++ export layout_y=8
+++ layout_y=8
+++ export LNDRES=C96
+++ LNDRES=C96
+++ export ATMRES=C96
+++ ATMRES=C96
+++ export mosaic_file=INPUT/C96_mosaic.nc
+++ mosaic_file=INPUT/C96_mosaic.nc
+++ export coupling_interval_sec=3600
+++ coupling_interval_sec=3600
+++ export snow_albedo_option=2
+++ snow_albedo_option=2
+++ export precip_partition_option=1
+++ precip_partition_option=1
+++ export initial_albedo=0.25
+++ initial_albedo=0.25
+++ export 'FV3_RUN=lnd_datm_cdeps_era5.IN noahmp_run.IN'
+++ FV3_RUN='lnd_datm_cdeps_era5.IN noahmp_run.IN'
++ rm -f /work/noaa/epic/jongkim/UFS-RT/orion/refactor/merge/ufs-weather-model/tests-dev/fail_test_datm_cdeps_lnd_era5_intel
++ export INPUT_DIR=datm_cdeps_lnd_era5
++ INPUT_DIR=datm_cdeps_lnd_era5
++ export RUNDIR=/work/noaa/stmp/jongkim/stmp/jongkim/FV3_RT/rt_1396202/datm_cdeps_lnd_era5_intel
++ RUNDIR=/work/noaa/stmp/jongkim/stmp/jongkim/FV3_RT/rt_1396202/datm_cdeps_lnd_era5_intel
++ export CNTL_DIR=datm_cdeps_lnd_era5
++ CNTL_DIR=datm_cdeps_lnd_era5
++ JBNME=run_datm_cdeps_lnd_era5_intel
++ export JBNME
+++ date +%s
++ date_s=1760648131
++ echo -n 'datm_cdeps_lnd_era5_intel, 1760648131,'
++ export RT_LOG=/work/noaa/epic/jongkim/UFS-RT/orion/refactor/merge/ufs-weather-model/tests-dev/logs/log_orion/rt_datm_cdeps_lnd_era5_intel.log
++ RT_LOG=/work/noaa/epic/jongkim/UFS-RT/orion/refactor/merge/ufs-weather-model/tests-dev/logs/log_orion/rt_datm_cdeps_lnd_era5_intel.log
++ echo 'Test datm_cdeps_lnd_era5_intel DATM_CDEPS_NOAHMP_ERA5 - control '
+Test datm_cdeps_lnd_era5_intel DATM_CDEPS_NOAHMP_ERA5 - control 
++ source rt_utils.sh
+++ set -eu
+++ [[ /work/noaa/epic/jongkim/UFS-RT/orion/refactor/merge/ufs-weather-model/tests-dev/run_test.sh = \r\t\_\u\t\i\l\s\.\s\h ]]
+++ ECFLOW_RUNNING=false
+++ jobid=0
++ source atparse.bash
++ rm -rf /work/noaa/stmp/jongkim/stmp/jongkim/FV3_RT/rt_1396202/datm_cdeps_lnd_era5_intel
++ mkdir -p /work/noaa/stmp/jongkim/stmp/jongkim/FV3_RT/rt_1396202/datm_cdeps_lnd_era5_intel
++ cd /work/noaa/stmp/jongkim/stmp/jongkim/FV3_RT/rt_1396202/datm_cdeps_lnd_era5_intel
++ cp /work/noaa/epic/jongkim/UFS-RT/orion/refactor/merge/ufs-weather-model/tests-dev/fv3_datm_cdeps_land_intel.exe fv3.exe
++ mkdir -p modulefiles
++ [[ orion == linux ]]
++ cp /work/noaa/epic/jongkim/UFS-RT/orion/refactor/merge/ufs-weather-model/tests-dev/modules.fv3_datm_cdeps_land_intel.lua ./modulefiles/modules.fv3.lua
++ cp /work/noaa/epic/jongkim/UFS-RT/orion/refactor/merge/ufs-weather-model/modulefiles/ufs_common.lua ./modulefiles/.
++ cp /work/noaa/epic/jongkim/UFS-RT/orion/refactor/merge/ufs-weather-model/tests-dev/module-setup.sh module-setup.sh
++ case ${MACHINE_ID} in
++ module use modulefiles
++ '[' -z '' ']'
++ case "$-" in
++ __lmod_sh_dbg=x
++ '[' -n x ']'
++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+Shell debugging restarted
++ unset __lmod_sh_dbg
++ return 0
++ module load modules.fv3
++ '[' -z '' ']'
++ case "$-" in
++ __lmod_sh_dbg=x
++ '[' -n x ']'
++ set +x
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for Lmod's output
+
+Lmod is automatically replacing "gcc/12.2.0" with
+"intel-oneapi-compilers/2024.2.1".
+
+-------------------------------------------------------------------------------
+The following dependent module(s) are not currently loaded: zstd/1.5.6 (required by: c-blosc/1.21.5, netcdf-c/4.9.2)
+-------------------------------------------------------------------------------
+Shell debugging restarted
++ unset __lmod_sh_dbg
++ return 0
++ [[ -n lnd_datm_cdeps_era5.IN noahmp_run.IN ]]
++ for i in ${FV3_RUN}
++ atparse
++ local __text
++ local __before
++ local __after
++ local __during
++ local __set_x=:
++ local __set_u=:
++ local __set_e=:
++ local __abort_on_undefined=NO
++ [[ -o xtrace ]]
++ __set_x='set -x'
++ [[ -o errexit ]]
++ __set_e='set -e'
++ [[ -o nounset ]]
++ __set_u='set -u'
++ __abort_on_undefined=YES
++ set +eux
++ eval 'set -u'
+++ set -u
++ eval 'set -e'
+++ set -e
++ for i in ${FV3_RUN}
++ atparse
++ local __text
++ local __before
++ local __after
++ local __during
++ local __set_x=:
++ local __set_u=:
++ local __set_e=:
++ local __abort_on_undefined=NO
++ [[ -o xtrace ]]
++ __set_x='set -x'
++ [[ -o errexit ]]
++ __set_e='set -e'
++ [[ -o nounset ]]
++ __set_u='set -u'
++ __abort_on_undefined=YES
++ set +eux
++ eval 'set -u'
+++ set -u
++ eval 'set -e'
+++ set -e
++ [[ .false. == .true. ]]
++ export 'HIDE_UGWPV0= '
++ HIDE_UGWPV0=' '
++ export 'HIDE_UGWPV1=!'
++ HIDE_UGWPV1='!'
++ export 'HIDE_AIAU= '
++ HIDE_AIAU=' '
++ export 'HIDE_LIAU= '
++ HIDE_LIAU=' '
++ [[ true = \t\r\u\e ]]
++ [[ false = \f\a\l\s\e ]]
++ atparse
++ local __text
++ local __before
++ local __after
++ local __during
++ local __set_x=:
++ local __set_u=:
++ local __set_e=:
++ local __abort_on_undefined=NO
++ [[ -o xtrace ]]
++ __set_x='set -x'
++ [[ -o errexit ]]
++ __set_e='set -e'
++ [[ -o nounset ]]
++ __set_u='set -u'
++ __abort_on_undefined=YES
++ set +eux
++ eval 'set -u'
+++ set -u
++ eval 'set -e'
+++ set -e
++ [[ -f /work/noaa/epic/jongkim/UFS-RT/orion/refactor/merge/ufs-weather-model/tests-dev/parm/datm_cdeps_configure.IN ]]
++ atparse
++ local __text
++ local __before
++ local __after
++ local __during
++ local __set_x=:
++ local __set_u=:
++ local __set_e=:
++ local __abort_on_undefined=NO
++ [[ -o xtrace ]]
++ __set_x='set -x'
++ [[ -o errexit ]]
++ __set_e='set -e'
++ [[ -o nounset ]]
++ __set_u='set -u'
++ __abort_on_undefined=YES
++ set +eux
++ eval 'set -u'
+++ set -u
++ eval 'set -e'
+++ set -e
++ [[ true == true ]]
++ compute_petbounds_and_tasks_esmf_threading
++ [[ true = \f\a\l\s\e ]]
++ local n=0
++ unset atm_petlist_bounds ocn_petlist_bounds ice_petlist_bounds wav_petlist_bounds chm_petlist_bounds med_petlist_bounds aqm_petlist_bounds fbh_petlist_bounds
++ ATM_io_tasks=0
++ [[ 144 -gt 0 ]]
++ atm_petlist_bounds='0 143'
++ n=144
++ [[ 16 -gt 0 ]]
++ OCN_tasks=16
++ ocn_petlist_bounds='144 159'
++ n=160
++ [[ 12 -gt 0 ]]
++ ICE_tasks=12
++ ice_petlist_bounds='160 171'
++ n=172
++ [[ 0 -gt 0 ]]
++ chm_petlist_bounds='0 143'
++ MED_compute_tasks=144
++ med_petlist_bounds='0 143'
++ aqm_petlist_bounds='0 143'
++ [[ noahmp = \l\m\4 ]]
++ [[ 144 -gt 0 ]]
++ LND_tasks=144
++ lnd_petlist_bounds='172 315'
++ n=316
++ [[ 0 -gt 0 ]]
++ UFS_tasks=316
++ [[ false == true ]]
++ export TASKS=316
++ TASKS=316
++ [[ -f /work/noaa/epic/jongkim/UFS-RT/orion/refactor/merge/ufs-weather-model/tests-dev/parm/ufs.configure.atm_lnd.IN ]]
++ atparse
++ local __text
++ local __before
++ local __after
++ local __during
++ local __set_x=:
++ local __set_u=:
++ local __set_e=:
++ local __abort_on_undefined=NO
++ [[ -o xtrace ]]
++ __set_x='set -x'
++ [[ -o errexit ]]
++ __set_e='set -e'
++ [[ -o nounset ]]
++ __set_u='set -u'
++ __abort_on_undefined=YES
++ set +eux
++ eval 'set -u'
+++ set -u
++ eval 'set -e'
+++ set -e
++ [[ true != true ]]
++ [[ Q != Q ]]
++ sed -i -e '/<output_grid_02>/,/<\/output_grid_02>/d' model_configure
++ [[ Q != Q ]]
++ sed -i -e '/<output_grid_03>/,/<\/output_grid_03>/d' model_configure
++ [[ Q != Q ]]
++ sed -i -e '/<output_grid_04>/,/<\/output_grid_04>/d' model_configure
++ [[ Q != Q ]]
++ sed -i -e '/<output_grid_05>/,/<\/output_grid_05>/d' model_configure
++ [[ Q != Q ]]
++ sed -i -e '/<output_grid_06>/,/<\/output_grid_06>/d' model_configure
++ [[ Qdiag_table_template != Q ]]
++ atparse
++ local __text
++ local __before
++ local __after
++ local __during
++ local __set_x=:
++ local __set_u=:
++ local __set_e=:
++ local __abort_on_undefined=NO
++ [[ -o xtrace ]]
++ __set_x='set -x'
++ [[ -o errexit ]]
++ __set_e='set -e'
++ [[ -o nounset ]]
++ __set_u='set -u'
++ __abort_on_undefined=YES
++ set +eux
++ eval 'set -u'
+++ set -u
++ eval 'set -e'
+++ set -e
++ [[ Q != Q ]]
++ [[ false == true ]]
++ [[ .false. == .true. ]]
++ cp /work/noaa/epic/jongkim/UFS-RT/orion/refactor/merge/ufs-weather-model/tests-dev/parm/noahmptable.tbl .
++ [[ false == .true. ]]
++ cp /work/noaa/epic/jongkim/UFS-RT/orion/refactor/merge/ufs-weather-model/tests-dev/parm/fd_ufs.yaml fd_ufs.yaml
++ source ./fv3_run
+++ mkdir -p RESTART INPUT
+++ cd INPUT
+++ rsync -arv /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/DATM_ERA5_input_data_v2/. .
+sending incremental file list
+./
+ERA5_forcing_2010-12-31_fix.nc
+ERA5_forcing_2011-01-01_fix.nc
+ERA5_forcing_2011-01-02_fix.nc
+ERA5_mesh.nc
+
+sent 2,280,225,911 bytes  received 95 bytes  304,030,134.13 bytes/sec
+total size is 2,279,669,026  speedup is 1.00
+++ cd -
+/work/noaa/stmp/jongkim/stmp/jongkim/FV3_RT/rt_1396202/datm_cdeps_lnd_era5_intel
+++ SUFFIX=
+++ '[' .false. = .true. ']'
+++ mkdir -p INPUT RESTART
+++ '[' C96 = C96 ']'
+++ inputdir=FV3_input_data
+++ echo inputdir=FV3_input_data,ATMRES=C96
+inputdir=FV3_input_data,ATMRES=C96
+++ V2_SFC_FILE=false
+++ SUFFIX=
+++ [[ true == true ]]
+++ targetdir=./INPUT
+++ '[' true == true ']'
+++ rsync -arv /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/NOAHMP_IC/ERA5/ufs-land_C96_init_fields.tile1.nc ././INPUT/C96.initial.tile1.nc
+sending incremental file list
+ufs-land_C96_init_fields.tile1.nc
+
+sent 665,443 bytes  received 35 bytes  1,330,956.00 bytes/sec
+total size is 665,156  speedup is 1.00
+++ rsync -arv /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/NOAHMP_IC/ERA5/ufs-land_C96_init_fields.tile2.nc ././INPUT/C96.initial.tile2.nc
+sending incremental file list
+ufs-land_C96_init_fields.tile2.nc
+
+sent 665,443 bytes  received 35 bytes  1,330,956.00 bytes/sec
+total size is 665,156  speedup is 1.00
+++ rsync -arv /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/NOAHMP_IC/ERA5/ufs-land_C96_init_fields.tile3.nc ././INPUT/C96.initial.tile3.nc
+sending incremental file list
+ufs-land_C96_init_fields.tile3.nc
+
+sent 665,443 bytes  received 35 bytes  1,330,956.00 bytes/sec
+total size is 665,156  speedup is 1.00
+++ rsync -arv /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/NOAHMP_IC/ERA5/ufs-land_C96_init_fields.tile4.nc ././INPUT/C96.initial.tile4.nc
+sending incremental file list
+ufs-land_C96_init_fields.tile4.nc
+
+sent 665,443 bytes  received 35 bytes  1,330,956.00 bytes/sec
+total size is 665,156  speedup is 1.00
+++ rsync -arv /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/NOAHMP_IC/ERA5/ufs-land_C96_init_fields.tile5.nc ././INPUT/C96.initial.tile5.nc
+sending incremental file list
+ufs-land_C96_init_fields.tile5.nc
+
+sent 665,443 bytes  received 35 bytes  1,330,956.00 bytes/sec
+total size is 665,156  speedup is 1.00
+++ rsync -arv /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/NOAHMP_IC/ERA5/ufs-land_C96_init_fields.tile6.nc ././INPUT/C96.initial.tile6.nc
+sending incremental file list
+ufs-land_C96_init_fields.tile6.nc
+
+sent 665,443 bytes  received 35 bytes  1,330,956.00 bytes/sec
+total size is 665,156  speedup is 1.00
+++ cp /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/FV3_fix_tiled/C96mx100/oro_C96.mx100.tile1.nc ./INPUT/oro_data.tile1.nc
+++ cp /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/FV3_fix_tiled/C96mx100/oro_C96.mx100.tile2.nc ./INPUT/oro_data.tile2.nc
+++ cp /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/FV3_fix_tiled/C96mx100/oro_C96.mx100.tile3.nc ./INPUT/oro_data.tile3.nc
+++ cp /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/FV3_fix_tiled/C96mx100/oro_C96.mx100.tile4.nc ./INPUT/oro_data.tile4.nc
+++ cp /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/FV3_fix_tiled/C96mx100/oro_C96.mx100.tile5.nc ./INPUT/oro_data.tile5.nc
+++ cp /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/FV3_fix_tiled/C96mx100/oro_C96.mx100.tile6.nc ./INPUT/oro_data.tile6.nc
+++ cp /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/FV3_input_data/INPUT_L127_gfsv17/oro_data_ls.tile1.nc /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/FV3_input_data/INPUT_L127_gfsv17/oro_data_ls.tile2.nc /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/FV3_input_data/INPUT_L127_gfsv17/oro_data_ls.tile3.nc /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/FV3_input_data/INPUT_L127_gfsv17/oro_data_ls.tile4.nc /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/FV3_input_data/INPUT_L127_gfsv17/oro_data_ls.tile5.nc /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/FV3_input_data/INPUT_L127_gfsv17/oro_data_ls.tile6.nc ./INPUT/.
+++ cp /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/FV3_input_data/INPUT_L127_gfsv17/oro_data_ss.tile1.nc /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/FV3_input_data/INPUT_L127_gfsv17/oro_data_ss.tile2.nc /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/FV3_input_data/INPUT_L127_gfsv17/oro_data_ss.tile3.nc /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/FV3_input_data/INPUT_L127_gfsv17/oro_data_ss.tile4.nc /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/FV3_input_data/INPUT_L127_gfsv17/oro_data_ss.tile5.nc /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/FV3_input_data/INPUT_L127_gfsv17/oro_data_ss.tile6.nc ./INPUT/.
+++ cp /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/FV3_fix_tiled/C96mx100/C96.facsf.tile1.nc /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/FV3_fix_tiled/C96mx100/C96.facsf.tile2.nc /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/FV3_fix_tiled/C96mx100/C96.facsf.tile3.nc /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/FV3_fix_tiled/C96mx100/C96.facsf.tile4.nc /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/FV3_fix_tiled/C96mx100/C96.facsf.tile5.nc /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/FV3_fix_tiled/C96mx100/C96.facsf.tile6.nc /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/FV3_fix_tiled/C96mx100/C96.maximum_snow_albedo.tile1.nc /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/FV3_fix_tiled/C96mx100/C96.maximum_snow_albedo.tile2.nc /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/FV3_fix_tiled/C96mx100/C96.maximum_snow_albedo.tile3.nc /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/FV3_fix_tiled/C96mx100/C96.maximum_snow_albedo.tile4.nc /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/FV3_fix_tiled/C96mx100/C96.maximum_snow_albedo.tile5.nc /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/FV3_fix_tiled/C96mx100/C96.maximum_snow_albedo.tile6.nc /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/FV3_fix_tiled/C96mx100/C96.slope_type.tile1.nc /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/FV3_fix_tiled/C96mx100/C96.slope_type.tile2.nc /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/FV3_fix_tiled/C96mx100/C96.slope_type.tile3.nc /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/FV3_fix_tiled/C96mx100/C96.slope_type.tile4.nc /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/FV3_fix_tiled/C96mx100/C96.slope_type.tile5.nc /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/FV3_fix_tiled/C96mx100/C96.slope_type.tile6.nc /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/FV3_fix_tiled/C96mx100/C96.snowfree_albedo.tile1.nc /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/FV3_fix_tiled/C96mx100/C96.snowfree_albedo.tile2.nc /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/FV3_fix_tiled/C96mx100/C96.snowfree_albedo.tile3.nc /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/FV3_fix_tiled/C96mx100/C96.snowfree_albedo.tile4.nc /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/FV3_fix_tiled/C96mx100/C96.snowfree_albedo.tile5.nc /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/FV3_fix_tiled/C96mx100/C96.snowfree_albedo.tile6.nc /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/FV3_fix_tiled/C96mx100/C96.soil_color.tile1.nc /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/FV3_fix_tiled/C96mx100/C96.soil_color.tile2.nc /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/FV3_fix_tiled/C96mx100/C96.soil_color.tile3.nc /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/FV3_fix_tiled/C96mx100/C96.soil_color.tile4.nc /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/FV3_fix_tiled/C96mx100/C96.soil_color.tile5.nc /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/FV3_fix_tiled/C96mx100/C96.soil_color.tile6.nc /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/FV3_fix_tiled/C96mx100/C96.soil_type.tile1.nc /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/FV3_fix_tiled/C96mx100/C96.soil_type.tile2.nc /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/FV3_fix_tiled/C96mx100/C96.soil_type.tile3.nc /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/FV3_fix_tiled/C96mx100/C96.soil_type.tile4.nc /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/FV3_fix_tiled/C96mx100/C96.soil_type.tile5.nc /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/FV3_fix_tiled/C96mx100/C96.soil_type.tile6.nc /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/FV3_fix_tiled/C96mx100/C96.substrate_temperature.tile1.nc /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/FV3_fix_tiled/C96mx100/C96.substrate_temperature.tile2.nc /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/FV3_fix_tiled/C96mx100/C96.substrate_temperature.tile3.nc /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/FV3_fix_tiled/C96mx100/C96.substrate_temperature.tile4.nc /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/FV3_fix_tiled/C96mx100/C96.substrate_temperature.tile5.nc /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/FV3_fix_tiled/C96mx100/C96.substrate_temperature.tile6.nc /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/FV3_fix_tiled/C96mx100/C96.vegetation_greenness.tile1.nc /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/FV3_fix_tiled/C96mx100/C96.vegetation_greenness.tile2.nc /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/FV3_fix_tiled/C96mx100/C96.vegetation_greenness.tile3.nc /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/FV3_fix_tiled/C96mx100/C96.vegetation_greenness.tile4.nc /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/FV3_fix_tiled/C96mx100/C96.vegetation_greenness.tile5.nc /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/FV3_fix_tiled/C96mx100/C96.vegetation_greenness.tile6.nc /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/FV3_fix_tiled/C96mx100/C96.vegetation_type.tile1.nc /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/FV3_fix_tiled/C96mx100/C96.vegetation_type.tile2.nc /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/FV3_fix_tiled/C96mx100/C96.vegetation_type.tile3.nc /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/FV3_fix_tiled/C96mx100/C96.vegetation_type.tile4.nc /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/FV3_fix_tiled/C96mx100/C96.vegetation_type.tile5.nc /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/FV3_fix_tiled/C96mx100/C96.vegetation_type.tile6.nc ./INPUT/.
+++ cp /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/CPL_FIX/aC96o100/grid_spec.nc ./INPUT/.
+++ cp /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/FV3_input_data/INPUT/C96_grid.tile1.nc /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/FV3_input_data/INPUT/C96_grid.tile2.nc /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/FV3_input_data/INPUT/C96_grid.tile3.nc /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/FV3_input_data/INPUT/C96_grid.tile4.nc /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/FV3_input_data/INPUT/C96_grid.tile5.nc /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/FV3_input_data/INPUT/C96_grid.tile6.nc ./INPUT/.
+++ cp /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/FV3_input_data/INPUT/grid_spec.nc ./INPUT/C96_mosaic.nc
+++ '[' .false. = .true. ']'
+++ '[' C96 '!=' C96 ']'
++ [[ .false. == .true. ]]
++ [[ .false. == .true. ]]
++ [[ true = \t\r\u\e ]]
++ [[ false = \f\a\l\s\e ]]
++ atparse
++ local __text
++ local __before
++ local __after
++ local __during
++ local __set_x=:
++ local __set_u=:
++ local __set_e=:
++ local __abort_on_undefined=NO
++ [[ -o xtrace ]]
++ __set_x='set -x'
++ [[ -o errexit ]]
++ __set_e='set -e'
++ [[ -o nounset ]]
++ __set_u='set -u'
++ __abort_on_undefined=YES
++ set +eux
++ eval 'set -u'
+++ set -u
++ eval 'set -e'
+++ set -e
++ atparse
++ local __text
++ local __before
++ local __after
++ local __during
++ local __set_x=:
++ local __set_u=:
++ local __set_e=:
++ local __abort_on_undefined=NO
++ [[ -o xtrace ]]
++ __set_x='set -x'
++ [[ -o errexit ]]
++ __set_e='set -e'
++ [[ -o nounset ]]
++ __set_u='set -u'
++ __abort_on_undefined=YES
++ set +eux
++ eval 'set -u'
+++ set -u
++ eval 'set -e'
+++ set -e
++ atparse
++ local __text
++ local __before
++ local __after
++ local __during
++ local __set_x=:
++ local __set_u=:
++ local __set_e=:
++ local __abort_on_undefined=NO
++ [[ -o xtrace ]]
++ __set_x='set -x'
++ [[ -o errexit ]]
++ __set_e='set -e'
++ [[ -o nounset ]]
++ __set_u='set -u'
++ __abort_on_undefined=YES
++ set +eux
++ eval 'set -u'
+++ set -u
++ eval 'set -e'
+++ set -e
++ atparse
++ local __text
++ local __before
++ local __after
++ local __during
++ local __set_x=:
++ local __set_u=:
++ local __set_e=:
++ local __abort_on_undefined=NO
++ [[ -o xtrace ]]
++ __set_x='set -x'
++ [[ -o errexit ]]
++ __set_e='set -e'
++ [[ -o nounset ]]
++ __set_u='set -u'
++ __abort_on_undefined=YES
++ set +eux
++ eval 'set -u'
+++ set -u
++ eval 'set -e'
+++ set -e
++ [[ false = \t\r\u\e ]]
++ [[ Q != Q ]]
++ [[ Q != Q ]]
++ [[ .false. == .true. ]]
++ [[ true = \t\r\u\e ]]
++ atparse
++ local __text
++ local __before
++ local __after
++ local __during
++ local __set_x=:
++ local __set_u=:
++ local __set_e=:
++ local __abort_on_undefined=NO
++ [[ -o xtrace ]]
++ __set_x='set -x'
++ [[ -o errexit ]]
++ __set_e='set -e'
++ [[ -o nounset ]]
++ __set_u='set -u'
++ __abort_on_undefined=YES
++ set +eux
++ eval 'set -u'
+++ set -u
++ eval 'set -e'
+++ set -e
++ atparse
++ local __text
++ local __before
++ local __after
++ local __during
++ local __set_x=:
++ local __set_u=:
++ local __set_e=:
++ local __abort_on_undefined=NO
++ [[ -o xtrace ]]
++ __set_x='set -x'
++ [[ -o errexit ]]
++ __set_e='set -e'
++ [[ -o nounset ]]
++ __set_u='set -u'
++ __abort_on_undefined=YES
++ set +eux
++ eval 'set -u'
+++ set -u
++ eval 'set -e'
+++ set -e
++ [[ false = \t\r\u\e ]]
++ [[ false = \t\r\u\e ]]
++ [[ false = \t\r\u\e ]]
++ [[ false = \t\r\u\e ]]
++ [[ false = \t\r\u\e ]]
++ [[ -n x ]]
++ [[ 900 -ne 900 ]]
++ [[ -n x ]]
++ [[ -n x ]]
++ [[ 0 -ne 0 ]]
++ TPN=40
++ ((  TASKS < TPN  ))
++ export TPN
++ NODES=7
++ ((  NODES * TPN < TASKS  ))
++ NODES=8
++ export NODES
++ UFS_TASKS=316
++ TASKS=320
++ export TASKS
++ PPN=39
++ ((  UFS_TASKS - ( PPN * NODES ) > 0  ))
++ PPN=40
++ export PPN
++ export UFS_TASKS
++ [[ true != true ]]
++ export NCPUS=40
++ NCPUS=40
++ [[ slurm = \p\b\s ]]
++ [[ slurm = \s\l\u\r\m ]]
++ [[ -e /work/noaa/epic/jongkim/UFS-RT/orion/refactor/merge/ufs-weather-model/tests-dev/fv3_conf/fv3_slurm.IN_orion ]]
++ atparse
++ local __text
++ local __before
++ local __after
++ local __during
++ local __set_x=:
++ local __set_u=:
++ local __set_e=:
++ local __abort_on_undefined=NO
++ [[ -o xtrace ]]
++ __set_x='set -x'
++ [[ -o errexit ]]
++ __set_e='set -e'
++ [[ -o nounset ]]
++ __set_u='set -u'
++ __abort_on_undefined=YES
++ set +eux
++ eval 'set -u'
+++ set -u
++ eval 'set -e'
+++ set -e
++ [[ NO == WHEN_COPYING ]]
++ export OMP_ENV=
++ OMP_ENV=
++ [[ slurm = \n\o\n\e ]]
++ [[ true = \f\a\l\s\e ]]
++ chmod u+x job_card
++ redirect_out_err ./job_card
++ set -e -o pipefail
++ tee out
++ ./job_card
++ tee err
+++ date +%s
++ echo -n ' 1760648147,'
++ set +x
+-------------------------------------------------------------------------------
+The following dependent module(s) are not currently loaded: zstd/1.5.6 (required by: c-blosc/1.21.5, netcdf-c/4.9.2)
+-------------------------------------------------------------------------------
+
+Currently Loaded Modules:
+  1) intel-oneapi-compilers/2024.2.1  31) esmf/8.8.0
+  2) stack-oneapi/2024.2.1            32) fms/2024.02
+  3) intel-oneapi-runtime/2024.2.1    33) bacio/2.4.1
+  4) intel-oneapi-mpi/2021.13.1       34) crtm-fix/2.4.0.1_emc
+  5) stack-intel-oneapi-mpi/2021.13   35) git-lfs/3.1.2
+  6) glibc/2.34                       36) crtm/2.4.0.1
+  7) nghttp2/1.63.0                   37) g2/3.5.1
+  8) openssl/3.0.1                    38) g2tmpl/1.13.0
+  9) curl/8.10.1                      39) ip/5.1.0
+ 10) cmake/3.27.9                     40) sp/2.5.0
+ 11) libjpeg/2.1.0                    41) w3emc/2.10.0
+ 12) jasper/2.0.32                    42) gftl/1.14.0
+ 13) libpng/1.6.37                    43) gftl-shared/1.9.0
+ 14) snappy/1.2.1                     44) fargparse/1.8.0
+ 15) c-blosc/1.21.5                   45) yafyaml/1.4.0
+ 16) netcdf-c/4.9.2                   46) pflogger/1.15.0
+ 17) netcdf-fortran/4.6.1             47) udunits/2.2.28
+ 18) parallel-netcdf/1.12.3           48) mapl/2.53.4-esmf-8.8.0
+ 19) parallelio/2.6.2                 49) scotch/7.0.4
+ 20) gettext/0.21                     50) ufs_common
+ 21) sqlite/3.46.0                    51) zlib/1.2.13
+ 22) util-linux-uuid/2.40.2           52) hdf5/1.14.3
+ 23) python/3.11.7                    53) nccmp/1.9.0.1
+ 24) python-venv/1.0                  54) bzip2/1.0.8
+ 25) py-mpi4py/4.0.1                  55) libiconv/1.16
+ 26) openblas/0.3.24                  56) pigz/2.7
+ 27) py-numpy/1.26.4                  57) xz/5.2.7
+ 28) py-pip/23.1.2                    58) zstd/1.5.2
+ 29) libyaml/0.2.5                    59) tar/1.34
+ 30) py-pyyaml/6.0.2                  60) modules.fv3
+
+ 
+
++ ulimit -s unlimited
+++ date
++ echo 'Model started:  ' Thu Oct 16 03:55:50 PM CDT 2025
+Model started:   Thu Oct 16 03:55:50 PM CDT 2025
++ export OMP_STACKSIZE=512M
++ OMP_STACKSIZE=512M
++ export KMP_AFFINITY=scatter
++ KMP_AFFINITY=scatter
++ export OMP_NUM_THREADS=1
++ OMP_NUM_THREADS=1
++ export ESMF_RUNTIME_PROFILE=ON
++ ESMF_RUNTIME_PROFILE=ON
++ export ESMF_RUNTIME_PROFILE_OUTPUT=SUMMARY
++ ESMF_RUNTIME_PROFILE_OUTPUT=SUMMARY
++ export FI_MLX_INJECT_LIMIT=0
++ FI_MLX_INJECT_LIMIT=0
++ sync
++ sleep 1
++ '[' NO = WHEN_RUNNING ']'
++ srun --label -n 320 ./fv3.exe
+  0: 
+  0: 
+  0: * . * . * . * . * . * . * . * . * . * . * . * . * . * . * . * . * . * . * . * . 
+  0:      PROGRAM ufs-weather-model HAS BEGUN. COMPILED       0.00     ORG: np23
+  0:      STARTING DATE-TIME  OCT 16,2025  15:55:55.336  289  THU   2460965
+  0: 
+  0: 
+  0: Compiler version: Intel(R) Fortran Intel(R) 64 Compiler Classic for applications running on Intel(R) 64, Version 2021.13.1 Build 20240703_000000
+  0: 
+  0: MPI Library: Intel(R) MPI Library 2021.13 for Linux* OS
+  0: 
+  0: MPI Version: 3.1
+  0: 
+  0: 
+  0:      ENDING DATE-TIME    OCT 16,2025  15:56:33.852  289  THU   2460965
+  0:      PROGRAM ufs       HAS ENDED.
+  0: * . * . * . * . * . * . * . * . * . * . * . * . * . * . * . * . * . * . * . * . 
+  0: *****************RESOURCE STATISTICS*******************************
+  0: The total amount of wall time                        = 38.515850
+  0: The total amount of time in user mode                = 39.272632
+  0: The total amount of time in sys mode                 = 0.433114
+  0: The maximum resident set size (KB)                   = 315852
+  0: Number of page faults without I/O activity           = 43821
+  0: Number of page faults with I/O activity              = 3912
+  0: Number of times filesystem performed INPUT           = 2704
+  0: Number of times filesystem performed OUTPUT          = 1168
+  0: Number of Voluntary Context Switches                 = 3110
+  0: Number of InVoluntary Context Switches               = 402
+  0: *****************END OF RESOURCE STATISTICS*************************
+  0: 
+++ date
++ echo 'Model ended:    ' Thu Oct 16 03:56:34 PM CDT 2025
+Model ended:     Thu Oct 16 03:56:34 PM CDT 2025
+++ date +%s
++ echo -n ' 1760648194,'
++ skip_check_results=false
++ [[ false == false ]]
++ test_status=PASS
++ echo
++ echo 'baseline dir = /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/develop-20251007/datm_cdeps_lnd_era5_intel'
++ echo 'working dir  = /work/noaa/stmp/jongkim/stmp/jongkim/FV3_RT/rt_1396202/datm_cdeps_lnd_era5_intel'
++ echo 'Checking test datm_cdeps_lnd_era5_intel results ....'
++ echo
+
++ echo 'baseline dir = /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/develop-20251007/datm_cdeps_lnd_era5_intel'
+baseline dir = /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/develop-20251007/datm_cdeps_lnd_era5_intel
++ echo 'working dir  = /work/noaa/stmp/jongkim/stmp/jongkim/FV3_RT/rt_1396202/datm_cdeps_lnd_era5_intel'
+working dir  = /work/noaa/stmp/jongkim/stmp/jongkim/FV3_RT/rt_1396202/datm_cdeps_lnd_era5_intel
++ echo 'Checking test datm_cdeps_lnd_era5_intel results ....'
+Checking test datm_cdeps_lnd_era5_intel results ....
++ [[ false = false ]]
++ for i in ${LIST_FILES}
++ printf %s ' Comparing ufs.cpld.lnd.out.2011-01-01-43200.tile1.nc .....'
++ printf %s ' Comparing ufs.cpld.lnd.out.2011-01-01-43200.tile1.nc .....'
+ Comparing ufs.cpld.lnd.out.2011-01-01-43200.tile1.nc .....+ [[ ! -f /work/noaa/stmp/jongkim/stmp/jongkim/FV3_RT/rt_1396202/datm_cdeps_lnd_era5_intel/ufs.cpld.lnd.out.2011-01-01-43200.tile1.nc ]]
++ [[ ! -f /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/develop-20251007/datm_cdeps_lnd_era5_intel/ufs.cpld.lnd.out.2011-01-01-43200.tile1.nc ]]
++ [[ nc == nc* ]]
++ [[  orion hercules hera ursa wcoss2 acorn derecho gaeac5 gaeac6 jet s4 noaacloud frontera  =~ orion ]]
++ printf 'USING NCCMP..'
++ printf 'USING NCCMP..'
+USING NCCMP..+ nccmp_args=(-d -S -q -f -B --Attribute=checksum --warn=format)
++ [[ false == false ]]
++ nccmp_args+=("-g")
++ [[ -n '' ]]
++ [[ -n '' ]]
++ nccmp -d -S -q -f -B --Attribute=checksum --warn=format -g /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/develop-20251007/datm_cdeps_lnd_era5_intel/ufs.cpld.lnd.out.2011-01-01-43200.tile1.nc /work/noaa/stmp/jongkim/stmp/jongkim/FV3_RT/rt_1396202/datm_cdeps_lnd_era5_intel/ufs.cpld.lnd.out.2011-01-01-43200.tile1.nc
++ d=0
++ [[ 0 -ne 0 ]]
++ [[ 0 -ne 0 ]]
++ echo ....OK
++ echo ....OK
+....OK
++ for i in ${LIST_FILES}
++ printf %s ' Comparing ufs.cpld.lnd.out.2011-01-01-43200.tile2.nc .....'
++ printf %s ' Comparing ufs.cpld.lnd.out.2011-01-01-43200.tile2.nc .....'
+ Comparing ufs.cpld.lnd.out.2011-01-01-43200.tile2.nc .....+ [[ ! -f /work/noaa/stmp/jongkim/stmp/jongkim/FV3_RT/rt_1396202/datm_cdeps_lnd_era5_intel/ufs.cpld.lnd.out.2011-01-01-43200.tile2.nc ]]
++ [[ ! -f /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/develop-20251007/datm_cdeps_lnd_era5_intel/ufs.cpld.lnd.out.2011-01-01-43200.tile2.nc ]]
++ [[ nc == nc* ]]
++ [[  orion hercules hera ursa wcoss2 acorn derecho gaeac5 gaeac6 jet s4 noaacloud frontera  =~ orion ]]
++ printf 'USING NCCMP..'
++ printf 'USING NCCMP..'
+USING NCCMP..+ nccmp_args=(-d -S -q -f -B --Attribute=checksum --warn=format)
++ [[ false == false ]]
++ nccmp_args+=("-g")
++ [[ -n '' ]]
++ [[ -n '' ]]
++ nccmp -d -S -q -f -B --Attribute=checksum --warn=format -g /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/develop-20251007/datm_cdeps_lnd_era5_intel/ufs.cpld.lnd.out.2011-01-01-43200.tile2.nc /work/noaa/stmp/jongkim/stmp/jongkim/FV3_RT/rt_1396202/datm_cdeps_lnd_era5_intel/ufs.cpld.lnd.out.2011-01-01-43200.tile2.nc
++ d=0
++ [[ 0 -ne 0 ]]
++ [[ 0 -ne 0 ]]
++ echo ....OK
++ echo ....OK
+....OK
++ for i in ${LIST_FILES}
++ printf %s ' Comparing ufs.cpld.lnd.out.2011-01-01-43200.tile3.nc .....'
++ printf %s ' Comparing ufs.cpld.lnd.out.2011-01-01-43200.tile3.nc .....'
+ Comparing ufs.cpld.lnd.out.2011-01-01-43200.tile3.nc .....+ [[ ! -f /work/noaa/stmp/jongkim/stmp/jongkim/FV3_RT/rt_1396202/datm_cdeps_lnd_era5_intel/ufs.cpld.lnd.out.2011-01-01-43200.tile3.nc ]]
++ [[ ! -f /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/develop-20251007/datm_cdeps_lnd_era5_intel/ufs.cpld.lnd.out.2011-01-01-43200.tile3.nc ]]
++ [[ nc == nc* ]]
++ [[  orion hercules hera ursa wcoss2 acorn derecho gaeac5 gaeac6 jet s4 noaacloud frontera  =~ orion ]]
++ printf 'USING NCCMP..'
++ printf 'USING NCCMP..'
+USING NCCMP..+ nccmp_args=(-d -S -q -f -B --Attribute=checksum --warn=format)
++ [[ false == false ]]
++ nccmp_args+=("-g")
++ [[ -n '' ]]
++ [[ -n '' ]]
++ nccmp -d -S -q -f -B --Attribute=checksum --warn=format -g /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/develop-20251007/datm_cdeps_lnd_era5_intel/ufs.cpld.lnd.out.2011-01-01-43200.tile3.nc /work/noaa/stmp/jongkim/stmp/jongkim/FV3_RT/rt_1396202/datm_cdeps_lnd_era5_intel/ufs.cpld.lnd.out.2011-01-01-43200.tile3.nc
++ d=0
++ [[ 0 -ne 0 ]]
++ [[ 0 -ne 0 ]]
++ echo ....OK
++ echo ....OK
+....OK
++ for i in ${LIST_FILES}
++ printf %s ' Comparing ufs.cpld.lnd.out.2011-01-01-43200.tile4.nc .....'
++ printf %s ' Comparing ufs.cpld.lnd.out.2011-01-01-43200.tile4.nc .....'
+ Comparing ufs.cpld.lnd.out.2011-01-01-43200.tile4.nc .....+ [[ ! -f /work/noaa/stmp/jongkim/stmp/jongkim/FV3_RT/rt_1396202/datm_cdeps_lnd_era5_intel/ufs.cpld.lnd.out.2011-01-01-43200.tile4.nc ]]
++ [[ ! -f /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/develop-20251007/datm_cdeps_lnd_era5_intel/ufs.cpld.lnd.out.2011-01-01-43200.tile4.nc ]]
++ [[ nc == nc* ]]
++ [[  orion hercules hera ursa wcoss2 acorn derecho gaeac5 gaeac6 jet s4 noaacloud frontera  =~ orion ]]
++ printf 'USING NCCMP..'
++ printf 'USING NCCMP..'
+USING NCCMP..+ nccmp_args=(-d -S -q -f -B --Attribute=checksum --warn=format)
++ [[ false == false ]]
++ nccmp_args+=("-g")
++ [[ -n '' ]]
++ [[ -n '' ]]
++ nccmp -d -S -q -f -B --Attribute=checksum --warn=format -g /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/develop-20251007/datm_cdeps_lnd_era5_intel/ufs.cpld.lnd.out.2011-01-01-43200.tile4.nc /work/noaa/stmp/jongkim/stmp/jongkim/FV3_RT/rt_1396202/datm_cdeps_lnd_era5_intel/ufs.cpld.lnd.out.2011-01-01-43200.tile4.nc
++ d=0
++ [[ 0 -ne 0 ]]
++ [[ 0 -ne 0 ]]
++ echo ....OK
++ echo ....OK
+....OK
++ for i in ${LIST_FILES}
++ printf %s ' Comparing ufs.cpld.lnd.out.2011-01-01-43200.tile5.nc .....'
++ printf %s ' Comparing ufs.cpld.lnd.out.2011-01-01-43200.tile5.nc .....'
+ Comparing ufs.cpld.lnd.out.2011-01-01-43200.tile5.nc .....+ [[ ! -f /work/noaa/stmp/jongkim/stmp/jongkim/FV3_RT/rt_1396202/datm_cdeps_lnd_era5_intel/ufs.cpld.lnd.out.2011-01-01-43200.tile5.nc ]]
++ [[ ! -f /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/develop-20251007/datm_cdeps_lnd_era5_intel/ufs.cpld.lnd.out.2011-01-01-43200.tile5.nc ]]
++ [[ nc == nc* ]]
++ [[  orion hercules hera ursa wcoss2 acorn derecho gaeac5 gaeac6 jet s4 noaacloud frontera  =~ orion ]]
++ printf 'USING NCCMP..'
++ printf 'USING NCCMP..'
+USING NCCMP..+ nccmp_args=(-d -S -q -f -B --Attribute=checksum --warn=format)
++ [[ false == false ]]
++ nccmp_args+=("-g")
++ [[ -n '' ]]
++ [[ -n '' ]]
++ nccmp -d -S -q -f -B --Attribute=checksum --warn=format -g /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/develop-20251007/datm_cdeps_lnd_era5_intel/ufs.cpld.lnd.out.2011-01-01-43200.tile5.nc /work/noaa/stmp/jongkim/stmp/jongkim/FV3_RT/rt_1396202/datm_cdeps_lnd_era5_intel/ufs.cpld.lnd.out.2011-01-01-43200.tile5.nc
++ d=0
++ [[ 0 -ne 0 ]]
++ [[ 0 -ne 0 ]]
++ echo ....OK
++ echo ....OK
+....OK
++ for i in ${LIST_FILES}
++ printf %s ' Comparing ufs.cpld.lnd.out.2011-01-01-43200.tile6.nc .....'
++ printf %s ' Comparing ufs.cpld.lnd.out.2011-01-01-43200.tile6.nc .....'
+ Comparing ufs.cpld.lnd.out.2011-01-01-43200.tile6.nc .....+ [[ ! -f /work/noaa/stmp/jongkim/stmp/jongkim/FV3_RT/rt_1396202/datm_cdeps_lnd_era5_intel/ufs.cpld.lnd.out.2011-01-01-43200.tile6.nc ]]
++ [[ ! -f /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/develop-20251007/datm_cdeps_lnd_era5_intel/ufs.cpld.lnd.out.2011-01-01-43200.tile6.nc ]]
++ [[ nc == nc* ]]
++ [[  orion hercules hera ursa wcoss2 acorn derecho gaeac5 gaeac6 jet s4 noaacloud frontera  =~ orion ]]
++ printf 'USING NCCMP..'
++ printf 'USING NCCMP..'
+USING NCCMP..+ nccmp_args=(-d -S -q -f -B --Attribute=checksum --warn=format)
++ [[ false == false ]]
++ nccmp_args+=("-g")
++ [[ -n '' ]]
++ [[ -n '' ]]
++ nccmp -d -S -q -f -B --Attribute=checksum --warn=format -g /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/develop-20251007/datm_cdeps_lnd_era5_intel/ufs.cpld.lnd.out.2011-01-01-43200.tile6.nc /work/noaa/stmp/jongkim/stmp/jongkim/FV3_RT/rt_1396202/datm_cdeps_lnd_era5_intel/ufs.cpld.lnd.out.2011-01-01-43200.tile6.nc
++ d=0
++ [[ 0 -ne 0 ]]
++ [[ 0 -ne 0 ]]
++ echo ....OK
++ echo ....OK
+....OK
++ echo
++ grep 'The total amount of wall time' /work/noaa/stmp/jongkim/stmp/jongkim/FV3_RT/rt_1396202/datm_cdeps_lnd_era5_intel/out
++ grep 'The maximum resident set size' /work/noaa/stmp/jongkim/stmp/jongkim/FV3_RT/rt_1396202/datm_cdeps_lnd_era5_intel/out
++ echo
++ echo 'Test datm_cdeps_lnd_era5_intel PASS'
++ echo
++ echo 'Test datm_cdeps_lnd_era5_intel PASS'
+Test datm_cdeps_lnd_era5_intel PASS
++ echo
+
++ [[ PASS = \F\A\I\L ]]
++ [[ slurm != \n\o\n\e ]]
++ cat /work/noaa/stmp/jongkim/stmp/jongkim/FV3_RT/rt_1396202/datm_cdeps_lnd_era5_intel/job_timestamp.txt
+++ date +%s
++ date_s=1760648196
++ echo ' 1760648196, 8'
++ delete_rundir=false
++ [[ false = true ]]
++ elapsed=65
++ echo 'run_test.sh: Test datm_cdeps_lnd_era5_intel Completed.'
+run_test.sh: Test datm_cdeps_lnd_era5_intel Completed.
++ echo 'run_test.sh: Test datm_cdeps_lnd_era5_intel Elapsed time 65 seconds.'
+run_test.sh: Test datm_cdeps_lnd_era5_intel Elapsed time 65 seconds.
++ '[' 0 -eq 0 ']'

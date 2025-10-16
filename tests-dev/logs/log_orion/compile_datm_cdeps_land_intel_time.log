@@ -1,0 +1,1 @@
+Compile datm_cdeps_land_intel elapsed time 85 seconds. -DAPP=LND -DMPI=ON -DCMAKE_BUILD_TYPE=Release

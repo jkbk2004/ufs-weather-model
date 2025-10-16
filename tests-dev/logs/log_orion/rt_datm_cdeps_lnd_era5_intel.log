@@ -1,0 +1,16 @@
+
+baseline dir = /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/develop-20251007/datm_cdeps_lnd_era5_intel
+working dir  = /work/noaa/stmp/jongkim/stmp/jongkim/FV3_RT/rt_1396202/datm_cdeps_lnd_era5_intel
+Checking test datm_cdeps_lnd_era5_intel results ....
+ Comparing ufs.cpld.lnd.out.2011-01-01-43200.tile1.nc .....USING NCCMP......OK
+ Comparing ufs.cpld.lnd.out.2011-01-01-43200.tile2.nc .....USING NCCMP......OK
+ Comparing ufs.cpld.lnd.out.2011-01-01-43200.tile3.nc .....USING NCCMP......OK
+ Comparing ufs.cpld.lnd.out.2011-01-01-43200.tile4.nc .....USING NCCMP......OK
+ Comparing ufs.cpld.lnd.out.2011-01-01-43200.tile5.nc .....USING NCCMP......OK
+ Comparing ufs.cpld.lnd.out.2011-01-01-43200.tile6.nc .....USING NCCMP......OK
+
+  0: The total amount of wall time                        = 38.515850
+  0: The maximum resident set size (KB)                   = 315852
+
+Test datm_cdeps_lnd_era5_intel PASS
+

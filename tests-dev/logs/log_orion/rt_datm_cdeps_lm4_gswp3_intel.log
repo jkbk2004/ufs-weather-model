@@ -1,0 +1,59 @@
+
+baseline dir = /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/develop-20251007/datm_cdeps_lm4_gswp3_intel
+working dir  = /work/noaa/stmp/jongkim/stmp/jongkim/FV3_RT/rt_1396202/datm_cdeps_lm4_gswp3_intel
+Checking test datm_cdeps_lm4_gswp3_intel results ....
+ Comparing RESTART/cana.res.tile1.nc .....USING NCCMP......OK
+ Comparing RESTART/cana.res.tile2.nc .....USING NCCMP......OK
+ Comparing RESTART/cana.res.tile3.nc .....USING NCCMP......OK
+ Comparing RESTART/cana.res.tile4.nc .....USING NCCMP......OK
+ Comparing RESTART/cana.res.tile5.nc .....USING NCCMP......OK
+ Comparing RESTART/cana.res.tile6.nc .....USING NCCMP......OK
+ Comparing RESTART/glac.res.tile1.nc .....USING NCCMP......OK
+ Comparing RESTART/glac.res.tile2.nc .....USING NCCMP......OK
+ Comparing RESTART/glac.res.tile3.nc .....USING NCCMP......OK
+ Comparing RESTART/glac.res.tile4.nc .....USING NCCMP......OK
+ Comparing RESTART/glac.res.tile5.nc .....USING NCCMP......OK
+ Comparing RESTART/glac.res.tile6.nc .....USING NCCMP......OK
+ Comparing RESTART/lake.res.tile1.nc .....USING NCCMP......OK
+ Comparing RESTART/lake.res.tile2.nc .....USING NCCMP......OK
+ Comparing RESTART/lake.res.tile3.nc .....USING NCCMP......OK
+ Comparing RESTART/lake.res.tile4.nc .....USING NCCMP......OK
+ Comparing RESTART/lake.res.tile5.nc .....USING NCCMP......OK
+ Comparing RESTART/lake.res.tile6.nc .....USING NCCMP......OK
+ Comparing RESTART/land.res.tile1.nc .....USING NCCMP......OK
+ Comparing RESTART/land.res.tile2.nc .....USING NCCMP......OK
+ Comparing RESTART/land.res.tile3.nc .....USING NCCMP......OK
+ Comparing RESTART/land.res.tile4.nc .....USING NCCMP......OK
+ Comparing RESTART/land.res.tile5.nc .....USING NCCMP......OK
+ Comparing RESTART/land.res.tile6.nc .....USING NCCMP......OK
+ Comparing RESTART/landuse.res .....USING CMP......OK
+ Comparing RESTART/snow.res.tile1.nc .....USING NCCMP......OK
+ Comparing RESTART/snow.res.tile2.nc .....USING NCCMP......OK
+ Comparing RESTART/snow.res.tile3.nc .....USING NCCMP......OK
+ Comparing RESTART/snow.res.tile4.nc .....USING NCCMP......OK
+ Comparing RESTART/snow.res.tile5.nc .....USING NCCMP......OK
+ Comparing RESTART/snow.res.tile6.nc .....USING NCCMP......OK
+ Comparing RESTART/soil.res.tile1.nc .....USING NCCMP......OK
+ Comparing RESTART/soil.res.tile2.nc .....USING NCCMP......OK
+ Comparing RESTART/soil.res.tile3.nc .....USING NCCMP......OK
+ Comparing RESTART/soil.res.tile4.nc .....USING NCCMP......OK
+ Comparing RESTART/soil.res.tile5.nc .....USING NCCMP......OK
+ Comparing RESTART/soil.res.tile6.nc .....USING NCCMP......OK
+ Comparing RESTART/vegn1.res.tile1.nc .....USING NCCMP......OK
+ Comparing RESTART/vegn1.res.tile2.nc .....USING NCCMP......OK
+ Comparing RESTART/vegn1.res.tile3.nc .....USING NCCMP......OK
+ Comparing RESTART/vegn1.res.tile4.nc .....USING NCCMP......OK
+ Comparing RESTART/vegn1.res.tile5.nc .....USING NCCMP......OK
+ Comparing RESTART/vegn1.res.tile6.nc .....USING NCCMP......OK
+ Comparing RESTART/vegn2.res.tile1.nc .....USING NCCMP......OK
+ Comparing RESTART/vegn2.res.tile2.nc .....USING NCCMP......OK
+ Comparing RESTART/vegn2.res.tile3.nc .....USING NCCMP......OK
+ Comparing RESTART/vegn2.res.tile4.nc .....USING NCCMP......OK
+ Comparing RESTART/vegn2.res.tile5.nc .....USING NCCMP......OK
+ Comparing RESTART/vegn2.res.tile6.nc .....USING NCCMP......OK
+
+ 0: The total amount of wall time                        = 39.570250
+ 0: The maximum resident set size (KB)                   = 568832
+
+Test datm_cdeps_lm4_gswp3_intel PASS
+

@@ -1,0 +1,37 @@
+2025-10-16 15:51:49 -0500 :: orion-login-3.hpc.msstate.edu :: Submitting compile_datm_cdeps_land_intel
+2025-10-16 15:51:49 -0500 :: orion-login-3.hpc.msstate.edu :: Submitting compile_datm_cdeps_lm4_intel
+2025-10-16 15:51:49 -0500 :: orion-login-3.hpc.msstate.edu :: Submission status of compile_datm_cdeps_land_intel is pending at druby://130.18.14.113:39015
+2025-10-16 15:51:49 -0500 :: orion-login-3.hpc.msstate.edu :: Submission status of compile_datm_cdeps_lm4_intel is pending at druby://130.18.14.113:39015
+2025-10-16 15:52:52 -0500 :: orion-login-3.hpc.msstate.edu :: Submission status of previously pending compile_datm_cdeps_land_intel is success, jobid=21126537
+2025-10-16 15:52:54 -0500 :: orion-login-3.hpc.msstate.edu :: Submission status of previously pending compile_datm_cdeps_lm4_intel is success, jobid=21126538
+2025-10-16 15:52:55 -0500 :: orion-login-3.hpc.msstate.edu :: Task compile_datm_cdeps_land_intel, jobid=21126537, in state RUNNING (RUNNING)
+2025-10-16 15:52:55 -0500 :: orion-login-3.hpc.msstate.edu :: Task compile_datm_cdeps_lm4_intel, jobid=21126538, in state RUNNING (RUNNING)
+2025-10-16 15:54:00 -0500 :: orion-login-3.hpc.msstate.edu :: Task compile_datm_cdeps_land_intel, jobid=21126537, in state SUCCEEDED (COMPLETED), ran for 85.0 seconds, exit status=0, try=1 (of 3)
+2025-10-16 15:54:00 -0500 :: orion-login-3.hpc.msstate.edu :: Task compile_datm_cdeps_lm4_intel, jobid=21126538, in state SUCCEEDED (COMPLETED), ran for 99.0 seconds, exit status=0, try=1 (of 3)
+2025-10-16 15:54:00 -0500 :: orion-login-3.hpc.msstate.edu :: Submitting datm_cdeps_lnd_gswp3_intel
+2025-10-16 15:54:00 -0500 :: orion-login-3.hpc.msstate.edu :: Submitting datm_cdeps_lnd_era5_intel
+2025-10-16 15:54:00 -0500 :: orion-login-3.hpc.msstate.edu :: Submitting datm_cdeps_lm4_gswp3_intel
+2025-10-16 15:54:00 -0500 :: orion-login-3.hpc.msstate.edu :: Submission of datm_cdeps_lnd_gswp3_intel succeeded, jobid=21126539
+2025-10-16 15:54:00 -0500 :: orion-login-3.hpc.msstate.edu :: Submission of datm_cdeps_lnd_era5_intel succeeded, jobid=21126540
+2025-10-16 15:54:00 -0500 :: orion-login-3.hpc.msstate.edu :: Submission of datm_cdeps_lm4_gswp3_intel succeeded, jobid=21126541
+2025-10-16 15:55:04 -0500 :: orion-login-3.hpc.msstate.edu :: Task datm_cdeps_lnd_gswp3_intel, jobid=21126539, in state RUNNING (RUNNING)
+2025-10-16 15:55:04 -0500 :: orion-login-3.hpc.msstate.edu :: Task datm_cdeps_lnd_era5_intel, jobid=21126540, in state QUEUED (PENDING)
+2025-10-16 15:55:04 -0500 :: orion-login-3.hpc.msstate.edu :: Task datm_cdeps_lm4_gswp3_intel, jobid=21126541, in state RUNNING (RUNNING)
+2025-10-16 15:56:07 -0500 :: orion-login-3.hpc.msstate.edu :: Task datm_cdeps_lnd_gswp3_intel, jobid=21126539, in state SUCCEEDED (COMPLETED), ran for 99.0 seconds, exit status=0, try=1 (of 3)
+2025-10-16 15:56:07 -0500 :: orion-login-3.hpc.msstate.edu :: Task datm_cdeps_lnd_era5_intel, jobid=21126540, in state RUNNING (RUNNING)
+2025-10-16 15:56:07 -0500 :: orion-login-3.hpc.msstate.edu :: Task datm_cdeps_lm4_gswp3_intel, jobid=21126541, in state SUCCEEDED (COMPLETED), ran for 68.0 seconds, exit status=0, try=1 (of 3)
+2025-10-16 15:56:07 -0500 :: orion-login-3.hpc.msstate.edu :: Submitting datm_cdeps_lm4_gswp3_rst_intel
+2025-10-16 15:56:07 -0500 :: orion-login-3.hpc.msstate.edu :: Submission status of datm_cdeps_lm4_gswp3_rst_intel is pending at druby://130.18.14.113:41835
+2025-10-16 15:57:10 -0500 :: orion-login-3.hpc.msstate.edu :: Submission status of previously pending datm_cdeps_lm4_gswp3_rst_intel is success, jobid=21126550
+2025-10-16 15:57:10 -0500 :: orion-login-3.hpc.msstate.edu :: Task datm_cdeps_lnd_era5_intel, jobid=21126540, in state SUCCEEDED (COMPLETED), ran for 66.0 seconds, exit status=0, try=1 (of 3)
+2025-10-16 15:57:10 -0500 :: orion-login-3.hpc.msstate.edu :: Task datm_cdeps_lm4_gswp3_rst_intel, jobid=21126550, in state SUCCEEDED (COMPLETED), ran for 41.0 seconds, exit status=0, try=1 (of 3)
+2025-10-16 15:57:10 -0500 :: orion-login-3.hpc.msstate.edu :: Submitting datm_cdeps_lnd_era5_rst_intel
+2025-10-16 15:57:10 -0500 :: orion-login-3.hpc.msstate.edu :: Submission status of datm_cdeps_lnd_era5_rst_intel is pending at druby://130.18.14.113:41963
+2025-10-16 15:58:14 -0500 :: orion-login-3.hpc.msstate.edu :: Submission status of previously pending datm_cdeps_lnd_era5_rst_intel is success, jobid=21126588
+2025-10-16 15:58:14 -0500 :: orion-login-3.hpc.msstate.edu :: Task datm_cdeps_lnd_era5_rst_intel, jobid=21126588, in state QUEUED (PENDING)
+2025-10-16 15:59:17 -0500 :: orion-login-3.hpc.msstate.edu :: Task datm_cdeps_lnd_era5_rst_intel, jobid=21126588, in state QUEUED (PENDING)
+2025-10-16 16:00:21 -0500 :: orion-login-3.hpc.msstate.edu :: Task datm_cdeps_lnd_era5_rst_intel, jobid=21126588, in state QUEUED (PENDING)
+2025-10-16 16:01:24 -0500 :: orion-login-3.hpc.msstate.edu :: Task datm_cdeps_lnd_era5_rst_intel, jobid=21126588, in state QUEUED (PENDING)
+2025-10-16 16:02:28 -0500 :: orion-login-3.hpc.msstate.edu :: Task datm_cdeps_lnd_era5_rst_intel, jobid=21126588, in state RUNNING (RUNNING)
+2025-10-16 16:03:31 -0500 :: orion-login-3.hpc.msstate.edu :: Task datm_cdeps_lnd_era5_rst_intel, jobid=21126588, in state SUCCEEDED (COMPLETED), ran for 46.0 seconds, exit status=0, try=1 (of 3)
+2025-10-16 16:03:31 -0500 :: orion-login-3.hpc.msstate.edu :: This cycle is complete: Success

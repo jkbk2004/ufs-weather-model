@@ -1,0 +1,1 @@
+Compile datm_cdeps_lm4_intel elapsed time 99 seconds. -DAPP=LND-LM4 -DMPI=ON -DCMAKE_BUILD_TYPE=Release
