@@ -7,7 +7,7 @@ from xmlbuilder_rocoto import RocotoXMLBuilder
 from setup_experiment_env import setup_experiment_env
 from util.shared_utils import extract_bl_date, enrich_test_context
 
-def main():
+def build_rocoto_workflow():
     parser = argparse.ArgumentParser()
     parser.add_argument("--machine", required=True)
     parser.add_argument("--manifest", required=True)
@@ -70,6 +70,12 @@ def main():
         extra_vars=extra_vars
     )
 
+    # Save enriched test config to current directory
+    enriched_yaml_path = Path(f"enriched_tests_{args.machine}.yaml")
+    with open(enriched_yaml_path, "w") as f:
+        yaml.dump(tests, f, sort_keys=False, default_flow_style=False)
+    print(f"[DEBUG] Enriched test config saved to: {enriched_yaml_path.resolve()}")
+
     # Generate Rocoto XML
     builder = RocotoXMLBuilder(
         machine=args.machine,
@@ -97,4 +103,4 @@ def main():
     builder.write()
 
 if __name__ == "__main__":
-    main()
+    build_rocoto_workflow()
