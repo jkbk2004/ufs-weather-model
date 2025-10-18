@@ -2,7 +2,7 @@ import argparse
 import yaml
 import os
 from pathlib import Path
-from test_loader import TestLoader
+from util.test_loader import TestLoader
 from xmlbuilder_rocoto import RocotoXMLBuilder
 from setup_experiment_env import setup_experiment_env
 from util.shared_utils import extract_bl_date, enrich_test_context
