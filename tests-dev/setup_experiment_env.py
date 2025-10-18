@@ -1,7 +1,7 @@
 import os
 import shutil
 from pathlib import Path
-from shared_utils import extract_bl_date
+from util.shared_utils import extract_bl_date
 
 def rrmdir(path):
     shutil.rmtree(path)

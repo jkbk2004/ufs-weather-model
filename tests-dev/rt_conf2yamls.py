@@ -9,6 +9,16 @@ from datetime import datetime
 from pathlib import Path
 from collections import defaultdict
 
+from util.yaml_tools import inject_resources_into_yaml, cleanup_all_yaml_keys
+
+def inject_and_cleanup_yaml():
+    platforms = ["orion", "hera", "ursa", "derecho", "hercules", "gaeac6"]
+    cleanup_all_yaml_keys()
+    yaml_dir = Path("tests-yamls/configs/by_app")
+    for yaml_file in yaml_dir.glob("*.yaml"):
+        print(f"[INJECT] Processing {yaml_file.name}")
+        inject_resources_into_yaml(yaml_file, platforms)
+
 def extract_dapp(option_str):
     match = re.search(r"-DAPP=([A-Za-z0-9_-]+)", option_str)
     return match.group(1).lower() if match else "unknown"
@@ -397,3 +407,4 @@ def rrmdir(path):
 if __name__ == "__main__":
     create_yaml()
     split_by_app()
+    inject_and_cleanup_yaml()
