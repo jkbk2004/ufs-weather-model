@@ -53,7 +53,7 @@ def setup_experiment_env(tests, machine_config, machine_id, pathrt, bl_date, ext
             "INPUTDATA_ROOT_BMIC": machine_config.get("INPUTDATA_ROOT_BMIC", "/inputdata_bmic"),
             "INPUTDATA_LM4": f"{machine_config.get('INPUTDATA_ROOT', '/inputdata')}/LM4_input_data",
             "PATHRT": pathrt,
-            "PATHTR": pathrt,
+            "PATHTR": str(Path(pathrt).parent),
             "NEW_BASELINE": new_baseline,
             "CREATE_BASELINE": extra_vars.get("CREATE_BASELINE", "false"),
             "RT_SUFFIX": extra_vars.get("RT_SUFFIX", ""),
