@@ -28,7 +28,7 @@ def write_env_file(env_path, env_vars):
 def setup_experiment_env(tests, machine_config, machine_id, pathrt, bl_date, extra_vars):
     rundir_root = f"{machine_config['RUNDIR_PATH']}/rt_{os.getpid()}"
     rtpwd = f"{machine_config['BASELINE_PATH']}/NEMSfv3gfs/develop-{bl_date}"
-    new_baseline = f"{machine_config['BASELINE_PATH']}/new_baseline_{bl_date}"
+    new_baseline = f"{machine_config['RUNDIR_PATH']}/FV3_RT/REGRESSION_TEST}"
     log_dir = prepare_runtime_environment(pathrt, rundir_root, machine_id)
 
     for i, test in enumerate(tests):
