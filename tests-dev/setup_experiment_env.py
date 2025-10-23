@@ -64,7 +64,7 @@ def setup_experiment_env(tests, machine_config, machine_id, pathrt, bl_date, ext
             "PARTITION": extra_vars.get("PARTITION", "compute"),
             "ROCOTO": extra_vars.get("ROCOTO", "true"),
             "ECFLOW": extra_vars.get("ECFLOW", "false"),
-            "REGRESSIONTEST_LOG": f"{pathrt}/regression.log",
+            "REGRESSIONTEST_LOG": f"{pathrt}/logs/log_{machine_id}/RegressionTests_{machine_id}.log",
             "LOG_DIR": log_dir,
             "DEP_RUN": test.get("dependency", ""),
             "skip_check_results": extra_vars.get("skip_check_results", "false"),
