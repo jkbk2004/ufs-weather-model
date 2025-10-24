@@ -42,7 +42,8 @@ def build_rocoto_workflow():
     pathrt = os.getcwd()
     pathtro = str(Path(pathrt).parent)
     log = f"{pathrt}/logs/log_{args.machine}"
-    rundir_root = f"{machine_config['RUNDIR_PATH']}/rt_{os.getpid()}"
+    pid = os.environ.get("EXP_PID", str(os.getpid()))
+    rundir_root = f"{machine_config['RUNDIR_PATH']}/rt_{pid}"
     rtpwd = f"{machine_config['BASELINE_PATH']}/NEMSfv3gfs/develop-{bl_date}"
 
     # Setup environment
