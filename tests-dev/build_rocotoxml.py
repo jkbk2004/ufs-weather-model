@@ -17,7 +17,7 @@ def build_rocoto_workflow():
     args = parser.parse_args()
 
     # Load machine config
-    config_path = Path("machine_config") / f"baseline_{args.machine}.yaml"
+    config_path = Path("machine_config") / f"runtime_config_{args.machine}.yaml"
     with open(config_path) as f:
         machine_config = yaml.safe_load(f)
 

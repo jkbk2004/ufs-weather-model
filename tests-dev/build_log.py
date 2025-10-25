@@ -78,7 +78,7 @@ def generate_log(args):
     repo_root = Path(__file__).resolve().parent.parent
     ufshash = get_git_hash(repo_root)
     submodule_hashes = get_git_submodule_hashes(repo_root)
-    baseline_dir = resolve_baseline_dir("machine_config/baseline_orion.yaml", "bl_date.conf")
+    baseline_dir = resolve_baseline_dir("machine_config/runtime_config_orion.yaml", "bl_date.conf")
     start_time, end_time = get_log_time_range(args.log_dir)
     log_map = collect_log_files(args.log_dir)
 
