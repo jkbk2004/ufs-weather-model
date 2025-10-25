@@ -24,28 +24,38 @@ class TestLoader:
                 if app_prefix not in self.selected_apps:
                     continue
 
-                build_info = block.get("build", {})
-                compiler = build_info.get("compiler", "intel")
-                option = build_info.get("option", "")
-                turnoff = build_info.get("turnoff", [])
+                self._append_build_and_tests(build_id, block)
 
+    def load_user_yaml(self, yaml_path):
+        with open(yaml_path) as f:
+            user_yaml = yaml.safe_load(f)
+
+        for build_id, block in user_yaml.items():
+            self._append_build_and_tests(build_id, block)
+
+    def _append_build_and_tests(self, build_id, block):
+        build_info = block.get("build", {})
+        compiler = build_info.get("compiler", "intel")
+        option = build_info.get("option", "")
+        turnoff = build_info.get("turnoff", [])
+
+        self.tests.append({
+            "id": build_id,
+            "compiler": compiler,
+            "option": option,
+            "type": "compile"
+        })
+
+        for test_entry in block.get("tests", []):
+            for test_id, test_meta in test_entry.items():
                 self.tests.append({
-                    "id": build_id,
+                    "id": test_id,
                     "compiler": compiler,
-                    "option": option,
-                    "type": "compile"
+                    "parent": build_id,
+                    "dependency": test_meta.get("dependency"),
+                    "resources": test_meta.get("resources", {}),
+                    "type": "run"
                 })
-
-                for test_entry in block.get("tests", []):
-                    for test_id, test_meta in test_entry.items():
-                        self.tests.append({
-                            "id": test_id,
-                            "compiler": compiler,
-                            "parent": build_id,
-                            "dependency": test_meta.get("dependency"),
-                            "resources": test_meta.get("resources", {}),
-                            "type": "run"
-                        })
 
     def get_tests(self):
         return self.tests
