@@ -8,6 +8,11 @@ python build_rocotoxml.py  --machine orion --output my_workflow.xml --user-yaml 
 
 python build_rocotoxml.py --machine orion --test-list tests/test_changes.list --yamls_dir tests-dev/by_app --output my_workflow.xml
 
+python build_rocotoxml.py --machine orion --yamls_dir tests-dev/by_app --single-test "datm_cdeps_lnd_gswp3 intel" --output my_workflow.xml
+
+--dry-run: Skip environment setup and XML writing
+--force: Include tests even if turned off for the machine
+
 python build_log.py --yaml enriched_tests_orion.yaml --log-dir logs/log_orion --machine orion --comparison /work/noaa/stmp/jongkim/FV3_RT/rt_$EXP_PID --output logs/RegressionTests_orion.log --options "-a epic -r"
 
 python tests-dev/runners/workflow_runner.py --backend rocoto --file my_experiments.xml

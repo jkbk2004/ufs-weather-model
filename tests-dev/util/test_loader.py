@@ -33,25 +33,8 @@ class TestLoader:
             self._append_build_and_tests(build_id, block)
 
     def load_from_test_list(self, test_list_path):
-        # Build a lookup from all available YAMLs
-        test_lookup = {}
-        for yaml_file in Path(self.yamls_dir).glob("*.yaml"):
-            with open(yaml_file) as f:
-                app_yaml = yaml.safe_load(f)
-            for build_id, block in app_yaml.items():
-                compiler = block.get("build", {}).get("compiler", "intel")
-                for test_entry in block.get("tests", []):
-                    for test_id, test_meta in test_entry.items():
-                        test_lookup[test_id] = {
-                            "id": test_id,
-                            "compiler": compiler,
-                            "parent": build_id,
-                            "dependency": test_meta.get("dependency"),
-                            "resources": test_meta.get("resources", {}),
-                            "type": "run"
-                        }
+        test_lookup = self._build_test_lookup()
 
-        # Read test list and filter
         with open(test_list_path) as f:
             for line in f:
                 parts = line.strip().split()
@@ -63,6 +46,34 @@ class TestLoader:
                     test["compiler"] = compiler_override
                     self.tests.append(test)
 
+    def load_single_test(self, test_id, compiler_override):
+        test_lookup = self._build_test_lookup()
+        if test_id in test_lookup:
+            test = test_lookup[test_id]
+            test["compiler"] = compiler_override
+            self.tests.append(test)
+        else:
+            raise ValueError(f"[ERROR] Test case '{test_id}' not found in {self.yamls_dir}")
+
+    def _build_test_lookup(self):
+        test_lookup = {}
+        for yaml_file in Path(self.yamls_dir).glob("*.yaml"):
+            with open(yaml_file) as f:
+                app_yaml = yaml.safe_load(f)
+            for build_id, block in app_yaml.items():
+                for test_entry in block.get("tests", []):
+                    for test_id, test_meta in test_entry.items():
+                        test_lookup[test_id] = {
+                            "id": test_id,
+                            "compiler": block.get("build", {}).get("compiler", "intel"),
+                            "parent": build_id,
+                            "dependency": test_meta.get("dependency"),
+                            "resources": test_meta.get("resources", {}),
+                            "turnoff": test_meta.get("turnoff", []),
+                            "type": "run"
+                        }
+        return test_lookup
+
     def _append_build_and_tests(self, build_id, block):
         build_info = block.get("build", {})
         compiler = build_info.get("compiler", "intel")
@@ -73,6 +84,7 @@ class TestLoader:
             "id": build_id,
             "compiler": compiler,
             "option": option,
+            "turnoff": turnoff,
             "type": "compile"
         })
 
@@ -84,6 +96,7 @@ class TestLoader:
                     "parent": build_id,
                     "dependency": test_meta.get("dependency"),
                     "resources": test_meta.get("resources", {}),
+                    "turnoff": test_meta.get("turnoff", []),
                     "type": "run"
                 })
 

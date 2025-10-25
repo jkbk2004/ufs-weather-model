@@ -5,17 +5,34 @@ from pathlib import Path
 from util.test_loader import TestLoader
 from xmlbuilder_rocoto import RocotoXMLBuilder
 from setup_experiment_env import setup_experiment_env
-from util.shared_utils import extract_bl_date, enrich_test_context
+from util.shared_utils import extract_bl_date
+
+def enrich_test_context(tests, machine_config, machine_id, force=False):
+    filtered = []
+    for test in tests:
+        turnoff = test.get("turnoff", [])
+        if machine_id in turnoff:
+            if force:
+                print(f"[FORCE] Including test '{test['id']}' despite turnoff for {machine_id}")
+                filtered.append(test)
+            else:
+                print(f"[INFO] Skipping test '{test['id']}' — turned off for {machine_id}")
+        else:
+            filtered.append(test)
+    tests.clear()
+    tests.extend(filtered)
 
 def build_rocoto_workflow():
     parser = argparse.ArgumentParser()
     parser.add_argument("--machine", required=True)
-    parser.add_argument("--manifest", help="Path to app_manifest.yaml (ignored if --user-yaml or --test-list is used)")
-    parser.add_argument("--yamls_dir", help="Directory of by_app YAMLs (required for --manifest or --test-list)")
+    parser.add_argument("--manifest", help="Path to app_manifest.yaml (ignored if other modes are used)")
+    parser.add_argument("--yamls_dir", help="Directory of by_app YAMLs (required for manifest, test-list, or single-test)")
     parser.add_argument("--user-yaml", help="Path to user-supplied test YAML", default=None)
     parser.add_argument("--test-list", help="Path to test_changes.list", default=None)
+    parser.add_argument("--single-test", help='Single test case in format "test_id compiler"', default=None)
     parser.add_argument("--output", required=True)
     parser.add_argument("--dry-run", action="store_true")
+    parser.add_argument("--force", action="store_true", help="Force inclusion of tests even if turned off for the machine")
     args = parser.parse_args()
 
     # Load machine config
@@ -35,7 +52,13 @@ def build_rocoto_workflow():
 
     # Load and enrich tests
     loader = TestLoader(args.manifest, args.yamls_dir, bl_date)
-    if args.test_list:
+    if args.single_test:
+        parts = args.single_test.strip().split()
+        if len(parts) != 2:
+            raise ValueError("[ERROR] --single-test must be in format 'test_id compiler'")
+        test_id, compiler = parts
+        loader.load_single_test(test_id, compiler)
+    elif args.test_list:
         loader.load_from_test_list(args.test_list)
     elif args.user_yaml:
         loader.load_user_yaml(args.user_yaml)
@@ -44,7 +67,7 @@ def build_rocoto_workflow():
         loader.attach_yaml_configs()
 
     tests = loader.get_tests()
-    enrich_test_context(tests, machine_config, args.machine)
+    enrich_test_context(tests, machine_config, args.machine, force=args.force)
 
     # Prepare paths
     pathrt = os.getcwd()
