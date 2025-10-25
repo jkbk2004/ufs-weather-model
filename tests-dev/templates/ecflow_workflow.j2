@@ -1,0 +1,17 @@
+suite {{ suite_name }}
+{% for group in task_groups %}
+  family {{ group.app }}
+  {% for task in group.tasks %}
+    task {{ task.name }}
+      {% for var, val in task.variables.items() %}
+      edit {{ var }} "{{ val }}"
+      {% endfor %}
+      edit SCRIPT "{{ task.command }}"
+      {% for dep in task.depends %}
+      trigger {{ dep }} == complete
+      {% endfor %}
+    endtask
+  {% endfor %}
+  endfamily
+{% endfor %}
+endsuite
