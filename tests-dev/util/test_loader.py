@@ -23,7 +23,6 @@ class TestLoader:
                 app_prefix = build_id.split("_")[0]
                 if app_prefix not in self.selected_apps:
                     continue
-
                 self._append_build_and_tests(build_id, block)
 
     def load_user_yaml(self, yaml_path):
@@ -32,6 +31,37 @@ class TestLoader:
 
         for build_id, block in user_yaml.items():
             self._append_build_and_tests(build_id, block)
+
+    def load_from_test_list(self, test_list_path):
+        # Build a lookup from all available YAMLs
+        test_lookup = {}
+        for yaml_file in Path(self.yamls_dir).glob("*.yaml"):
+            with open(yaml_file) as f:
+                app_yaml = yaml.safe_load(f)
+            for build_id, block in app_yaml.items():
+                compiler = block.get("build", {}).get("compiler", "intel")
+                for test_entry in block.get("tests", []):
+                    for test_id, test_meta in test_entry.items():
+                        test_lookup[test_id] = {
+                            "id": test_id,
+                            "compiler": compiler,
+                            "parent": build_id,
+                            "dependency": test_meta.get("dependency"),
+                            "resources": test_meta.get("resources", {}),
+                            "type": "run"
+                        }
+
+        # Read test list and filter
+        with open(test_list_path) as f:
+            for line in f:
+                parts = line.strip().split()
+                if len(parts) != 2:
+                    continue
+                test_id, compiler_override = parts
+                if test_id in test_lookup:
+                    test = test_lookup[test_id]
+                    test["compiler"] = compiler_override
+                    self.tests.append(test)
 
     def _append_build_and_tests(self, build_id, block):
         build_info = block.get("build", {})

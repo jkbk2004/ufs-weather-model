@@ -10,10 +10,11 @@ from util.shared_utils import extract_bl_date, enrich_test_context
 def build_rocoto_workflow():
     parser = argparse.ArgumentParser()
     parser.add_argument("--machine", required=True)
-    parser.add_argument("--manifest", help="Path to app_manifest.yaml (ignored if --user-yaml is used)")
-    parser.add_argument("--output", required=True)
-    parser.add_argument("--yamls_dir", help="Directory of by_app YAMLs (ignored if --user-yaml is used)")
+    parser.add_argument("--manifest", help="Path to app_manifest.yaml (ignored if --user-yaml or --test-list is used)")
+    parser.add_argument("--yamls_dir", help="Directory of by_app YAMLs (required for --manifest or --test-list)")
     parser.add_argument("--user-yaml", help="Path to user-supplied test YAML", default=None)
+    parser.add_argument("--test-list", help="Path to test_changes.list", default=None)
+    parser.add_argument("--output", required=True)
     parser.add_argument("--dry-run", action="store_true")
     args = parser.parse_args()
 
@@ -34,7 +35,9 @@ def build_rocoto_workflow():
 
     # Load and enrich tests
     loader = TestLoader(args.manifest, args.yamls_dir, bl_date)
-    if args.user_yaml:
+    if args.test_list:
+        loader.load_from_test_list(args.test_list)
+    elif args.user_yaml:
         loader.load_user_yaml(args.user_yaml)
     else:
         loader.load_manifest()
