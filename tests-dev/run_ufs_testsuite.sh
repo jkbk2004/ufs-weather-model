@@ -1,6 +1,32 @@
 #!/bin/bash
 set -eux
 
+# === Help message ===
+if [[ "$1" == "-h" || "$1" == "--help" ]]; then
+  echo "Usage: ./run_ufs_testsuite.sh [options]"
+  echo ""
+  echo "Options:"
+  echo "  -s, --link-tests        One-time setup: copy test files from ../tests/ into current directory"
+  echo "  -a, --account <name>    Required HPC account name for job submission"
+  echo "  -r, --rocoto            Run workflow using Rocoto"
+  echo "  -e, --ecflow            Run workflow using ecFlow"
+  echo "  -n, --single-test <id>  Run a single test by ID"
+  echo "  -l, --test-list <file>  Run tests listed in a file"
+  echo "  -b, --baseline-list <file>  Compare against baseline tests listed in a file"
+  echo "  -c, --create-baseline   Create baseline outputs"
+  echo "  -m, --compare-baseline  Compare outputs against baseline"
+  echo "  -o, --compile-only      Compile only, no test execution"
+  echo "  -d, --delete-rundir     Delete run directory after completion"
+  echo "  -k, --keep-rundir       Keep run directory after completion"
+  echo "  -w, --weekly            Run weekly test mode"
+  echo "      --force             Force overwrite of existing workflow XML"
+  echo "      --dry-run           Print commands without executing"
+  echo ""
+  echo "Example:"
+  echo "  ./run_ufs_testsuite.sh -s -a myaccount -r -l test_list.txt"
+  exit 0
+fi
+
 # === Check if -s was passed ===
 LINK_TESTS=false
 for arg in "$@"; do
