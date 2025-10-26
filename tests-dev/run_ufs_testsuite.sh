@@ -42,7 +42,8 @@ if $LINK_TESTS; then
     echo "[INFO] Copying test files from ../tests/ to current directory"
     cp -r ../tests/rt.conf .
     cp -r ../tests/bl_date.conf .
-    cp -r ../tests/param .
+    cp -r ../tests/fv3_conf .
+    cp -r ../tests/parm .
     cp -r ../tests/tests .
   else
     echo "[INFO] Test files already present — skipping copy"
