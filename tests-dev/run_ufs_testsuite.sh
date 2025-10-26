@@ -40,8 +40,8 @@ done
 if $LINK_TESTS; then
   if [[ ! -e "rt.sh" || ! -d "parm" || ! -d "scripts" ]]; then
     echo "[INFO] Copying test files from ../tests/ to current directory"
-    cp -r ../tests/rt.conf .
-    cp -r ../tests/bl_date.conf .
+    cp ../tests/rt.conf .
+    cp ../tests/bl_date.conf .
     cp -r ../tests/fv3_conf .
     cp -r ../tests/parm .
     cp -r ../tests/tests .
