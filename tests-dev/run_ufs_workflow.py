@@ -4,16 +4,30 @@ from runtime_manager import RuntimeManager
 
 def build_rocoto_xml(manager, machine, output, args):
     cmd = ["python3", "tests-dev/build_rocotoxml.py", "--machine", machine, "--output", output]
+
+    # Use user-provided yamls_dir if available, else default
+    yamls_dir = args.yamls_dir if args.yamls_dir else "tests-dev/by_app"
+
     if args.single_test:
-        cmd += ["--single-test", args.single_test, "--yamls_dir", "tests-dev/by_app"]
+        cmd += ["--single-test", args.single_test, "--yamls_dir", yamls_dir]
     elif args.test_list:
-        cmd += ["--test-list", args.test_list, "--yamls_dir", "tests-dev/by_app"]
+        cmd += ["--test-list", args.test_list, "--yamls_dir", yamls_dir]
     elif args.baseline_list:
-        cmd += ["--test-list", args.baseline_list, "--yamls_dir", "tests-dev/by_app"]
+        cmd += ["--test-list", args.baseline_list, "--yamls_dir", yamls_dir]
+    elif args.manifest:
+        cmd += ["--manifest", args.manifest, "--yamls_dir", yamls_dir]
     else:
-        cmd += ["--manifest", "tests-dev/app_manifest.yaml", "--yamls_dir", "tests-dev/by_app"]
-    if args.force: cmd.append("--force")
-    if args.dry_run: cmd.append("--dry-run")
+        cmd += ["--manifest", "tests-dev/app_manifest.yaml", "--yamls_dir", yamls_dir]
+
+    if args.user_yaml:
+        cmd += ["--user-yaml", args.user_yaml]
+
+    if args.force:
+        cmd.append("--force")
+    if args.dry_run:
+        cmd.append("--dry-run")
+
+    print(f"[INFO] Using yamls_dir: {yamls_dir}")
     manager.run_subprocess(cmd)
 
 def run_rocoto(manager, xml, db):
@@ -38,6 +52,12 @@ def main():
     parser.add_argument("-r", "--rocoto", action="store_true")
     parser.add_argument("-w", "--weekly", action="store_true")
     parser.add_argument("-s", "--link-tests", action="store_true")
+    parser.add_argument("-f", "--manifest", default="tests-dev/app_manifest.yaml",
+                        help="Path to user-provided manifest file (default: tests-dev/app_manifest.yaml)")
+    parser.add_argument("-y", "--yamls_dir",
+                        help="Directory of by_app YAMLs (required for manifest, test-list, or single-test)")
+    parser.add_argument("-u", "--user-yaml", default=None,
+                        help="Path to user-supplied test YAML")    
     parser.add_argument("--force", action="store_true")
     parser.add_argument("--dry-run", action="store_true")
     args = parser.parse_args()
