@@ -39,6 +39,8 @@ for arg in "$@"; do
   fi
 done
 
+export EXP_PID=$$
+
 # === Link test files only if -s is passed AND not already linked ===
 if $LINK_TESTS; then
   if [[ ! -e "rt.sh" || ! -d "parm" || ! -d "scripts" ]]; then
