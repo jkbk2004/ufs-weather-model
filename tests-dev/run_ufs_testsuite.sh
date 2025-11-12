@@ -50,6 +50,7 @@ if $LINK_TESTS; then
     cp -r ../tests/fv3_conf .
     cp -r ../tests/parm .
     cp -r ../tests/tests .
+    cp ../test/*.sh .
   else
     echo "[INFO] Test files already present — skipping copy"
   fi
@@ -57,7 +58,7 @@ fi
 
 # === Detect machine ===
 if [[ -z "${MACHINE_ID:-}" ]]; then
-  source default_machine.sh
+  source detect_machine.sh
 fi
 
 # === Load modules from runtime_config_${MACHINE_ID}.yaml ===
