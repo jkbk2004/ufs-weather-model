@@ -32,6 +32,8 @@ class TestLoader:
 
     def load_from_test_list(self, test_list_path):
         test_lookup = self._build_test_lookup()
+        loaded_ids = set()
+
         with open(test_list_path) as f:
             for line in f:
                 parts = line.strip().split()
@@ -42,6 +44,12 @@ class TestLoader:
                     test = test_lookup[test_id]
                     test["compiler"] = compiler_override
                     self.tests.append(test)
+                    loaded_ids.add(test_id)
+
+                    parent_id = test.get("parent")
+                    if parent_id and parent_id not in loaded_ids:
+                        self.load_compile_task(parent_id, compiler_override)
+                        loaded_ids.add(parent_id)
 
     def load_single_test(self, test_id, compiler_override, strict=False):
         test_lookup = self._build_test_lookup()

@@ -97,6 +97,19 @@ def build_rocotoxml():
             loader.load_single_test(test_id, compiler, strict=True)
             loaded_ids.add(test_id)
 
+        # Load upstream dependency
+        dependency_id = run_test.get("dependency")
+        if dependency_id and dependency_id not in loaded_ids:
+            dep_test = test_lookup.get(dependency_id)
+            if dep_test:
+                dep_parent = dep_test.get("parent")
+                if dep_parent and dep_parent not in loaded_ids:
+                    loader.load_compile_task(dep_parent, compiler)
+                    loaded_ids.add(dep_parent)
+                loader.load_single_test(dependency_id, compiler, strict=True)
+                loaded_ids.add(dependency_id)
+
+        # Load downstream dependents
         for other_id, other_test in test_lookup.items():
             if other_test.get("dependency") == test_id and other_id not in loaded_ids:
                 loader.load_single_test(other_id, compiler, strict=True)
@@ -111,7 +124,7 @@ def build_rocotoxml():
     enrich_test_context(tests, machine_config, args.machine, force=args.force)
     enrich_for_rocoto(tests, machine_config, args.machine)
 
-    # ✅ Deduplicate by (id, type)
+    # Deduplicate by (id, type)
     unique = {}
     for t in tests:
         key = (t["id"], t["type"])
