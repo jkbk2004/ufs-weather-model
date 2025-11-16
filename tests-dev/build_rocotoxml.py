@@ -48,7 +48,11 @@ def enrich_for_rocoto(tests, machine_config, machine_id):
 
 def build_rocotoxml():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--machine", required=True)
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--machine",
+        help="Target machine (can also be set via MACHINE_ID env var)"
+    )    
     parser.add_argument("--manifest", help="Path to app_manifest.yaml")
     parser.add_argument("--yamls_dir", help="Directory of by_app YAMLs")
     parser.add_argument("--user-yaml", help="Path to enriched test YAML")
@@ -59,6 +63,11 @@ def build_rocotoxml():
     parser.add_argument("--force", action="store_true")
     args = parser.parse_args()
 
+    # Resolve machine ID: CLI arg wins, else env var
+    machine_id = args.machine or os.environ.get("MACHINE_ID")
+    if not machine_id:
+        parser.error("You must specify --machine or set MACHINE_ID environment variable")    
+    
     config_path = Path("machine_config") / f"runtime_config_{args.machine}.yaml"
     with open(config_path) as f:
         machine_config = yaml.safe_load(f)
