@@ -50,7 +50,7 @@ if $LINK_TESTS; then
     cp -r ../tests/fv3_conf .
     cp -r ../tests/parm .
     cp -r ../tests/tests .
-    cp ../test/*.sh .
+    cp ../tests/*.sh .
   else
     echo "[INFO] Test files already present — skipping copy"
   fi
