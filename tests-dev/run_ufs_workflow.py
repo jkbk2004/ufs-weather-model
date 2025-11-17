@@ -3,10 +3,10 @@ import argparse, os, sys
 from runtime_manager import RuntimeManager
 
 def build_rocoto_xml(manager, machine, output, args):
-    cmd = ["python3", "tests-dev/build_rocotoxml.py", "--machine", machine, "--output", output]
+    cmd = ["python3", "build_rocotoxml.py", "--machine", machine, "--output", output]
 
     # Use user-provided yamls_dir if available, else default
-    yamls_dir = args.yamls_dir if args.yamls_dir else "tests-dev/by_app"
+    yamls_dir = args.yamls_dir if args.yamls_dir else "tests-yamls/configs/by_app"
 
     if args.single_test:
         cmd += ["--single-test", args.single_test, "--yamls_dir", yamls_dir]
@@ -17,7 +17,7 @@ def build_rocoto_xml(manager, machine, output, args):
     elif args.manifest:
         cmd += ["--manifest", args.manifest, "--yamls_dir", yamls_dir]
     else:
-        cmd += ["--manifest", "tests-dev/app_manifest.yaml", "--yamls_dir", yamls_dir]
+        cmd += ["--manifest", "app_manifest.yaml", "--yamls_dir", yamls_dir]
 
     if args.user_yaml:
         cmd += ["--user-yaml", args.user_yaml]
@@ -52,8 +52,8 @@ def main():
     parser.add_argument("-r", "--rocoto", action="store_true")
     parser.add_argument("-w", "--weekly", action="store_true")
     parser.add_argument("-s", "--link-tests", action="store_true")
-    parser.add_argument("-f", "--manifest", default="tests-dev/app_manifest.yaml",
-                        help="Path to user-provided manifest file (default: tests-dev/app_manifest.yaml)")
+    parser.add_argument("-f", "--manifest", default="app_manifest.yaml",
+                        help="Path to user-provided manifest file (default: app_manifest.yaml)")
     parser.add_argument("-y", "--yamls_dir",
                         help="Directory of by_app YAMLs (required for manifest, test-list, or single-test)")
     parser.add_argument("-u", "--user-yaml", default=None,
