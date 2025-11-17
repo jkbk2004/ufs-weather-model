@@ -62,12 +62,32 @@ if [[ -z "${MACHINE_ID:-}" ]]; then
 fi
 
 # === Load modules from runtime_config_${MACHINE_ID}.yaml ===
-RUNTIME_YAML="machine_config/runtime_config_${MACHINE_ID}.yaml"
-MODULE_LINES=$(awk '/^MODULE_COMMANDS:/,/^[^ ]/' "$RUNTIME_YAML" | grep '^  - ' | sed 's/^  - //')
-while IFS= read -r line; do
-  [[ "$line" =~ ^# ]] && continue
-  eval "$line"
-done <<< "$MODULE_LINES"
+RUNTIME_CONFIG="machine_config/runtime_config_${MACHINE_ID}.yaml"
+
+if [ ! -f "$RUNTIME_CONFIG" ]; then
+  echo "Runtime config $RUNTIME_CONFIG not found"
+  exit 1
+fi
+
+# Extract MODULE_COMMANDS lines, strip leading "- " and whitespace
+module_cmds=$(awk '/^MODULE_COMMANDS:/ {flag=1; next} /^[A-Z_]+:/ {flag=0} flag && NF' "$RUNTIME_CONFIG" \
+              | sed -E 's/^[[:space:]]*-[[:space:]]*//')
+
+if [ -z "$module_cmds" ]; then
+  echo "No MODULE_COMMANDS found in $RUNTIME_CONFIG"
+  exit 1
+fi
+
+echo "Executing module commands from $RUNTIME_CONFIG..."
+while IFS= read -r cmd; do
+  [ -z "$cmd" ] && continue
+  echo " -> $cmd"
+  # If the line starts with "#", just echo it, don’t execute
+  if [[ "$cmd" =~ ^# ]]; then
+    continue
+  fi
+  $cmd
+done <<< "$module_cmds"
 
 # === Set Rocoto paths ===
 export ROCOTORUN=$(grep 'ROCOTORUN:' "$RUNTIME_YAML" | awk '{print $2}')
