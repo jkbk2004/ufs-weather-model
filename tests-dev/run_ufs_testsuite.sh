@@ -83,17 +83,18 @@ while IFS= read -r cmd; do
   [ -z "$cmd" ] && continue
   echo " -> $cmd"
   # If the line starts with "#", just echo it, don’t execute
-  if [[ "$cmd" =~ ^# ]]; then
-    continue
+  if [[ $cmd =~ ^# ]]; then
+      echo " -> $cmd"
+  else
+      eval "$cmd"
   fi
-  $cmd
 done <<< "$module_cmds"
 
 # === Set Rocoto paths ===
-export ROCOTORUN=$(grep 'ROCOTORUN:' "$RUNTIME_YAML" | awk '{print $2}')
-export ROCOTOSTAT=$(grep 'ROCOTOSTAT:' "$RUNTIME_YAML" | awk '{print $2}')
-export ROCOTOCOMPLETE=$(grep 'ROCOTOCOMPLETE:' "$RUNTIME_YAML" | awk '{print $2}')
-export ROCOTO_SCHEDULER=$(grep 'ROCOTO_SCHEDULER:' "$RUNTIME_YAML" | awk '{print $2}')
+export ROCOTORUN=$(grep 'ROCOTORUN:' "$RUNTIME_CONFIG" | awk '{print $2}')
+export ROCOTOSTAT=$(grep 'ROCOTOSTAT:' "$RUNTIME_CONFIG" | awk '{print $2}')
+export ROCOTOCOMPLETE=$(grep 'ROCOTOCOMPLETE:' "$RUNTIME_CONFIG" | awk '{print $2}')
+export ROCOTO_SCHEDULER=$(grep 'ROCOTO_SCHEDULER:' "$RUNTIME_CONFIG" | awk '{print $2}')
 export MACHINE_ID
 
 # === Run Python workflow ===
