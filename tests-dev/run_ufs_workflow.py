@@ -96,6 +96,8 @@ def main():
     rocoto_db = "rocoto_workflow.db"
 
     if args.rocoto:
+        build_rocoto_xml(manager, machine, rocoto_xml, args)
+        
         # --- Driver-level defaults set here ---
         rocoto_once = False              # always loop until completion
         rocoto_sleep = 60                # seconds between iterations
