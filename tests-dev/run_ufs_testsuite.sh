@@ -51,7 +51,6 @@ if $LINK_TESTS; then
     cp -r ../tests/parm .
     cp -r ../tests/tests .
     cp ../tests/*.sh .
-    cp ../tests/*.bash .
   else
     echo "[INFO] Test files already present — skipping copy"
   fi

@@ -30,10 +30,36 @@ def build_rocoto_xml(manager, machine, output, args):
     print(f"[INFO] Using yamls_dir: {yamls_dir}")
     manager.run_subprocess(cmd)
 
-def run_rocoto(manager, xml, db):
-    manager.run_subprocess([os.environ["ROCOTORUN"], "-w", xml, "-d", db])
-    manager.run_subprocess([os.environ["ROCOTOSTAT"], "-w", xml, "-d", db])
+def run_rocoto(manager, xml, db, once=False, sleep_interval=None, max_iterations=None):
+    """Drive Rocoto until workflow completion (or once if requested)."""
+    rocotorun = os.environ.get("ROCOTORUN", "rocotorun")
+    rocotostat = os.environ.get("ROCOTOSTAT", "rocotostat")
+    sleep_interval = sleep_interval or int(os.environ.get("ROCOTO_SLEEP", "60"))
 
+    iteration = 0
+    while True:
+        iteration += 1
+        print(f"[INFO] Iteration {iteration}: running {rocotorun}...")
+        manager.run_subprocess([rocotorun, "-w", xml, "-d", db])
+
+        print(f"[INFO] Checking status with {rocotostat}...")
+        status_output = manager.run_subprocess([rocotostat, "-w", xml, "-d", db])
+
+        if "Done" in status_output:
+            print("[INFO] Workflow completed successfully.")
+            break
+
+        if once:
+            print("[INFO] Single-run mode enabled. Exiting after one iteration.")
+            break
+
+        if max_iterations and iteration >= max_iterations:
+            print("[WARN] Reached max iterations without completion. Exiting.")
+            break
+
+        print(f"[INFO] Sleeping {sleep_interval} seconds before next iteration...")
+        time.sleep(sleep_interval)
+    
 def run_sequential(manager):
     manager.run_subprocess(["./rt.sh", "-e"])
 
@@ -70,8 +96,15 @@ def main():
     rocoto_db = "rocoto_workflow.db"
 
     if args.rocoto:
-        build_rocoto_xml(manager, machine, rocoto_xml, args)
-        run_rocoto(manager, rocoto_xml, rocoto_db)
+        # --- Driver-level defaults set here ---
+        rocoto_once = False              # always loop until completion
+        rocoto_sleep = 60                # seconds between iterations
+        rocoto_max_iter = None           # unlimited iterations
+        # --------------------------------------
+        run_rocoto(manager, rocoto_xml, rocoto_db,
+                   once=rocoto_once,
+                   sleep_interval=rocoto_sleep,
+                   max_iterations=rocoto_max_iter)
     else:
         run_sequential(manager)
 
