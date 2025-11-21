@@ -41,6 +41,7 @@ fi
 BUILD_NAME=fv3_${COMPILE_ID}
 
 PATHTR=${PATHTR:-$( cd "${MYDIR}/.." && pwd )}
+PATHRT=${PATHRT:-$(pwd)}
 BUILD_DIR=${BUILD_DIR:-$(pwd)/build_${BUILD_NAME}}
 
 # ----------------------------------------------------------------------
@@ -119,11 +120,11 @@ export CMAKE_FLAGS
 
 bash -x "${PATHTR}/build.sh"
 
-rsync --remove-source-files "${BUILD_DIR}/ufs_model" "${PATHTR}/tests/${BUILD_NAME}.exe"
+rsync --remove-source-files "${BUILD_DIR}/ufs_model" "${PATHRT}/${BUILD_NAME}.exe"
 if [[ ${MACHINE_ID} == linux ]]; then
-  cp "${PATHTR}/modulefiles/ufs_${MACHINE_ID}.${RT_COMPILER}" "${PATHTR}/tests/modules.${BUILD_NAME}"
+  cp "${PATHTR}/modulefiles/ufs_${MACHINE_ID}.${RT_COMPILER}" "${PATHRT}/modules.${BUILD_NAME}"
 else
-  cp "${PATHTR}/modulefiles/ufs_${MACHINE_ID}.${RT_COMPILER}.lua" "${PATHTR}/tests/modules.${BUILD_NAME}.lua"
+  cp "${PATHTR}/modulefiles/ufs_${MACHINE_ID}.${RT_COMPILER}.lua" "${PATHRT}/modules.${BUILD_NAME}.lua"
 fi
 
 [[ ${clean_after} == YES ]] && rm -rf "${BUILD_DIR}"
