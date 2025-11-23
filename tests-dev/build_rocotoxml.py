@@ -26,14 +26,21 @@ def enrich_for_rocoto(tests, machine_config, machine_id):
     for test in tests:
         if test["type"] == "compile":
             test["name"] = f"compile_{test['id']}"
-            test["command"] = f"&PATHRT;/run_compile.sh &PATHRT; &RUNDIR_ROOT; \"{test['option']}\" {test['id']} 2>&amp;1 | tee &LOG;/compile_{test['id']}.log"
+            test["command"] = (
+                f"&PATHRT;/run_compile.sh &PATHRT; &RUNDIR_ROOT; "
+                f"\"{test['option']}\" {test['id']} 2>&amp;1 | tee &LOG;/compile_{test['id']}.log"
+            )
             test["jobname"] = test["name"]
             test["nodes"] = "1:ppn=8"
             test["walltime"] = "01:00:00"
             test["join"] = f"&RUNDIR_ROOT;/compile_{test['id']}.log"
         elif test["type"] == "run":
             test["name"] = f"{test['id']}_{test['compiler']}"
-            test["command"] = f"bash -c 'set -xe -o pipefail ; &PATHRT;/run_test.sh &PATHRT; &RUNDIR_ROOT; {test['id']} {test['name']} {test['parent']} 2>&amp;1 | tee &LOG;/run_{test['name']}.log'"
+            test["command"] = (
+                f"bash -c 'set -xe -o pipefail ; &PATHRT;/run_test.sh "
+                f"&PATHRT; &RUNDIR_ROOT; {test['id']} {test['name']} {test['parent']} "
+                f"2>&amp;1 | tee &LOG;/run_{test['name']}.log'"
+            )
             test["jobname"] = test["name"]
             res = test["resources"].get(machine_id, {})
             ppn = res.get("ppn", 40)
@@ -48,11 +55,7 @@ def enrich_for_rocoto(tests, machine_config, machine_id):
 
 def build_rocotoxml():
     parser = argparse.ArgumentParser()
-    parser = argparse.ArgumentParser()
-    parser.add_argument(
-        "--machine",
-        help="Target machine (can also be set via MACHINE_ID env var)"
-    )    
+    parser.add_argument("--machine", help="Target machine (can also be set via MACHINE_ID env var)")
     parser.add_argument("--manifest", help="Path to app_manifest.yaml")
     parser.add_argument("--yamls_dir", help="Directory of by_app YAMLs")
     parser.add_argument("--user-yaml", help="Path to enriched test YAML")
@@ -61,13 +64,19 @@ def build_rocotoxml():
     parser.add_argument("--output", required=True)
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--force", action="store_true")
+    parser.add_argument("--create-baseline", action="store_true",
+                        help="Enable baseline creation setup (propagates to CREATE_BASELINE)")
     args = parser.parse_args()
 
     # Resolve machine ID: CLI arg wins, else env var
     machine_id = args.machine or os.environ.get("MACHINE_ID")
     if not machine_id:
-        parser.error("You must specify --machine or set MACHINE_ID environment variable")    
-    
+        parser.error("You must specify --machine or set MACHINE_ID environment variable")
+
+    # Export baseline creation flag
+    os.environ["CREATE_BASELINE"] = "true" if args.create_baseline else "false"
+    print(f"[DEBUG] CREATE_BASELINE={os.environ['CREATE_BASELINE']}")
+
     config_path = Path("machine_config") / f"runtime_config_{args.machine}.yaml"
     with open(config_path) as f:
         machine_config = yaml.safe_load(f)
@@ -89,24 +98,18 @@ def build_rocotoxml():
         if len(parts) != 2:
             raise ValueError("[ERROR] --single-test must be in format 'test_id compiler'")
         test_id, compiler = parts
-
         test_lookup = loader._build_test_lookup()
         if test_id not in test_lookup:
             raise ValueError(f"[ERROR] Test case '{test_id}' not found in {args.yamls_dir}")
-
         loaded_ids = set()
         run_test = test_lookup[test_id]
         parent_id = run_test.get("parent")
-
         if parent_id and parent_id not in loaded_ids:
             loader.load_compile_task(parent_id, compiler)
             loaded_ids.add(parent_id)
-
         if test_id not in loaded_ids:
             loader.load_single_test(test_id, compiler, strict=True)
             loaded_ids.add(test_id)
-
-        # Load upstream dependency
         dependency_id = run_test.get("dependency")
         if dependency_id and dependency_id not in loaded_ids:
             dep_test = test_lookup.get(dependency_id)
@@ -117,8 +120,6 @@ def build_rocotoxml():
                     loaded_ids.add(dep_parent)
                 loader.load_single_test(dependency_id, compiler, strict=True)
                 loaded_ids.add(dependency_id)
-
-        # Load downstream dependents
         for other_id, other_test in test_lookup.items():
             if other_test.get("dependency") == test_id and other_id not in loaded_ids:
                 loader.load_single_test(other_id, compiler, strict=True)
@@ -128,7 +129,6 @@ def build_rocotoxml():
     else:
         loader.load_manifest()
         loader.attach_yaml_configs()
-
     tests = loader.get_tests()
     enrich_test_context(tests, machine_config, args.machine, force=args.force)
     enrich_for_rocoto(tests, machine_config, args.machine)
@@ -141,6 +141,7 @@ def build_rocotoxml():
             unique[key] = t
     tests[:] = list(unique.values())
 
+    # Paths and runtime setup
     pathrt = os.getcwd()
     pathtro = str(Path(pathrt).parent)
     log = f"{pathrt}/logs/log_{args.machine}"
@@ -148,8 +149,9 @@ def build_rocotoxml():
     rundir_root = f"{machine_config['RUNDIR_PATH']}/rt_{pid}"
     rtpwd = f"{machine_config['BASELINE_PATH']}/NEMSfv3gfs/develop-{bl_date}"
 
+    # Unified extra_vars with CREATE_BASELINE
     extra_vars = {
-        "CREATE_BASELINE": "false",
+        "CREATE_BASELINE": os.environ["CREATE_BASELINE"],
         "RT_SUFFIX": "",
         "BL_SUFFIX": "",
         "SCHEDULER": machine_config.get("SCHEDULER", "slurm"),
@@ -163,6 +165,7 @@ def build_rocotoxml():
         "RTVERBOSE": "false"
     }
 
+    # Prepare experiment environment
     setup_experiment_env(
         tests=tests,
         machine_config=machine_config,
@@ -172,15 +175,17 @@ def build_rocotoxml():
         extra_vars=extra_vars
     )
 
+    # Save enriched test YAML
     enriched_yaml_path = Path(f"enriched_tests_{args.machine}.yaml")
     with open(enriched_yaml_path, "w") as f:
         yaml.dump(tests, f, sort_keys=False, default_flow_style=False)
     print(f"[DEBUG] Enriched test config saved to: {enriched_yaml_path.resolve()}")
 
+    # Print summary
     print(f"[DEBUG] Final test count: {len(tests)}")
     for t in tests:
         print(f"  - {t['type']:6} | {t['name']:35} | {t['nodes']:10} | {t['walltime']}")
-
+    # Instantiate RocotoXMLBuilder
     builder = RocotoXMLBuilder(
         machine=args.machine,
         machine_config=machine_config,
@@ -194,7 +199,7 @@ def build_rocotoxml():
             "INPUTDATA_ROOT",
             "INPUTDATA_ROOT_WW3",
             "INPUTDATA_ROOT_BMIC",
-            "INPUTDATA_ROOT_LM4"
+            "INPUTDATA_LM4"
         ],
         project=machine_config.get("ACCOUNT", "epic"),
         tests=tests,
@@ -203,6 +208,7 @@ def build_rocotoxml():
         output_path=args.output
     )
 
+    # Generate and write Rocoto XML
     builder.generate()
     builder.write()
 

@@ -29,4 +29,4 @@ BASELINE_PATH: /work/noaa/epic/UFS-WM_RT
 INPUTDATA_ROOT: /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507
 INPUTDATA_ROOT_WW3: /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/WW3_input_data_20250807
 INPUTDATA_ROOT_BMIC: /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/BM_IC-20220207
-INPUTDATA_ROOT_LM4: /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/LM4_input_data_20250807
+INPUTDATA_LM4: /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/LM4_input_data

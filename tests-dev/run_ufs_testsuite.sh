@@ -2,7 +2,7 @@
 set -eux
 
 # === Help message ===
-if [[ "$1" == "-h" || "$1" == "--help" ]]; then
+if [[ "${1:-}" == "-h" || "${1:-}" == "--help" ]]; then
   echo "Usage: ./run_ufs_testsuite.sh [options]"
   echo ""
   echo "Options:"
@@ -83,7 +83,6 @@ echo "Executing module commands from $RUNTIME_CONFIG..."
 while IFS= read -r cmd; do
   [ -z "$cmd" ] && continue
   echo " -> $cmd"
-  # If the line starts with "#", just echo it, don’t execute
   if [[ $cmd =~ ^# ]]; then
       echo " -> $cmd"
   else
@@ -97,6 +96,17 @@ export ROCOTOSTAT=$(grep 'ROCOTOSTAT:' "$RUNTIME_CONFIG" | awk '{print $2}')
 export ROCOTOCOMPLETE=$(grep 'ROCOTOCOMPLETE:' "$RUNTIME_CONFIG" | awk '{print $2}')
 export ROCOTO_SCHEDULER=$(grep 'ROCOTO_SCHEDULER:' "$RUNTIME_CONFIG" | awk '{print $2}')
 export MACHINE_ID
+
+# === Handle baseline creation flag ===
+CREATE_BASELINE="false"
+for arg in "$@"; do
+  if [[ "$arg" == "-c" || "$arg" == "--create-baseline" ]]; then
+    CREATE_BASELINE="true"
+    break
+  fi
+done
+export CREATE_BASELINE
+echo "[DEBUG] CREATE_BASELINE=${CREATE_BASELINE}"
 
 # === Run Python workflow ===
 python3 run_ufs_workflow.py "$@"

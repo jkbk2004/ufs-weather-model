@@ -32,6 +32,11 @@ def setup_experiment_env(tests, machine_config, machine_id, pathrt, bl_date, ext
     new_baseline = machine_config.get("NEW_BASELINE_PATH", f"{machine_config['RUNDIR_PATH']}/FV3_RT/REGRESSION_TEST")
     log_dir = prepare_runtime_environment(pathrt, rundir_root, machine_id)
 
+    # Export CREATE_BASELINE into the environment for downstream bash
+    create_baseline = extra_vars.get("CREATE_BASELINE", "false")
+    os.environ["CREATE_BASELINE"] = create_baseline
+    print(f"[DEBUG] CREATE_BASELINE={create_baseline}")
+
     for i, test in enumerate(tests):
         test_id = test["id"]
         test_type = test.get("type", "run")
@@ -60,7 +65,8 @@ def setup_experiment_env(tests, machine_config, machine_id, pathrt, bl_date, ext
                 "ECFLOW": extra_vars.get("ECFLOW", "false"),
                 "REGRESSIONTEST_LOG": f"{pathrt}/logs/log_{machine_id}/RegressionTests_{machine_id}.log",
                 "LOG_DIR": log_dir,
-                "RTVERBOSE": extra_vars.get("RTVERBOSE", "false")
+                "RTVERBOSE": extra_vars.get("RTVERBOSE", "false"),
+                "CREATE_BASELINE": create_baseline
             }
         else:
             env_vars = {
@@ -72,11 +78,11 @@ def setup_experiment_env(tests, machine_config, machine_id, pathrt, bl_date, ext
                 "INPUTDATA_ROOT": machine_config.get("INPUTDATA_ROOT", "/inputdata"),
                 "INPUTDATA_ROOT_WW3": machine_config.get("INPUTDATA_ROOT_WW3", "/inputdata_ww3"),
                 "INPUTDATA_ROOT_BMIC": machine_config.get("INPUTDATA_ROOT_BMIC", "/inputdata_bmic"),
-                "INPUTDATA_LM4": machine_config.get("INPUTDATA_ROOT_LM4", "/inputdata_lm4"),
+                "INPUTDATA_LM4": machine_config.get("INPUTDATA_LM4", "/inputdata_lm4"),
                 "PATHRT": pathrt,
                 "PATHTR": str(Path(pathrt).parent),
                 "NEW_BASELINE": new_baseline,
-                "CREATE_BASELINE": extra_vars.get("CREATE_BASELINE", "false"),
+                "CREATE_BASELINE": create_baseline,
                 "RT_SUFFIX": extra_vars.get("RT_SUFFIX", ""),
                 "BL_SUFFIX": extra_vars.get("BL_SUFFIX", ""),
                 "SCHEDULER": extra_vars.get("SCHEDULER", "slurm"),

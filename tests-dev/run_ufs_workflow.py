@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import argparse, os, sys
+import time
 from runtime_manager import RuntimeManager
 
 def build_rocoto_xml(manager, machine, output, args):
@@ -26,6 +27,8 @@ def build_rocoto_xml(manager, machine, output, args):
         cmd.append("--force")
     if args.dry_run:
         cmd.append("--dry-run")
+    if args.create_baseline:
+        cmd.append("--create-baseline")
 
     print(f"[INFO] Using yamls_dir: {yamls_dir}")
     manager.run_subprocess(cmd)
@@ -40,10 +43,26 @@ def run_rocoto(manager, xml, db, once=False, sleep_interval=None, max_iterations
     while True:
         iteration += 1
         print(f"[INFO] Iteration {iteration}: running {rocotorun}...")
-        manager.run_subprocess([rocotorun, "-w", xml, "-d", db])
+        run_proc = manager.run_subprocess(
+            [rocotorun, "-w", xml, "-d", db],
+            capture_output=True,
+            text=True
+        )
+        print("[DEBUG] rocotorun returncode:", getattr(run_proc, "returncode", None))
+        print("[DEBUG] rocotorun stdout:", getattr(run_proc, "stdout", None))
+        print("[DEBUG] rocotorun stderr:", getattr(run_proc, "stderr", None))
 
         print(f"[INFO] Checking status with {rocotostat}...")
-        status_output = manager.run_subprocess([rocotostat, "-w", xml, "-d", db])
+        status_proc = manager.run_subprocess(
+            [rocotostat, "-w", xml, "-d", db],
+            capture_output=True,
+            text=True
+        )
+        print("[DEBUG] rocotostat returncode:", getattr(status_proc, "returncode", None))
+        print("[DEBUG] rocotostat stdout:", getattr(status_proc, "stdout", None))
+        print("[DEBUG] rocotostat stderr:", getattr(status_proc, "stderr", None))
+
+        status_output = status_proc.stdout or ""
 
         if "Done" in status_output:
             print("[INFO] Workflow completed successfully.")
@@ -59,7 +78,7 @@ def run_rocoto(manager, xml, db, once=False, sleep_interval=None, max_iterations
 
         print(f"[INFO] Sleeping {sleep_interval} seconds before next iteration...")
         time.sleep(sleep_interval)
-    
+
 def run_sequential(manager):
     manager.run_subprocess(["./rt.sh", "-e"])
 
@@ -67,7 +86,8 @@ def main():
     parser = argparse.ArgumentParser(description="Unified UFS workflow runner")
     parser.add_argument("-a", "--account", required=True)
     parser.add_argument("-b", "--baseline-list")
-    parser.add_argument("-c", "--create-baseline", action="store_true")
+    parser.add_argument("-c", "--create-baseline", action="store_true",
+                        help="Enable baseline creation setup (propagates to CREATE_BASELINE)")
     parser.add_argument("-d", "--delete-rundir", action="store_true")
     parser.add_argument("-e", "--ecflow", action="store_true")
     parser.add_argument("-k", "--keep-rundir", action="store_true")
@@ -88,6 +108,15 @@ def main():
     parser.add_argument("--dry-run", action="store_true")
     args = parser.parse_args()
 
+    # === Baseline flag ===
+    os.environ["CREATE_BASELINE"] = "true" if args.create_baseline else "false"
+    print(f"[DEBUG] CREATE_BASELINE={os.environ['CREATE_BASELINE']}")
+
+    #jkim === Ensure INPUTDATA_ROOT_LM4 is set ===
+    #if "INPUTDATA_ROOT_LM4" not in os.environ and "INPUTDATA_ROOT" in os.environ:
+    #    os.environ["INPUTDATA_LM4"] = f"{os.environ['INPUTDATA_ROOT']}/LM4_input_data"
+    #print(f"[DEBUG] INPUTDATA_LM4={os.environ.get('INPUTDATA_ROOT_LM4', 'unset')}")
+
     machine = os.environ.get("MACHINE_ID", "orion")
     lockdir = os.path.join(os.getcwd(), "lock")
     manager = RuntimeManager(lockdir, rocoto=args.rocoto, ecflow=args.ecflow)
@@ -97,16 +126,8 @@ def main():
 
     if args.rocoto:
         build_rocoto_xml(manager, machine, rocoto_xml, args)
-        
-        # --- Driver-level defaults set here ---
-        rocoto_once = False              # always loop until completion
-        rocoto_sleep = 60                # seconds between iterations
-        rocoto_max_iter = None           # unlimited iterations
-        # --------------------------------------
-        run_rocoto(manager, rocoto_xml, rocoto_db,
-                   once=rocoto_once,
-                   sleep_interval=rocoto_sleep,
-                   max_iterations=rocoto_max_iter)
+        #run_rocoto(manager, rocoto_xml, rocoto_db,
+        #           once=False, sleep_interval=60, max_iterations=None)
     else:
         run_sequential(manager)
 
