@@ -6,7 +6,7 @@
   <!ENTITY RTPWD "{{ RTPWD }}">
   <!ENTITY RUNDIR_ROOT "{{ RUNDIR_ROOT }}">
   <!ENTITY NEW_BASELINE "{{ NEW_BASELINE }}">
-  {% for key, value in machine_config.items() if key.startswith("INPUTDATA_ROOT") %}
+  {% for key, value in machine_config.items() if key.startswith("INPUTDATA_") %}
   <!ENTITY {{ key }} "{{ value }}">
   {% endfor %}
 ]>
