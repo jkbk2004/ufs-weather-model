@@ -1,8 +1,17 @@
 #!/usr/bin/env python3
-import argparse, os, sys
-import time
-from runtime_manager import RuntimeManager
+"""
+Unified UFS workflow runner.
 
+- If --rocoto is given: build Rocoto XML (existing behavior).
+- Otherwise: run sequential mode using Python DAG executor.
+"""
+
+import argparse
+import os
+import sys
+import time
+
+from runtime_manager import RuntimeManager
 from util.test_loader import TestLoader
 from sequential_executor import run_sequential as run_sequential_executor
 
@@ -10,7 +19,6 @@ from sequential_executor import run_sequential as run_sequential_executor
 def build_rocoto_xml(manager, machine, output, args):
     cmd = ["python3", "build_rocotoxml.py", "--machine", machine, "--output", output]
 
-    # Use user-provided yamls_dir if available, else default
     yamls_dir = args.yamls_dir if args.yamls_dir else "tests-yamls/configs/by_app"
 
     if args.single_test:
@@ -96,7 +104,6 @@ def load_test_contexts(args, machine):
         yamls_dir=yamls_dir,
     )
 
-    # Manifest / test selection
     if args.single_test:
         loader.load_single_test(args.single_test, compiler_override=None, strict=False)
     elif args.test_list:
@@ -110,13 +117,11 @@ def load_test_contexts(args, machine):
         loader.load_manifest("app_manifest.yaml")
         loader.attach_yaml_configs()
 
-    # User YAML override
     if args.user_yaml:
         loader.load_user_yaml(args.user_yaml)
 
     tests = loader.get_tests()
 
-    # Convert list of test dicts into a dict keyed by id
     test_contexts = {}
     for t in tests:
         test_id = t.get("id")
@@ -129,7 +134,7 @@ def load_test_contexts(args, machine):
 
 def run_sequential(manager, args, machine):
     """
-    Phase 1 sequential mode:
+    Sequential mode:
     - load/enrich tests from YAMLs/manifest (same inputs as Rocoto)
     - build DAG
     - run tests sequentially via run_compile.sh / run_test.sh
@@ -171,9 +176,16 @@ def main():
     parser.add_argument("--dry-run", action="store_true")
     args = parser.parse_args()
 
-    # === Baseline flag ===
+    # Baseline flag
     os.environ["CREATE_BASELINE"] = "true" if args.create_baseline else "false"
     print(f"[DEBUG] CREATE_BASELINE={os.environ['CREATE_BASELINE']}")
+
+    # Optional compare-baseline flag (if used by scripts)
+    if args.compare_baseline:
+        os.environ["COMPARE_BASELINE"] = "true"
+    else:
+        os.environ.setdefault("COMPARE_BASELINE", "false")
+    print(f"[DEBUG] COMPARE_BASELINE={os.environ['COMPARE_BASELINE']}")
 
     machine = os.environ.get("MACHINE_ID", "orion")
     lockdir = os.path.join(os.getcwd(), "lock")
@@ -184,7 +196,7 @@ def main():
 
     if args.rocoto:
         build_rocoto_xml(manager, machine, rocoto_xml, args)
-        # You can re-enable this when you want to drive Rocoto from here:
+        # To drive Rocoto from here, uncomment:
         # run_rocoto(manager, rocoto_xml, rocoto_db,
         #            once=False, sleep_interval=60, max_iterations=None)
     else:

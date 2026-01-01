@@ -1,9 +1,8 @@
 """
 sequential_executor.py
 
-Phase 1:
-- Uses dag_builder.build_dag + topological_sort
-- Executes tests sequentially by calling run_compile.sh / run_test.sh
+Sequential execution of UFS tests using a Python DAG executor.
+Mirrors Rocoto's environment setup for run_compile.sh and run_test.sh.
 """
 
 import os
@@ -47,39 +46,51 @@ def _run_command(cmd, cwd=None, env=None):
     return result.returncode
 
 
-def _build_env(base_env, ctx: Any):
-    """
-    Build environment for a given test context.
-
-    ctx may be a dict or an object.
-    """
-    env = dict(base_env)
-
-    def get_attr(name, default=None):
-        if isinstance(ctx, dict):
-            return ctx.get(name, default)
-        return getattr(ctx, name, default)
-
-    for attr in ("PATHRT", "RUNDIR", "RUNDIR_ROOT", "LOGDIR", "APP", "TEST_NAME"):
-        val = get_attr(attr)
-        if val is not None:
-            env[attr] = str(val)
-
-    return env
+def _get_attr(ctx: Any, name: str, default=None):
+    if isinstance(ctx, dict):
+        return ctx.get(name, default)
+    return getattr(ctx, name, default)
 
 
 def _get_kind(ctx: Any) -> str:
-    if isinstance(ctx, dict):
-        k = ctx.get("type") or ctx.get("kind") or ""
-    else:
-        k = getattr(ctx, "type", None) or getattr(ctx, "kind", None) or ""
+    k = _get_attr(ctx, "type") or _get_attr(ctx, "kind") or ""
     return str(k).lower()
 
 
 def _get_rundir(ctx: Any) -> str:
-    if isinstance(ctx, dict):
-        return ctx.get("rundir") or ctx.get("workdir")
-    return getattr(ctx, "rundir", None) or getattr(ctx, "workdir", None)
+    return _get_attr(ctx, "rundir") or _get_attr(ctx, "workdir")
+
+
+def _build_env(base_env, ctx: Any):
+    """
+    Build environment for a given test context.
+    Mirrors Rocoto <envar> injection.
+    """
+    env = dict(base_env)
+
+    test_id = _get_attr(ctx, "id")
+    app = _get_attr(ctx, "APP", _get_attr(ctx, "app", "ufs"))
+    pathrt = _get_attr(ctx, "PATHRT", os.getcwd())
+    rundir_root = _get_attr(ctx, "RUNDIR_ROOT", os.path.join(os.getcwd(), "run"))
+    logdir = _get_attr(ctx, "LOGDIR", os.path.join(os.getcwd(), "logs"))
+    rundir = _get_rundir(ctx)
+
+    # Core Rocoto-style envs
+    if test_id is not None:
+        env["TEST_NAME"] = str(test_id)
+    env["APP"] = str(app)
+    env["PATHRT"] = str(pathrt)
+    env["RUNDIR_ROOT"] = str(rundir_root)
+    env["LOGDIR"] = str(logdir)
+
+    if rundir:
+        env["RUNDIR"] = str(rundir)
+
+    # Baseline flags (already set by run_ufs_workflow)
+    env["CREATE_BASELINE"] = os.environ.get("CREATE_BASELINE", "false")
+    env["COMPARE_BASELINE"] = os.environ.get("COMPARE_BASELINE", "false")
+
+    return env
 
 
 def run_sequential(test_contexts: Dict[str, Any]) -> int:

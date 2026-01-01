@@ -1,9 +1,8 @@
 """
 dag_builder.py
 
-Phase 1:
-- Build a simple dependency graph (DAG) from enriched test contexts.
-- Used by sequential execution only.
+Build a simple dependency graph (DAG) from enriched test contexts.
+Used by sequential execution.
 """
 
 from collections import defaultdict, deque
@@ -33,7 +32,6 @@ def build_dag(test_contexts):
     dag = {}
 
     for name, ctx in test_contexts.items():
-        # ctx may be a dict or an object; handle both
         if isinstance(ctx, dict):
             parent = ctx.get("parent")
             dep = ctx.get("dependency")
@@ -41,13 +39,13 @@ def build_dag(test_contexts):
             parent = getattr(ctx, "parent", None)
             dep = getattr(ctx, "dependency", None)
 
-        deps = []
+        deps = set()
         if parent:
-            deps.append(parent)
+            deps.add(parent)
         if dep:
-            deps.append(dep)
+            deps.add(dep)
 
-        dag[name] = set(deps)
+        dag[name] = deps
 
     return dag
 
