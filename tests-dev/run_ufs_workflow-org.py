@@ -3,10 +3,6 @@ import argparse, os, sys
 import time
 from runtime_manager import RuntimeManager
 
-from util.test_loader import TestLoader
-from sequential_executor import run_sequential as run_sequential_executor
-
-
 def build_rocoto_xml(manager, machine, output, args):
     cmd = ["python3", "build_rocotoxml.py", "--machine", machine, "--output", output]
 
@@ -36,7 +32,6 @@ def build_rocoto_xml(manager, machine, output, args):
 
     print(f"[INFO] Using yamls_dir: {yamls_dir}")
     manager.run_subprocess(cmd)
-
 
 def run_rocoto(manager, xml, db, once=False, sleep_interval=None, max_iterations=None):
     """Drive Rocoto until workflow completion (or once if requested)."""
@@ -84,66 +79,8 @@ def run_rocoto(manager, xml, db, once=False, sleep_interval=None, max_iterations
         print(f"[INFO] Sleeping {sleep_interval} seconds before next iteration...")
         time.sleep(sleep_interval)
 
-
-def load_test_contexts(args, machine):
-    """
-    Use existing TestLoader to build the test list for both Rocoto and sequential.
-    """
-    yamls_dir = args.yamls_dir if args.yamls_dir else "tests-yamls/configs/by_app"
-
-    loader = TestLoader(
-        machine=machine,
-        yamls_dir=yamls_dir,
-    )
-
-    # Manifest / test selection
-    if args.single_test:
-        loader.load_single_test(args.single_test, compiler_override=None, strict=False)
-    elif args.test_list:
-        loader.load_from_test_list(args.test_list)
-    elif args.baseline_list:
-        loader.load_from_test_list(args.baseline_list)
-    elif args.manifest:
-        loader.load_manifest(args.manifest)
-        loader.attach_yaml_configs()
-    else:
-        loader.load_manifest("app_manifest.yaml")
-        loader.attach_yaml_configs()
-
-    # User YAML override
-    if args.user_yaml:
-        loader.load_user_yaml(args.user_yaml)
-
-    tests = loader.get_tests()
-
-    # Convert list of test dicts into a dict keyed by id
-    test_contexts = {}
-    for t in tests:
-        test_id = t.get("id")
-        if not test_id:
-            continue
-        test_contexts[test_id] = t
-
-    return test_contexts
-
-
-def run_sequential(manager, args, machine):
-    """
-    Phase 1 sequential mode:
-    - load/enrich tests from YAMLs/manifest (same inputs as Rocoto)
-    - build DAG
-    - run tests sequentially via run_compile.sh / run_test.sh
-    """
-    print("[INFO] Sequential mode selected (Python DAG executor)")
-
-    test_contexts = load_test_contexts(args, machine)
-    if not test_contexts:
-        print("[WARN] No tests loaded for sequential mode.")
-        return 0
-
-    rc = run_sequential_executor(test_contexts)
-    return rc
-
+def run_sequential(manager):
+    manager.run_subprocess(["./rt.sh", "-e"])
 
 def main():
     parser = argparse.ArgumentParser(description="Unified UFS workflow runner")
@@ -166,7 +103,7 @@ def main():
     parser.add_argument("-y", "--yamls_dir",
                         help="Directory of by_app YAMLs (required for manifest, test-list, or single-test)")
     parser.add_argument("-u", "--user-yaml", default=None,
-                        help="Path to user-supplied test YAML")
+                        help="Path to user-supplied test YAML")    
     parser.add_argument("--force", action="store_true")
     parser.add_argument("--dry-run", action="store_true")
     args = parser.parse_args()
@@ -174,6 +111,11 @@ def main():
     # === Baseline flag ===
     os.environ["CREATE_BASELINE"] = "true" if args.create_baseline else "false"
     print(f"[DEBUG] CREATE_BASELINE={os.environ['CREATE_BASELINE']}")
+
+    #jkim === Ensure INPUTDATA_ROOT_LM4 is set ===
+    #if "INPUTDATA_ROOT_LM4" not in os.environ and "INPUTDATA_ROOT" in os.environ:
+    #    os.environ["INPUTDATA_LM4"] = f"{os.environ['INPUTDATA_ROOT']}/LM4_input_data"
+    #print(f"[DEBUG] INPUTDATA_LM4={os.environ.get('INPUTDATA_ROOT_LM4', 'unset')}")
 
     machine = os.environ.get("MACHINE_ID", "orion")
     lockdir = os.path.join(os.getcwd(), "lock")
@@ -184,14 +126,10 @@ def main():
 
     if args.rocoto:
         build_rocoto_xml(manager, machine, rocoto_xml, args)
-        # You can re-enable this when you want to drive Rocoto from here:
-        # run_rocoto(manager, rocoto_xml, rocoto_db,
-        #            once=False, sleep_interval=60, max_iterations=None)
+        #run_rocoto(manager, rocoto_xml, rocoto_db,
+        #           once=False, sleep_interval=60, max_iterations=None)
     else:
-        rc = run_sequential(manager, args, machine)
-        if rc != 0:
-            sys.exit(rc)
-
+        run_sequential(manager)
 
 if __name__ == "__main__":
     main()
