@@ -7,3 +7,11 @@ datm_cdeps_land_intel:
     - datm_cdeps_lnd_gswp3: {'project':['daily'],'baseline': 'True','turnoff':['wcoss2']}
     - datm_cdeps_lnd_era5: {'project':['daily'],'baseline': 'True','turnoff':['wcoss2']}
     - datm_cdeps_lnd_era5_rst: {'project':['daily'],'dependency':'datm_cdeps_lnd_era5','turnoff':['wcoss2','noaacloud']}
+datm_cdeps_lm4_intel:
+  build: 
+    compiler: 'intel'
+    option: '-DAPP=LND-LM4'
+    turnon: ['hera','orion','gaeac5']
+  tests: 
+    - datm_cdeps_lm4_gswp3: {'project':['daily'],'baseline': 'True','turnon':['hera','orion','gaeac5']}
+    - datm_cdeps_lm4_gswp3_rst: {'project':['daily'],'dependency':'datm_cdeps_lm4_gswp3','turnon':['hera','orion','gaeac5']}
