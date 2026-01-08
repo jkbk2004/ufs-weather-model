@@ -13,3 +13,10 @@ atmmpas_atm_mpas_dyn32_gnu:
       turnon:
       - hera
       - hercules
+      resources:
+        orion: {ppn: '40', nodes: '1', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '1', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '1', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '1', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}

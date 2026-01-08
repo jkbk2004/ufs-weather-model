@@ -9,6 +9,13 @@ s2swa_32bit_intel:
       baseline: 'True'
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '5', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '5', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '2', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '3', wlclk: '00:30:00'}
+        gaeac6: {ppn: '96', nodes: '3', wlclk: '00:30:00'}
   - cpld_control_gefs:
       project:
       - daily
@@ -17,6 +24,13 @@ s2swa_32bit_intel:
       - noaacloud
       - derecho
       - gaeac6
+      resources:
+        orion: {ppn: '40', nodes: '35', wlclk: '00:40:00'}
+        hera: {ppn: '40', nodes: '35', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '8', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '11', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '18', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '8', wlclk: '00:30:00'}
   - cpld_restart_gefs:
       project:
       - daily
@@ -25,6 +39,13 @@ s2swa_32bit_intel:
       - noaacloud
       - derecho
       - gaeac6
+      resources:
+        orion: {ppn: '40', nodes: '35', wlclk: '00:20:00'}
+        hera: {ppn: '40', nodes: '35', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '8', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '11', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '18', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '8', wlclk: '00:30:00'}
   - cpld_dcp_gefs:
       project:
       - daily
@@ -34,6 +55,13 @@ s2swa_32bit_intel:
       - wcoss2
       - acorn
       - gaeac6
+      resources:
+        orion: {ppn: '40', nodes: '36', wlclk: '00:40:00'}
+        hera: {ppn: '40', nodes: '36', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '8', wlclk: '00:60:00'}
+        derecho: {ppn: '128', nodes: '12', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '18', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '8', wlclk: '00:30:00'}
 s2swa_32bit_pdlib_intel:
   build:
     compiler: intel
@@ -47,6 +75,13 @@ s2swa_32bit_pdlib_intel:
       baseline: 'True'
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '6', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '6', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '2', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '3', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '2', wlclk: '00:30:00'}
   - cpld_control_gfsv17_iau:
       project:
       - daily
@@ -54,37 +89,51 @@ s2swa_32bit_pdlib_intel:
       dependency: cpld_control_gfsv17
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '6', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '6', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '2', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '3', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '2', wlclk: '00:30:00'}
   - cpld_restart_gfsv17:
       project:
       - daily
       dependency: cpld_control_gfsv17
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '6', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '6', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '2', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '3', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '2', wlclk: '00:30:00'}
   - cpld_restart_gfsv17_iau:
       project:
       - daily
       dependency: cpld_control_gfsv17_iau
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '6', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '6', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '2', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '3', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '2', wlclk: '00:30:00'}
   - cpld_mpi_gfsv17:
       project:
       - daily
       turnoff:
       - noaacloud
-s2swa_32bit_pdlib_sfs_intel:
-  build:
-    compiler: intel
-    option: -DAPP=S2SWA -D32BIT=ON -DHYDRO=ON -DCCPP_SUITES=FV3_GFS_v17_coupled_p8_ugwpv1
-      -DPDLIB=ON
-    turnoff:
-    - noaacloud
-  tests:
-  - cpld_control_sfs:
-      project:
-      - daily
-      baseline: 'True'
-      turnoff:
-      - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '8', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '8', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '2', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '3', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '4', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '2', wlclk: '00:30:00'}
 s2swa_32bit_pdlib_debug_intel:
   build:
     compiler: intel
@@ -99,7 +148,14 @@ s2swa_32bit_pdlib_debug_intel:
       baseline: 'True'
       turnoff:
       - noaacloud
-s2swa_default_intel:
+      resources:
+        orion: {ppn: '40', nodes: '7', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '7', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '2', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '3', wlclk: '00:40:00'}
+        hercules: {ppn: '80', nodes: '4', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '2', wlclk: '00:30:00'}
+s2swa_intel:
   build:
     compiler: intel
     option: -DAPP=S2SWA -DCCPP_SUITES=FV3_GFS_v17_coupled_p8,FV3_GFS_v17_coupled_p8_ugwpv1
@@ -110,50 +166,113 @@ s2swa_default_intel:
       baseline: 'True'
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '5', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '5', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '2', wlclk: '00:30:00'}
+        derecho: {ppn: '96', nodes: '3', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '3', wlclk: '00:30:00'}
+        gaeac6: {ppn: '96', nodes: '3', wlclk: '00:30:00'}
   - cpld_control_p8.v2.sfc:
       project:
       - daily
       baseline: 'True'
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '5', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '5', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '2', wlclk: '00:30:00'}
+        derecho: {ppn: '96', nodes: '3', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '3', wlclk: '00:30:00'}
+        gaeac6: {ppn: '96', nodes: '3', wlclk: '00:30:00'}
   - cpld_restart_p8:
       project:
       - daily
       dependency: cpld_control_p8
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '5', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '5', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '2', wlclk: '00:30:00'}
+        derecho: {ppn: '96', nodes: '3', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '3', wlclk: '00:30:00'}
+        gaeac6: {ppn: '96', nodes: '3', wlclk: '00:30:00'}
   - cpld_control_qr_p8:
       project:
       - daily
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '5', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '5', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '2', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '3', wlclk: '00:30:00'}
+        gaeac6: {ppn: '96', nodes: '3', wlclk: '00:30:00'}
   - cpld_restart_qr_p8:
       project:
       - daily
       dependency: cpld_control_qr_p8
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '5', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '5', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '2', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '3', wlclk: '00:30:00'}
+        gaeac6: {ppn: '96', nodes: '3', wlclk: '00:30:00'}
   - cpld_2threads_p8:
       project:
       - daily
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '20', nodes: '7', wlclk: '00:40:00'}
+        hera: {ppn: '20', nodes: '7', wlclk: '00:30:00'}
+        ursa: {ppn: '96', nodes: '2', wlclk: '00:30:00'}
+        derecho: {ppn: '48', nodes: '3', wlclk: '00:30:00'}
+        hercules: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        gaeac6: {ppn: '96', nodes: '2', wlclk: '00:30:00'}
   - cpld_decomp_p8:
       project:
       - daily
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '5', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '5', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '2', wlclk: '00:30:00'}
+        derecho: {ppn: '96', nodes: '3', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '3', wlclk: '00:30:00'}
+        gaeac6: {ppn: '96', nodes: '3', wlclk: '00:30:00'}
   - cpld_mpi_p8:
       project:
       - daily
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '7', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '7', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '2', wlclk: '00:30:00'}
+        derecho: {ppn: '96', nodes: '3', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '4', wlclk: '00:30:00'}
+        gaeac6: {ppn: '96', nodes: '3', wlclk: '00:30:00'}
   - cpld_control_ciceC_p8:
       project:
       - daily
       baseline: 'True'
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '5', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '5', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '2', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '3', wlclk: '00:30:00'}
+        gaeac6: {ppn: '96', nodes: '3', wlclk: '00:30:00'}
   - cpld_control_c192_p8:
       project:
       - daily
@@ -163,6 +282,13 @@ s2swa_default_intel:
       - acorn
       - s4
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '20', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '20', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '5', wlclk: '00:30:00'}
+        derecho: {ppn: '96', nodes: '9', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '10', wlclk: '00:30:00'}
+        gaeac6: {ppn: '144', nodes: '6', wlclk: '00:30:00'}
   - cpld_restart_c192_p8:
       project:
       - daily
@@ -173,6 +299,13 @@ s2swa_default_intel:
       - s4
       - noaacloud
       - gaeac6
+      resources:
+        orion: {ppn: '40', nodes: '20', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '20', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '4', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '6', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '10', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '4', wlclk: '00:30:00'}
 s2swa_debug_intel:
   build:
     compiler: intel
@@ -190,19 +323,13 @@ s2swa_debug_intel:
       - wcoss2
       - acorn
       - noaacloud
-s2swa_faster_intel:
-  build:
-    compiler: intel
-    option: -DAPP=S2SWA -DCCPP_SUITES=FV3_GFS_v17_coupled_p8_ugwpv1 -DFASTER=ON
-    turnoff:
-    - noaacloud
-  tests:
-  - cpld_control_p8_faster:
-      project:
-      - daily
-      baseline: 'True'
-      turnoff:
-      - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '5', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '5', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '2', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '3', wlclk: '00:30:00'}
+        gaeac6: {ppn: '96', nodes: '3', wlclk: '00:30:00'}
 s2swa_32bit_pdlib_intelllvm:
   build:
     compiler: intelllvm
@@ -216,6 +343,13 @@ s2swa_32bit_pdlib_intelllvm:
       baseline: 'True'
       turnon:
       - ursa
+      resources:
+        orion: {ppn: '40', nodes: '6', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '6', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '2', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '3', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '2', wlclk: '00:30:00'}
 s2swa_32bit_pdlib_debug_intelllvm:
   build:
     compiler: intelllvm
@@ -230,21 +364,14 @@ s2swa_32bit_pdlib_debug_intelllvm:
       baseline: 'True'
       turnon:
       - ursa
-s2swa_32bit_pdlib_sfs_intelllvm:
-  build:
-    compiler: intelllvm
-    option: -DAPP=S2SWA -D32BIT=ON -DHYDRO=ON -DCCPP_SUITES=FV3_GFS_v17_coupled_p8_ugwpv1
-      -DPDLIB=ON
-    turnon:
-    - ursa
-  tests:
-  - cpld_control_sfs:
-      project:
-      - daily
-      baseline: 'True'
-      turnon:
-      - ursa
-s2swa_default_intelllvm:
+      resources:
+        orion: {ppn: '40', nodes: '7', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '7', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '2', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '3', wlclk: '00:40:00'}
+        hercules: {ppn: '80', nodes: '4', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '2', wlclk: '00:40:00'}
+s2swa_intelllvm:
   build:
     compiler: intelllvm
     option: -DAPP=S2SWA -DCCPP_SUITES=FV3_GFS_v17_coupled_p8,FV3_GFS_v17_coupled_p8_ugwpv1
@@ -257,7 +384,14 @@ s2swa_default_intelllvm:
       baseline: 'True'
       turnon:
       - ursa
-s2swa_default_gnu:
+      resources:
+        orion: {ppn: '40', nodes: '5', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '5', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '2', wlclk: '00:30:00'}
+        derecho: {ppn: '96', nodes: '3', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '3', wlclk: '00:30:00'}
+        gaeac6: {ppn: '96', nodes: '3', wlclk: '00:30:00'}
+s2swa_gnu:
   build:
     compiler: gnu
     option: -DAPP=S2SWA -DCCPP_SUITES=FV3_GFS_v17_coupled_p8_ugwpv1
@@ -274,6 +408,13 @@ s2swa_default_gnu:
       - hera
       - hercules
       - ursa
+      resources:
+        orion: {ppn: '40', nodes: '5', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '5', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '2', wlclk: '00:30:00'}
+        derecho: {ppn: '96', nodes: '3', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '3', wlclk: '00:30:00'}
+        gaeac6: {ppn: '96', nodes: '3', wlclk: '00:30:00'}
 s2swa_debug_gnu:
   build:
     compiler: gnu
@@ -291,3 +432,10 @@ s2swa_debug_gnu:
       - hera
       - hercules
       - ursa
+      resources:
+        orion: {ppn: '40', nodes: '5', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '5', wlclk: '00:40:00'}
+        ursa: {ppn: '192', nodes: '2', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '3', wlclk: '00:30:00'}
+        gaeac6: {ppn: '96', nodes: '3', wlclk: '00:30:00'}

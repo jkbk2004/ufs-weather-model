@@ -9,3 +9,10 @@ atm_ds2s-pcice_atm_ds2s_docn_pcice_intel:
       baseline: 'True'
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '5', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '5', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '3', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}

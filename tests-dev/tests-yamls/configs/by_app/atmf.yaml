@@ -15,3 +15,10 @@ atmf_atm_fbh_intel:
       - wcoss2
       - noaacloud
       - acorn
+      resources:
+        orion: {ppn: '40', nodes: '1', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '1', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '1', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '1', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}

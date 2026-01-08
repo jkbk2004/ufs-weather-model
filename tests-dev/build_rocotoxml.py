@@ -1,85 +1,91 @@
-import argparse, yaml, os
+#!/usr/bin/env python3
+
 from pathlib import Path
-from xmlbuilder_rocoto import RocotoXMLBuilder
-from test_loader import TestLoader
+from jinja2 import Environment, FileSystemLoader
 
-def load_baseline_config(path):
-    with open(path) as f:
-        return yaml.safe_load(f)
 
-def get_bl_date(conf_path="bl_date.conf"):
-    with open(conf_path) as f:
-        for line in f:
-            if line.startswith("export BL_DATE="):
-                return line.strip().split("=")[-1]
-    raise ValueError("BL_DATE not found")
+def write_rocotoxml_from_ctx(ctx):
+    """
+    Render Rocoto XML from Jinja2 template using the prepared context.
+    Template must be located at:
+        <PATHRT>/templates/rocoto_workflow.j2
+    """
 
-def extract_inputdata_entities(config, machine):
-    keys = [
-        "INPUTDATA_ROOT", "INPUTDATA_ROOT_WW3",
-        "INPUTDATA_ROOT_BMIC", "INPUTDATA_ROOT_LM4"
-    ]
-    missing = [k for k in keys if k not in config[machine]]
-    if missing:
-        raise ValueError(f"Missing inputdata keys: {missing}")
-    return {k: config[machine][k] for k in keys}
+    # ------------------------------------------------------------------
+    # Template directory and file
+    # ------------------------------------------------------------------
+    template_dir = Path(ctx.pathrt) / "templates"
+    template_name = "rocoto_workflow.j2"
 
-def main():
-    parser = argparse.ArgumentParser(description="Generate Rocoto XML workflow")
-    parser.add_argument("--machine", required=True)
-    parser.add_argument("--baseline_yaml", default="baseline_config.yaml")
-    parser.add_argument("--manifest", default="app_manifest.yaml")
-    parser.add_argument("--yamls_dir", default="tests-yamls/configs/by_app")
-    parser.add_argument("-l", "--list_yaml", help="Unified test YAML (e.g. ufs_test.yaml)")
-    parser.add_argument("-n", "--name", help="Single test name and compiler (e.g. 'cpld_control intel')")
-    parser.add_argument("-b", "--changes_file", help="Plain text list of test IDs")
-    parser.add_argument("--output", default="workflow.xml")
-    parser.add_argument("--project", default="default")
-    args = parser.parse_args()
+    template_path = template_dir / template_name
+    if not template_path.exists():
+        raise FileNotFoundError(
+            f"Template not found: {template_path}\n"
+            f"Expected template directory: {template_dir}"
+        )
 
-    config = load_baseline_config(args.baseline_yaml)
-    machine_config = config.get(args.machine)
-    if not machine_config:
-        raise ValueError(f"Machine '{args.machine}' not found")
-
-    user = os.getenv("USER", "jongkim")
-    for k, v in machine_config.items():
-        if isinstance(v, str):
-            machine_config[k] = v.replace("{{USER}}", user)
-
-    bl_date = get_bl_date()
-    pathrt = os.getcwd()
-    pathtro = str(Path(pathrt).parent)
-    log = os.path.join(pathrt, "logs", f"log_{args.machine}")
-    rtpwd = os.path.join(machine_config["BASELINE_PATH"], f"NEMSfv3gfs/develop-{bl_date}")
-    rundir_root = os.path.join(machine_config["RUNDIR_PATH"], f"rt_{os.getpid()}")
-    new_baseline = machine_config["NEW_BASELIN_PATH"]
-    inputdata_entities = extract_inputdata_entities(config, args.machine)
-
-    loader = TestLoader(machine=args.machine)
-    if args.list_yaml:
-        tests = loader.from_list_yaml(args.list_yaml)
-    elif args.name:
-        tests = loader.from_name(args.name)
-    elif args.changes_file:
-        tests = loader.from_changes_file(args.changes_file)
-    else:
-        tests = loader.from_manifest(args.manifest, args.yamls_dir)
-
-    builder = RocotoXMLBuilder(
-        machine=args.machine,
-        pathrt=pathrt,
-        pathtro=pathtro,
-        log=log,
-        rtpwd=rtpwd,
-        rundir_root=rundir_root,
-        new_baseline=new_baseline,
-        inputdata_entities=inputdata_entities,
-        project=args.project,
-        tests=tests
+    # ------------------------------------------------------------------
+    # Jinja environment
+    # ------------------------------------------------------------------
+    env = Environment(
+        loader=FileSystemLoader(str(template_dir)),
+        autoescape=False,
+        trim_blocks=True,
+        lstrip_blocks=True,
     )
-    builder.generate()
-    builder.write(args.output)
 
-if __name__ == "__main__":
-    main()
+    template = env.get_template(template_name)
+
+    # ------------------------------------------------------------------
+    # Normalize tests into simple objects for Jinja
+    # ------------------------------------------------------------------
+    tests = []
+    for t in ctx.tests:
+        tests.append(
+            type(
+                "Test",
+                (),
+                {
+                    "id": t["id"],
+                    "type": t["type"],
+                    "parent": t.get("parent"),
+                    "dependency": t.get("dependency") or "",
+                    "option": t.get("option", ""),
+                    "nodes": t.get("nodes", ""),
+                    "walltime": t.get("walltime", ""),
+                },
+            )()
+        )
+
+    # ------------------------------------------------------------------
+    # Render XML text
+    # ------------------------------------------------------------------
+    xml_text = template.render(
+        PATHRT=ctx.pathrt,
+        LOG=ctx.logdir,
+        PATHTR=ctx.patht,
+        RTPWD=ctx.rtpwd,
+        INPUTDATA_ROOT=ctx.inputdata_root,
+        INPUTDATA_ROOT_WW3=ctx.inputdata_root_ww3,
+        INPUTDATA_ROOT_BMIC=ctx.inputdata_root_bmic,
+        INPUTDATA_ROOT_LM4=ctx.inputdata_root_lm4,
+        RUNDIR_ROOT=ctx.rundir_root,
+        NEW_BASELINE=ctx.new_baseline,
+
+        # Scheduler + resources
+        scheduler=ctx.machine_config.get("SCHEDULER", "slurm"),
+        queue=ctx.machine_config.get("QUEUE", "batch"),
+        account=ctx.machine_config.get("ACCOUNT", "epic"),
+        partition=ctx.machine_config.get("PARTITION", "orion"),
+
+        # Tests
+        tests=tests,
+    )
+
+    # ------------------------------------------------------------------
+    # Write XML to file
+    # ------------------------------------------------------------------
+    xml_path = Path(ctx.pathrt) / f"{ctx.expid}.xml"
+    xml_path.write_text(xml_text + "\n")
+
+    print(f"[INFO] Rocoto XML written to {xml_path}")

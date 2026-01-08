@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
-<!DOCTYPE workflow [
+<!DOCTYPE workflow
+[
   <!ENTITY PATHRT         "{{ PATHRT }}">
   <!ENTITY LOG            "{{ LOG }}">
   <!ENTITY PATHTR         "{{ PATHTR }}">
@@ -11,34 +12,60 @@
   <!ENTITY RUNDIR_ROOT    "{{ RUNDIR_ROOT }}">
   <!ENTITY NEW_BASELINE   "{{ NEW_BASELINE }}">
 ]>
-<workflow realtime="F" scheduler="{{ scheduler }}">
-  <cycledef group="forecast" start="{{ start }}" end="{{ end }}" interval="{{ interval }}"/>
+<workflow realtime="F" scheduler="{{ scheduler }}" taskthrottle="10">
 
-  {% for test in tests %}
-    {% set label = test.id ~ '_' ~ test.compiler %}
+  <cycledef>197001010000 197001010000 01:00:00</cycledef>
+  <log>&LOG;/workflow.log</log>
 
-    <task name="build_{{ label }}" cycle="forecast">
-      <command>&PATHRT;/scripts/build.sh {{ test.id }} {{ test.compiler }}</command>
-      <jobname>build_{{ label }}</jobname>
-      <account>{{ account }}</account>
-    </task>
+  {# ===================== COMPILE TASKS ===================== #}
+  {% for t in tests if t.type == "compile" %}
+  <task name="{{ t.id }}" maxtries="3">
 
-    <task name="run_{{ label }}" cycle="forecast">
-      <command>&PATHRT;/scripts/run.sh {{ test.id }} {{ test.compiler }}</command>
-      <jobname>run_{{ label }}</jobname>
-      <account>{{ account }}</account>
+    <command>bash -c 'set -xe -o pipefail ; &amp;PATHRT;/run_compile.sh &amp;PATHRT; &amp;RUNDIR_ROOT; {{ t.option }} {{ t.id | replace("compile_", "") }} 2&gt;&amp;1 | tee &amp;LOG;/{{ t.id }}.log'</command>
+
+    <jobname>{{ t.id }}</jobname>
+    <account>{{ account }}</account>
+    <queue>{{ queue }}</queue>
+    <partition>{{ partition }}</partition>
+    <nodes>{{ t.nodes }}</nodes>
+    <walltime>{{ t.walltime }}</walltime>
+    <join>&RUNDIR_ROOT;/{{ t.id }}.log</join>
+
+  </task>
+
+  <metatask name="{{ t.id }}_tasks"><var name="zero">0</var>
+
+    {# ===================== RUN TASKS FOR THIS COMPILE ===================== #}
+    {% for r in tests if r.type == "run" and r.parent == t.id %}
+    <task name="{{ r.id }}" maxtries="3">
+
+      {% if r.dependency %}
       <dependency>
-        <taskdep task="build_{{ label }}"/>
+        <and>
+          <taskdep task="{{ r.parent }}"/>
+          <taskdep task="{{ r.dependency }}"/>
+        </and>
       </dependency>
-    </task>
-
-    <task name="compare_{{ label }}" cycle="forecast">
-      <command>&PATHRT;/scripts/compare.sh {{ test.id }} {{ test.compiler }}</command>
-      <jobname>compare_{{ label }}</jobname>
-      <account>{{ account }}</account>
+      {% else %}
       <dependency>
-        <taskdep task="run_{{ label }}"/>
+        <taskdep task="{{ r.parent }}"/>
       </dependency>
+      {% endif %}
+
+      <command>bash -c 'set -xe -o pipefail ; &amp;PATHRT;/run_test.sh &amp;PATHRT; &amp;RUNDIR_ROOT; {{ r.id }} {{ r.id }} {{ r.parent }} 2&gt;&amp;1 | tee &amp;LOG;/run_{{ r.id }}.log'</command>
+
+      <jobname>{{ r.id }}</jobname>
+      <account>{{ account }}</account>
+      <queue>{{ queue }}</queue>
+      <partition>{{ partition }}</partition>
+      <nodes>{{ r.nodes }}</nodes>
+      <walltime>{{ r.walltime }}</walltime>
+      <join>&RUNDIR_ROOT;/{{ r.id }}.log</join>
+
     </task>
+    {% endfor %}
+
+  </metatask>
   {% endfor %}
+
 </workflow>

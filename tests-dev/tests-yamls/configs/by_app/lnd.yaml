@@ -11,12 +11,26 @@ lnd_datm_cdeps_land_intel:
       baseline: 'True'
       turnoff:
       - wcoss2
+      resources:
+        orion: {ppn: '40', nodes: '8', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '8', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '2', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '3', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '4', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '2', wlclk: '00:30:00'}
   - datm_cdeps_lnd_era5:
       project:
       - daily
       baseline: 'True'
       turnoff:
       - wcoss2
+      resources:
+        orion: {ppn: '40', nodes: '8', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '8', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '2', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '3', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '4', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '2', wlclk: '00:30:00'}
   - datm_cdeps_lnd_era5_rst:
       project:
       - daily
@@ -24,3 +38,10 @@ lnd_datm_cdeps_land_intel:
       turnoff:
       - wcoss2
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '8', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '8', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '2', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '3', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '4', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '2', wlclk: '00:30:00'}

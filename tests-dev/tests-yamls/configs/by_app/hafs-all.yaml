@@ -12,16 +12,23 @@ hafs-all_hafs_all_intel:
       baseline: 'True'
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '9', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '9', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '2', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '3', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '5', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '2', wlclk: '00:30:00'}
   - hafs_regional_docn_oisst:
       project:
       - daily
       baseline: 'True'
       turnoff:
       - noaacloud
-  - hafs_regional_datm_cdeps:
-      project:
-      - daily
-      baseline: 'True'
-      turnoff:
-      - s4
-      - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '9', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '9', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '2', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '3', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '5', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '2', wlclk: '00:30:00'}

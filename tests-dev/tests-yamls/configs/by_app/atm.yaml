@@ -8,239 +8,545 @@ atm_dyn32_intel:
       project:
       - daily
       baseline: 'True'
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - control_CubedSphereGrid:
       project:
       - daily
       baseline: 'True'
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - control_CubedSphereGrid_parallel:
       project:
       - daily
       baseline: 'True'
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - control_latlon:
       project:
       - daily
       baseline: 'True'
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - control_wrtGauss_netcdf_parallel:
       project:
       - daily
       baseline: 'True'
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - control_c48:
       project:
       - daily
       baseline: 'True'
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '1', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '1', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '1', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '1', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - control_c48.v2.sfc:
       project:
       - daily
       baseline: 'True'
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '1', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '1', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '1', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '1', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - control_c48_lnd_iau:
       project:
       - daily
       baseline: 'True'
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '1', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '1', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '1', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '1', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - control_c192:
       project:
       - daily
       baseline: 'True'
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '6', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '6', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '2', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '3', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '2', wlclk: '00:30:00'}
   - control_c384:
       project:
       - daily
       baseline: 'True'
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '17', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '17', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '4', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '6', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '9', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '2', wlclk: '00:30:00'}
   - control_c384gdas:
       project:
       - daily
       baseline: 'True'
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '17', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '17', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '4', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '6', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '9', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '2', wlclk: '00:30:00'}
   - control_stochy:
       project:
       - daily
       baseline: 'True'
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - control_stochy_restart:
       project:
       - daily
       dependency: control_stochy
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - control_lndp:
       project:
       - daily
       baseline: 'True'
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - control_iovr4:
       project:
       - daily
       baseline: 'True'
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - control_iovr4_gfdlmpv3:
       project:
       - daily
       baseline: 'True'
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - control_iovr5:
       project:
       - daily
       baseline: 'True'
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - control_p8:
       project:
       - daily
       baseline: 'True'
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - control_p8.v2.sfc:
       project:
       - daily
       baseline: 'True'
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - control_p8_ugwpv1:
       project:
       - daily
       baseline: 'True'
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - control_p8_ugwpv1_tempo:
       project:
       - daily
       baseline: 'True'
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - control_p8_ugwpv1_tempo_aerosol:
       project:
       - daily
       baseline: 'True'
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - control_p8_ugwpv1_tempo_aerosol_hail:
       project:
       - daily
       baseline: 'True'
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '8', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '8', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '2', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '3', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '4', wlclk: '00:30:00'}
+        gaeac6: {ppn: '144', nodes: '3', wlclk: '00:30:00'}
   - control_restart_p8:
       project:
       - daily
       dependency: control_p8
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - control_noqr_p8:
       project:
       - daily
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - control_restart_noqr_p8:
       project:
       - daily
       dependency: control_noqr_p8
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - control_decomp_p8:
       project:
       - daily
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - control_2threads_p8:
       project:
       - daily
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '20', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '20', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '30', nodes: '3', wlclk: '00:30:00'}
+        derecho: {ppn: '64', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '40', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '96', nodes: '1', wlclk: '00:30:00'}
   - control_p8_lndp:
       project:
       - daily
       baseline: 'True'
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - control_p8_rrtmgp:
       project:
       - daily
       baseline: 'True'
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - control_p8_mynn:
       project:
       - daily
       baseline: 'True'
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - merra2_thompson:
       project:
       - daily
       baseline: 'True'
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - merra2_hf_thompson:
       project:
       - daily
       baseline: 'True'
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - regional_control:
       project:
       - daily
       baseline: 'True'
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '3', wlclk: '00:40:00'}
+        hera: {ppn: '40', nodes: '3', wlclk: '00:15:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:15:00'}
+        derecho: {ppn: '128', nodes: '1', wlclk: '00:15:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:15:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:15:00'}
   - regional_restart:
       project:
       - daily
       dependency: regional_control
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '3', wlclk: '00:15:00'}
+        hera: {ppn: '40', nodes: '3', wlclk: '00:15:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:15:00'}
+        derecho: {ppn: '128', nodes: '1', wlclk: '00:15:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:15:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:15:00'}
   - regional_decomp:
       project:
       - daily
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '3', wlclk: '00:15:00'}
+        hera: {ppn: '40', nodes: '3', wlclk: '00:15:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:15:00'}
+        derecho: {ppn: '128', nodes: '1', wlclk: '00:15:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:15:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:15:00'}
   - regional_2threads:
       project:
       - daily
       turnoff:
       - derecho
       - noaacloud
+      resources:
+        orion: {ppn: '20', nodes: '6', wlclk: '00:15:00'}
+        hera: {ppn: '20', nodes: '6', wlclk: '00:15:00'}
+        ursa: {ppn: '96', nodes: '2', wlclk: '00:30:00'}
+        derecho: {ppn: '64', nodes: '2', wlclk: '00:15:00'}
+        hercules: {ppn: '40', nodes: '3', wlclk: '00:15:00'}
+        gaeac6: {ppn: '96', nodes: '2', wlclk: '00:15:00'}
   - regional_noquilt:
       project:
       - daily
       baseline: 'True'
       turnoff:
       - s4
+      resources:
+        orion: {ppn: '40', nodes: '3', wlclk: '00:15:00'}
+        hera: {ppn: '40', nodes: '3', wlclk: '00:15:00'}
+        ursa: {ppn: '168', nodes: '1', wlclk: '00:15:00'}
+        derecho: {ppn: '128', nodes: '1', wlclk: '00:15:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:15:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:15:00'}
   - regional_netcdf_parallel:
       project:
       - daily
       baseline: 'True'
       turnoff:
       - acorn
+      resources:
+        orion: {ppn: '40', nodes: '3', wlclk: '00:15:00'}
+        hera: {ppn: '40', nodes: '3', wlclk: '00:15:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:15:00'}
+        derecho: {ppn: '128', nodes: '1', wlclk: '00:15:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:15:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:15:00'}
   - regional_2dwrtdecomp:
       project:
       - daily
       turnoff:
       - acorn
+      resources:
+        orion: {ppn: '40', nodes: '3', wlclk: '00:15:00'}
+        hera: {ppn: '40', nodes: '3', wlclk: '00:15:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:15:00'}
+        derecho: {ppn: '128', nodes: '1', wlclk: '00:15:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:15:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:15:00'}
   - regional_wofs:
       project:
       - daily
       baseline: 'True'
       turnoff:
       - s4
+      resources:
+        orion: {ppn: '40', nodes: '3', wlclk: '00:15:00'}
+        hera: {ppn: '40', nodes: '3', wlclk: '00:15:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:15:00'}
+        derecho: {ppn: '128', nodes: '1', wlclk: '00:15:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:15:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:15:00'}
+atm_dyn32_rad32_intel:
+  build:
+    compiler: intel
+    option: -DAPP=ATM -DCCPP_SUITES=FV3_GFS_v16,FV3_GFS_v16_flake,FV3_GFS_v17_p8,FV3_GFS_v17_p8_rrtmgp,FV3_GFS_v15_thompson_mynn_lam3km,FV3_WoFS_v0,FV3_GFS_v17_p8_mynn,FV3_GFS_v17_p8_ugwpv1
+      -D32BIT=ON -DRRTMGP_32BIT=ON
+  tests:
+  - control_p8_rrtmgp_rad32:
+      project:
+      - daily
+      baseline: 'True'
+      turnoff:
+      - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
 atm_rrfs_intel:
   build:
     compiler: intel
@@ -251,83 +557,188 @@ atm_rrfs_intel:
       project:
       - daily
       baseline: 'True'
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - regional_spp_sppt_shum_skeb:
       project:
       - daily
       baseline: 'True'
+      resources:
+        orion: {ppn: '40', nodes: '10', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '10', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '2', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '3', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '5', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '2', wlclk: '00:30:00'}
   - rap_decomp:
       project:
       - daily
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - rap_2threads:
       project:
       - daily
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '20', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '20', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '30', nodes: '3', wlclk: '00:30:00'}
+        derecho: {ppn: '64', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '40', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '96', nodes: '1', wlclk: '00:30:00'}
   - rap_restart:
       project:
       - daily
       dependency: rap_control
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - rap_sfcdiff:
       project:
       - daily
       baseline: 'True'
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - rap_sfcdiff_decomp:
       project:
       - daily
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - rap_sfcdiff_restart:
       project:
       - daily
       dependency: rap_sfcdiff
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - hrrr_control:
       project:
       - daily
       baseline: 'True'
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - hrrr_control_decomp:
       project:
       - daily
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - hrrr_control_2threads:
       project:
       - daily
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '20', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '20', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '30', nodes: '3', wlclk: '00:30:00'}
+        derecho: {ppn: '64', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '40', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '96', nodes: '1', wlclk: '00:30:00'}
   - hrrr_control_restart:
       project:
       - daily
       dependency: hrrr_control
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - rrfs_v1beta:
       project:
       - daily
       baseline: 'True'
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - rrfs_v1nssl:
       project:
       - daily
       baseline: 'True'
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - rrfs_v1nssl_nohailnoccn:
       project:
       - daily
       baseline: 'True'
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
 atm_csawmg_intel:
   build:
     compiler: intel
@@ -341,12 +752,26 @@ atm_csawmg_intel:
       baseline: 'True'
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - control_ras:
       project:
       - daily
       baseline: 'True'
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
 atm_wam_intel:
   build:
     compiler: intel
@@ -360,24 +785,13 @@ atm_wam_intel:
       baseline: 'True'
       turnoff:
       - noaacloud
-atm_faster_dyn32_intel:
-  build:
-    compiler: intel
-    option: -DAPP=ATM -DCCPP_SUITES=FV3_GFS_v17_p8,FV3_GFS_v15_thompson_mynn_lam3km
-      -D32BIT=ON -DFASTER=ON
-  tests:
-  - control_p8_faster:
-      project:
-      - daily
-      baseline: 'True'
-      turnoff:
-      - noaacloud
-  - regional_control_faster:
-      project:
-      - daily
-      baseline: 'True'
-      turnoff:
-      - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:45:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
 atm_debug_dyn32_intel:
   build:
     compiler: intel
@@ -391,142 +805,310 @@ atm_debug_dyn32_intel:
       baseline: 'True'
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - control_wrtGauss_netcdf_parallel_debug:
       project:
       - daily
       baseline: 'True'
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - control_stochy_debug:
       project:
       - daily
       baseline: 'True'
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - control_lndp_debug:
       project:
       - daily
       baseline: 'True'
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - control_csawmg_debug:
       project:
       - daily
       baseline: 'True'
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - control_ras_debug:
       project:
       - daily
       baseline: 'True'
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - control_diag_debug:
       project:
       - daily
       baseline: 'True'
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - control_debug_p8:
       project:
       - daily
       baseline: 'True'
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - regional_debug:
       project:
       - daily
       baseline: 'True'
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '3', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '3', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '1', wlclk: '00:50:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - rap_control_debug:
       project:
       - daily
       baseline: 'True'
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - hrrr_control_debug:
       project:
       - daily
       baseline: 'True'
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - hrrr_gf_debug:
       project:
       - daily
       baseline: 'True'
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - hrrr_c3_debug:
       project:
       - daily
       baseline: 'True'
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - rap_unified_drag_suite_debug:
       project:
       - daily
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - rap_diag_debug:
       project:
       - daily
       baseline: 'True'
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - rap_cires_ugwp_debug:
       project:
       - daily
       baseline: 'True'
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - rap_unified_ugwp_debug:
       project:
       - daily
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - rap_lndp_debug:
       project:
       - daily
       baseline: 'True'
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - rap_progcld_thompson_debug:
       project:
       - daily
       baseline: 'True'
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - rap_noah_debug:
       project:
       - daily
       baseline: 'True'
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - rap_sfcdiff_debug:
       project:
       - daily
       baseline: 'True'
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - rap_noah_sfcdiff_cires_ugwp_debug:
       project:
       - daily
       baseline: 'True'
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - rap_clm_lake_debug:
       project:
       - daily
       baseline: 'True'
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - rap_flake_debug:
       project:
       - daily
       baseline: 'True'
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - gnv1_c96_no_nest_debug:
       project:
       - daily
@@ -535,6 +1117,13 @@ atm_debug_dyn32_intel:
       - noaacloud
       - orion
       - hercules
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
 atm_wam_debug_intel:
   build:
     compiler: intel
@@ -549,6 +1138,13 @@ atm_wam_debug_intel:
       turnoff:
       - noaacloud
       - hercules
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
 atm_rrfs_dyn32_phy32_intel:
   build:
     compiler: intel
@@ -562,74 +1158,151 @@ atm_rrfs_dyn32_phy32_intel:
       baseline: 'True'
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '10', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '10', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '2', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '3', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '5', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '2', wlclk: '00:30:00'}
   - rap_control_dyn32_phy32:
       project:
       - daily
       baseline: 'True'
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - hrrr_control_dyn32_phy32:
       project:
       - daily
       baseline: 'True'
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - rap_2threads_dyn32_phy32:
       project:
       - daily
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '20', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '20', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '30', nodes: '3', wlclk: '00:30:00'}
+        derecho: {ppn: '64', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '40', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '96', nodes: '1', wlclk: '00:30:00'}
   - hrrr_control_2threads_dyn32_phy32:
       project:
       - daily
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '20', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '20', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '30', nodes: '3', wlclk: '00:30:00'}
+        derecho: {ppn: '64', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '40', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '96', nodes: '1', wlclk: '00:30:00'}
   - hrrr_control_decomp_dyn32_phy32:
       project:
       - daily
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - rap_restart_dyn32_phy32:
       project:
       - daily
       dependency: rap_control_dyn32_phy32
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - hrrr_control_restart_dyn32_phy32:
       project:
       - daily
       dependency: hrrr_control_dyn32_phy32
       turnoff:
       - noaacloud
-atm_rrfs_dyn32_phy32_faster_intel:
-  build:
-    compiler: intel
-    option: -DAPP=ATM -DFASTER=ON -DCCPP_SUITES=FV3_HRRR -D32BIT=ON -DCCPP_32BIT=ON
-    turnoff:
-    - noaacloud
-  tests:
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - conus13km_control:
       project:
       - daily
       baseline: 'True'
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '3', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '3', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '1', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - conus13km_2threads:
       project:
       - daily
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '20', nodes: '5', wlclk: '00:30:00'}
+        hera: {ppn: '20', nodes: '5', wlclk: '00:30:00'}
+        ursa: {ppn: '96', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '64', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '40', nodes: '3', wlclk: '00:30:00'}
+        gaeac6: {ppn: '96', nodes: '1', wlclk: '00:30:00'}
   - conus13km_decomp:
       project:
       - daily
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '3', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '3', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '1', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - conus13km_restart:
       project:
       - daily
       dependency: conus13km_control
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '3', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '3', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '1', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
 atm_rrfs_dyn64_phy32_intel:
   build:
     compiler: intel
@@ -643,6 +1316,13 @@ atm_rrfs_dyn64_phy32_intel:
       baseline: 'True'
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
 atm_rrfs_dyn32_phy32_debug_intel:
   build:
     compiler: intel
@@ -657,39 +1337,88 @@ atm_rrfs_dyn32_phy32_debug_intel:
       baseline: 'True'
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - hrrr_control_debug_dyn32_phy32:
       project:
       - daily
       baseline: 'True'
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - conus13km_debug:
       project:
       - daily
       baseline: 'True'
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '3', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '3', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '1', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - conus13km_debug_qr:
       project:
       - daily
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '3', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '3', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '1', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - conus13km_debug_2threads:
       project:
       - daily
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '20', nodes: '5', wlclk: '00:30:00'}
+        hera: {ppn: '20', nodes: '5', wlclk: '00:30:00'}
+        ursa: {ppn: '96', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '64', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '40', nodes: '3', wlclk: '00:30:00'}
+        gaeac6: {ppn: '96', nodes: '1', wlclk: '00:30:00'}
   - conus13km_debug_decomp:
       project:
       - daily
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '3', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '3', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '1', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - conus13km_radar_tten_debug:
       project:
       - daily
       baseline: 'True'
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '3', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '3', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '1', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
 atm_rrfs_dyn64_phy32_debug_intel:
   build:
     compiler: intel
@@ -703,6 +1432,13 @@ atm_rrfs_dyn64_phy32_debug_intel:
       baseline: 'True'
       turnoff:
       - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
 atm_rrfs_dyn32_phy32_intelllvm:
   build:
     compiler: intelllvm
@@ -718,6 +1454,13 @@ atm_rrfs_dyn32_phy32_intelllvm:
       turnon:
       - hera
       - ursa
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
 atm_rrfs_dyn64_phy32_intelllvm:
   build:
     compiler: intelllvm
@@ -733,7 +1476,14 @@ atm_rrfs_dyn64_phy32_intelllvm:
       turnon:
       - hera
       - ursa
-atm_default_gnu:
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+atm_gnu:
   build:
     compiler: gnu
     option: -DAPP=ATM -DCCPP_SUITES=FV3_GFS_v16,FV3_GFS_v16_flake,FV3_GFS_v16_ras,FV3_GFS_v17_p8,FV3_GFS_v17_p8_ugwpv1
@@ -750,6 +1500,13 @@ atm_default_gnu:
       - hera
       - hercules
       - ursa
+      resources:
+        orion: {ppn: '40', nodes: '1', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '1', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '1', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '1', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - control_stochy:
       project:
       - daily
@@ -758,6 +1515,13 @@ atm_default_gnu:
       - hera
       - hercules
       - ursa
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - control_ras:
       project:
       - daily
@@ -766,6 +1530,13 @@ atm_default_gnu:
       - hera
       - hercules
       - ursa
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - control_p8:
       project:
       - daily
@@ -774,6 +1545,13 @@ atm_default_gnu:
       - hera
       - hercules
       - ursa
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - control_p8_ugwpv1:
       project:
       - daily
@@ -782,6 +1560,13 @@ atm_default_gnu:
       - hera
       - hercules
       - ursa
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - control_flake:
       project:
       - daily
@@ -790,6 +1575,13 @@ atm_default_gnu:
       - hera
       - hercules
       - ursa
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
 atm_rrfs_gnu:
   build:
     compiler: gnu
@@ -808,6 +1600,13 @@ atm_rrfs_gnu:
       - hera
       - hercules
       - ursa
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - rap_decomp:
       project:
       - daily
@@ -815,6 +1614,13 @@ atm_rrfs_gnu:
       - hera
       - hercules
       - ursa
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - rap_2threads:
       project:
       - daily
@@ -822,6 +1628,13 @@ atm_rrfs_gnu:
       - hera
       - hercules
       - ursa
+      resources:
+        orion: {ppn: '20', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '20', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '30', nodes: '3', wlclk: '00:30:00'}
+        derecho: {ppn: '64', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '14', nodes: '12', wlclk: '00:50:00'}
+        gaeac6: {ppn: '96', nodes: '1', wlclk: '00:30:00'}
   - rap_restart:
       project:
       - daily
@@ -830,6 +1643,13 @@ atm_rrfs_gnu:
       - hera
       - hercules
       - ursa
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - rap_sfcdiff:
       project:
       - daily
@@ -838,6 +1658,13 @@ atm_rrfs_gnu:
       - hera
       - hercules
       - ursa
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - rap_sfcdiff_decomp:
       project:
       - daily
@@ -845,6 +1672,13 @@ atm_rrfs_gnu:
       - hera
       - hercules
       - ursa
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - rap_sfcdiff_restart:
       project:
       - daily
@@ -853,6 +1687,13 @@ atm_rrfs_gnu:
       - hera
       - hercules
       - ursa
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - hrrr_control:
       project:
       - daily
@@ -861,6 +1702,13 @@ atm_rrfs_gnu:
       - hera
       - hercules
       - ursa
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - hrrr_control_noqr:
       project:
       - daily
@@ -868,6 +1716,13 @@ atm_rrfs_gnu:
       - hera
       - hercules
       - ursa
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - hrrr_control_2threads:
       project:
       - daily
@@ -875,6 +1730,13 @@ atm_rrfs_gnu:
       - hera
       - hercules
       - ursa
+      resources:
+        orion: {ppn: '20', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '20', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '30', nodes: '3', wlclk: '00:30:00'}
+        derecho: {ppn: '64', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        gaeac6: {ppn: '96', nodes: '1', wlclk: '00:30:00'}
   - hrrr_control_decomp:
       project:
       - daily
@@ -882,6 +1744,13 @@ atm_rrfs_gnu:
       - hera
       - hercules
       - ursa
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - hrrr_control_restart:
       project:
       - daily
@@ -890,6 +1759,13 @@ atm_rrfs_gnu:
       - hera
       - hercules
       - ursa
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - hrrr_control_restart_noqr:
       project:
       - daily
@@ -898,6 +1774,13 @@ atm_rrfs_gnu:
       - hera
       - hercules
       - ursa
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - rrfs_v1beta:
       project:
       - daily
@@ -906,6 +1789,13 @@ atm_rrfs_gnu:
       - hera
       - hercules
       - ursa
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
 atm_csawmg_gnu:
   build:
     compiler: gnu
@@ -923,6 +1813,13 @@ atm_csawmg_gnu:
       - hera
       - hercules
       - ursa
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
 atm_dyn32_debug_gnu:
   build:
     compiler: gnu
@@ -940,6 +1837,13 @@ atm_dyn32_debug_gnu:
       - hera
       - hercules
       - ursa
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - regional_debug:
       project:
       - daily
@@ -948,6 +1852,13 @@ atm_dyn32_debug_gnu:
       - hera
       - hercules
       - ursa
+      resources:
+        orion: {ppn: '40', nodes: '3', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '3', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '1', wlclk: '00:50:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - rap_control_debug:
       project:
       - daily
@@ -956,6 +1867,13 @@ atm_dyn32_debug_gnu:
       - hera
       - hercules
       - ursa
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - hrrr_control_debug:
       project:
       - daily
@@ -964,6 +1882,13 @@ atm_dyn32_debug_gnu:
       - hera
       - hercules
       - ursa
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - hrrr_gf_debug:
       project:
       - daily
@@ -972,6 +1897,13 @@ atm_dyn32_debug_gnu:
       - hera
       - hercules
       - ursa
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - hrrr_c3_debug:
       project:
       - daily
@@ -980,6 +1912,13 @@ atm_dyn32_debug_gnu:
       - hera
       - hercules
       - ursa
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - rap_diag_debug:
       project:
       - daily
@@ -988,6 +1927,13 @@ atm_dyn32_debug_gnu:
       - hera
       - hercules
       - ursa
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - rap_noah_sfcdiff_cires_ugwp_debug:
       project:
       - daily
@@ -996,6 +1942,13 @@ atm_dyn32_debug_gnu:
       - hera
       - hercules
       - ursa
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - rap_progcld_thompson_debug:
       project:
       - daily
@@ -1004,6 +1957,13 @@ atm_dyn32_debug_gnu:
       - hera
       - hercules
       - ursa
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - control_ras_debug:
       project:
       - daily
@@ -1012,6 +1972,13 @@ atm_dyn32_debug_gnu:
       - hera
       - hercules
       - ursa
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - control_stochy_debug:
       project:
       - daily
@@ -1020,6 +1987,13 @@ atm_dyn32_debug_gnu:
       - hera
       - hercules
       - ursa
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - control_debug_p8:
       project:
       - daily
@@ -1028,6 +2002,13 @@ atm_dyn32_debug_gnu:
       - hera
       - hercules
       - ursa
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - rap_flake_debug:
       project:
       - daily
@@ -1036,6 +2017,13 @@ atm_dyn32_debug_gnu:
       - hera
       - hercules
       - ursa
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - rap_clm_lake_debug:
       project:
       - daily
@@ -1044,6 +2032,13 @@ atm_dyn32_debug_gnu:
       - hera
       - hercules
       - ursa
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - gnv1_c96_no_nest_debug:
       project:
       - daily
@@ -1052,6 +2047,13 @@ atm_dyn32_debug_gnu:
       - hera
       - hercules
       - ursa
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
 atm_wam_debug_gnu:
   build:
     compiler: gnu
@@ -1069,6 +2071,13 @@ atm_wam_debug_gnu:
       - hera
       - hercules
       - ursa
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
 atm_debug_dyn32_gnu:
   build:
     compiler: gnu
@@ -1086,6 +2095,13 @@ atm_debug_dyn32_gnu:
       - hera
       - hercules
       - ursa
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
 atm_rrfs_dyn32_phy32_gnu:
   build:
     compiler: gnu
@@ -1103,6 +2119,13 @@ atm_rrfs_dyn32_phy32_gnu:
       - hera
       - hercules
       - ursa
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - hrrr_control_dyn32_phy32:
       project:
       - daily
@@ -1111,6 +2134,13 @@ atm_rrfs_dyn32_phy32_gnu:
       - hera
       - hercules
       - ursa
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - rap_2threads_dyn32_phy32:
       project:
       - daily
@@ -1118,6 +2148,13 @@ atm_rrfs_dyn32_phy32_gnu:
       - hera
       - hercules
       - ursa
+      resources:
+        orion: {ppn: '20', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '20', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '30', nodes: '3', wlclk: '00:30:00'}
+        derecho: {ppn: '64', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        gaeac6: {ppn: '96', nodes: '1', wlclk: '00:30:00'}
   - hrrr_control_2threads_dyn32_phy32:
       project:
       - daily
@@ -1125,6 +2162,13 @@ atm_rrfs_dyn32_phy32_gnu:
       - hera
       - hercules
       - ursa
+      resources:
+        orion: {ppn: '20', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '20', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '30', nodes: '3', wlclk: '00:30:00'}
+        derecho: {ppn: '64', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        gaeac6: {ppn: '96', nodes: '1', wlclk: '00:30:00'}
   - hrrr_control_decomp_dyn32_phy32:
       project:
       - daily
@@ -1132,6 +2176,13 @@ atm_rrfs_dyn32_phy32_gnu:
       - hera
       - hercules
       - ursa
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - rap_restart_dyn32_phy32:
       project:
       - daily
@@ -1140,6 +2191,13 @@ atm_rrfs_dyn32_phy32_gnu:
       - hera
       - hercules
       - ursa
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - hrrr_control_restart_dyn32_phy32:
       project:
       - daily
@@ -1148,6 +2206,13 @@ atm_rrfs_dyn32_phy32_gnu:
       - hera
       - hercules
       - ursa
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - conus13km_control:
       project:
       - daily
@@ -1156,6 +2221,13 @@ atm_rrfs_dyn32_phy32_gnu:
       - hera
       - hercules
       - ursa
+      resources:
+        orion: {ppn: '40', nodes: '3', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '3', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '1', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - conus13km_2threads:
       project:
       - daily
@@ -1163,6 +2235,13 @@ atm_rrfs_dyn32_phy32_gnu:
       - hera
       - hercules
       - ursa
+      resources:
+        orion: {ppn: '20', nodes: '5', wlclk: '00:30:00'}
+        hera: {ppn: '20', nodes: '5', wlclk: '00:30:00'}
+        ursa: {ppn: '96', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '64', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '40', nodes: '3', wlclk: '00:30:00'}
+        gaeac6: {ppn: '96', nodes: '1', wlclk: '00:30:00'}
   - conus13km_decomp:
       project:
       - daily
@@ -1170,6 +2249,13 @@ atm_rrfs_dyn32_phy32_gnu:
       - hera
       - hercules
       - ursa
+      resources:
+        orion: {ppn: '40', nodes: '3', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '3', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '1', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - conus13km_restart:
       project:
       - daily
@@ -1178,6 +2264,13 @@ atm_rrfs_dyn32_phy32_gnu:
       - hera
       - hercules
       - ursa
+      resources:
+        orion: {ppn: '40', nodes: '3', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '3', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '1', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
 atm_dyn64_phy32_gnu:
   build:
     compiler: gnu
@@ -1195,6 +2288,13 @@ atm_dyn64_phy32_gnu:
       - hera
       - hercules
       - ursa
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
 atm_dyn32_phy32_debug_gnu:
   build:
     compiler: gnu
@@ -1212,6 +2312,13 @@ atm_dyn32_phy32_debug_gnu:
       - hera
       - hercules
       - ursa
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - hrrr_control_debug_dyn32_phy32:
       project:
       - daily
@@ -1220,6 +2327,13 @@ atm_dyn32_phy32_debug_gnu:
       - hera
       - hercules
       - ursa
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - conus13km_debug:
       project:
       - daily
@@ -1228,6 +2342,13 @@ atm_dyn32_phy32_debug_gnu:
       - hera
       - hercules
       - ursa
+      resources:
+        orion: {ppn: '40', nodes: '3', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '3', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '1', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - conus13km_debug_qr:
       project:
       - daily
@@ -1235,6 +2356,13 @@ atm_dyn32_phy32_debug_gnu:
       - hera
       - hercules
       - ursa
+      resources:
+        orion: {ppn: '40', nodes: '3', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '3', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '1', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - conus13km_debug_2threads:
       project:
       - daily
@@ -1242,6 +2370,13 @@ atm_dyn32_phy32_debug_gnu:
       - hera
       - hercules
       - ursa
+      resources:
+        orion: {ppn: '20', nodes: '5', wlclk: '00:30:00'}
+        hera: {ppn: '20', nodes: '5', wlclk: '00:30:00'}
+        ursa: {ppn: '96', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '64', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '40', nodes: '3', wlclk: '00:30:00'}
+        gaeac6: {ppn: '96', nodes: '1', wlclk: '00:30:00'}
   - conus13km_debug_decomp:
       project:
       - daily
@@ -1249,6 +2384,13 @@ atm_dyn32_phy32_debug_gnu:
       - hera
       - hercules
       - ursa
+      resources:
+        orion: {ppn: '40', nodes: '3', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '3', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '1', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
   - conus13km_radar_tten_debug:
       project:
       - daily
@@ -1257,6 +2399,13 @@ atm_dyn32_phy32_debug_gnu:
       - hera
       - hercules
       - ursa
+      resources:
+        orion: {ppn: '40', nodes: '3', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '3', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '1', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
 atm_dyn64_phy32_debug_gnu:
   build:
     compiler: gnu
@@ -1274,6 +2423,13 @@ atm_dyn64_phy32_debug_gnu:
       - hera
       - hercules
       - ursa
+      resources:
+        orion: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '4', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '2', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
 atm_pm_ideal_doubly_periodic_intel:
   build:
     compiler: intel
@@ -1288,3 +2444,10 @@ atm_pm_ideal_doubly_periodic_intel:
       baseline: 'True'
       turnon:
       - hera
+      resources:
+        orion: {ppn: '40', nodes: '1', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '1', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '1', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '1', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}

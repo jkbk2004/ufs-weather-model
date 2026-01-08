@@ -1,3 +1,57 @@
+s2s_32bit_sfs_intel:
+  build:
+    compiler: intel
+    option: -DAPP=S2S -D32BIT=ON -DHYDRO=ON -DCCPP_SUITES=FV3_GFS_v17_coupled_p8_ugwpv1
+    turnoff:
+    - noaacloud
+  tests:
+  - cpld_control_sfs:
+      project:
+      - daily
+      baseline: 'True'
+      turnoff:
+      - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '10', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '10', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '2', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '3', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '5', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '2', wlclk: '00:30:00'}
+  - cpld_restart_sfs:
+      project:
+      - daily
+      dependency: cpld_control_sfs
+      turnoff:
+      - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '10', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '10', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '2', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '3', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '5', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '2', wlclk: '00:30:00'}
+s2s_32bit_sfs_debug_intel:
+  build:
+    compiler: intel
+    option: -DAPP=S2S -D32BIT=ON -DHYDRO=ON -DCCPP_SUITES=FV3_GFS_v17_coupled_p8_ugwpv1
+      -DDEBUG=ON
+    turnoff:
+    - noaacloud
+  tests:
+  - cpld_debug_sfs:
+      project:
+      - daily
+      baseline: 'True'
+      turnoff:
+      - noaacloud
+      resources:
+        orion: {ppn: '40', nodes: '10', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '10', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '2', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '3', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '5', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '2', wlclk: '00:30:00'}
 s2s_aoflux_intel:
   build:
     compiler: intel
@@ -7,7 +61,34 @@ s2s_aoflux_intel:
       project:
       - daily
       baseline: 'True'
-s2s_default_gnu:
+      resources:
+        orion: {ppn: '40', nodes: '5', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '5', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '2', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '3', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '2', wlclk: '00:30:00'}
+s2s_32bit_sfs_intelllvm:
+  build:
+    compiler: intelllvm
+    option: -DAPP=S2S -D32BIT=ON -DHYDRO=ON -DCCPP_SUITES=FV3_GFS_v17_coupled_p8_ugwpv1
+    turnon:
+    - ursa
+  tests:
+  - cpld_control_sfs:
+      project:
+      - daily
+      baseline: 'True'
+      turnon:
+      - ursa
+      resources:
+        orion: {ppn: '40', nodes: '10', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '10', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '2', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '3', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '5', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '2', wlclk: '00:30:00'}
+s2s_gnu:
   build:
     compiler: gnu
     option: -DAPP=S2S -DCCPP_SUITES=FV3_GFS_v17_coupled_p8_ugwpv1
@@ -24,3 +105,10 @@ s2s_default_gnu:
       - hera
       - hercules
       - ursa
+      resources:
+        orion: {ppn: '40', nodes: '5', wlclk: '00:30:00'}
+        hera: {ppn: '40', nodes: '5', wlclk: '00:30:00'}
+        ursa: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
+        derecho: {ppn: '128', nodes: '2', wlclk: '00:30:00'}
+        hercules: {ppn: '80', nodes: '3', wlclk: '00:30:00'}
+        gaeac6: {ppn: '192', nodes: '1', wlclk: '00:30:00'}
