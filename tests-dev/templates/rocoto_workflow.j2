@@ -21,7 +21,8 @@
   {% for t in tests if t.type == "compile" %}
   <task name="{{ t.id }}" maxtries="3">
 
-    <command>bash -c 'set -xe -o pipefail ; &amp;PATHRT;/run_compile.sh &amp;PATHRT; &amp;RUNDIR_ROOT; {{ t.option }} {{ t.id | replace("compile_", "") }} 2&gt;&amp;1 | tee &amp;LOG;/{{ t.id }}.log'</command>
+    <!-- UFS-style compile command: NO bash -c -->
+    <command>&PATHRT;/run_compile.sh &PATHRT; &RUNDIR_ROOT; {{ t.option }} {{ t.id | replace("compile_", "") }} 2>&amp;1 | tee &LOG;/{{ t.id }}.log</command>
 
     <jobname>{{ t.id }}</jobname>
     <account>{{ account }}</account>
@@ -52,7 +53,8 @@
       </dependency>
       {% endif %}
 
-      <command>bash -c 'set -xe -o pipefail ; &amp;PATHRT;/run_test.sh &amp;PATHRT; &amp;RUNDIR_ROOT; {{ r.id }} {{ r.id }} {{ r.parent }} 2&gt;&amp;1 | tee &amp;LOG;/run_{{ r.id }}.log'</command>
+      <!-- UFS-style run command: bash -c is OK here -->
+      <command>bash -c 'set -xe -o pipefail ; &PATHRT;/run_test.sh &PATHRT; &RUNDIR_ROOT; {{ r.id }} {{ r.id }} {{ r.parent }} 2>&amp;1 | tee &LOG;/run_{{ r.id }}.log'</command>
 
       <jobname>{{ r.id }}</jobname>
       <account>{{ account }}</account>
