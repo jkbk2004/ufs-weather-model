@@ -17,11 +17,9 @@
   <cycledef>197001010000 197001010000 01:00:00</cycledef>
   <log>&LOG;/workflow.log</log>
 
-  {# ===================== COMPILE TASKS ===================== #}
   {% for t in tests if t.type == "compile" %}
   <task name="{{ t.id }}" maxtries="3">
 
-    <!-- UFS-style compile command: NO bash -c -->
     <command>&PATHRT;/run_compile.sh &PATHRT; &RUNDIR_ROOT; {{ t.option }} {{ t.id | replace("compile_", "") }} 2>&amp;1 | tee &LOG;/{{ t.id }}.log</command>
 
     <jobname>{{ t.id }}</jobname>
@@ -36,7 +34,6 @@
 
   <metatask name="{{ t.id }}_tasks"><var name="zero">0</var>
 
-    {# ===================== RUN TASKS FOR THIS COMPILE ===================== #}
     {% for r in tests if r.type == "run" and r.parent == t.id %}
     <task name="{{ r.id }}" maxtries="3">
 
@@ -53,8 +50,7 @@
       </dependency>
       {% endif %}
 
-      <!-- UFS-style run command: bash -c is OK here -->
-      <command>bash -c 'set -xe -o pipefail ; &PATHRT;/run_test.sh &PATHRT; &RUNDIR_ROOT; {{ r.id }} {{ r.id }} {{ r.parent }} 2>&amp;1 | tee &LOG;/run_{{ r.id }}.log'</command>
+      <command>bash -c 'set -xe -o pipefail ; &PATHRT;/run_test.sh &PATHRT; &RUNDIR_ROOT; {{ r.id }} {{ r.id }} {{ r.parent | replace("compile_", "") }} 2>&amp;1 | tee &LOG;/run_{{ r.id }}.log'</command>
 
       <jobname>{{ r.id }}</jobname>
       <account>{{ account }}</account>

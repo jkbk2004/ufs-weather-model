@@ -1,0 +1,34 @@
+PLATFORM: orion
+
+MODULE_COMMANDS:
+  - module load gcc/12.2.0
+  #- "#module load python/3.10.8"
+  - module use -a /work/noaa/epic/conda/modulefiles.orion
+  - module load anaconda/23.7.4
+  - module load contrib ruby/3.2.3 rocoto/1.3.7
+
+ROCOTO_PATHS:
+  ROCOTORUN: /apps/contrib/rocoto/1.3.7/bin/rocotorun
+  ROCOTOSTAT: /apps/contrib/rocoto/1.3.7/bin/rocotostat
+  ROCOTOCOMPLETE: /apps/contrib/rocoto/1.3.7/bin/rocotocomplete
+
+SCHEDULER: slurm
+QUEUE: batch
+COMPILE_QUEUE: batch
+PARTITION: orion
+ACCOUNT: epic
+
+BUILD_CORES: "8"
+BUILD_WALLTIME: "00:30:00"
+
+# ⭐ These paths should NOT contain {{USER}} anymore.
+# Bash now creates RUNDIR_ROOT and NEW_BASELINE_PATH.
+# These YAML entries are no longer used for directory creation.
+RUNDIR_PATH: /work/noaa/stmp
+NEW_BASELINE_PATH: /work/noaa/stmp
+BASELINE_PATH: /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs
+
+INPUTDATA_ROOT: /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507
+INPUTDATA_ROOT_WW3: /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/WW3_input_data_20250807
+INPUTDATA_ROOT_BMIC: /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/BM_IC-20220207
+INPUTDATA_LM4: /work/noaa/epic/UFS-WM_RT/NEMSfv3gfs/input-data-20250507/LM4_input_data
