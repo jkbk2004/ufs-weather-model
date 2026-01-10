@@ -76,13 +76,15 @@ def setup_experiment_env(ctx):
     # ----------------------------------------------------------------------
     for t in ctx.tests:
 
-        test_id = t["id"]
+        test_id = t["id"]                     # bare ID expected
         test_type = t.get("type", "")
-        parent = t.get("parent", "")  # compile ID for run tasks
+        parent = t.get("parent", "")          # compile ID for run tasks
 
+        # Create run directory
         test_rundir = rundir_root / test_id
         test_rundir.mkdir(parents=True, exist_ok=True)
 
+        # Base env vars for all tasks
         env_vars = {
             # Core paths
             "PATHRT": ctx.pathrt,
@@ -118,14 +120,27 @@ def setup_experiment_env(ctx):
             "LOG_DIR": str(ctx.logdir),
         }
 
-        # Compile tasks need COMPILE_ID
+        # ------------------------------------------------------------------
+        # Compile tasks: COMPILE_ID must be bare
+        # ------------------------------------------------------------------
         if test_type == "compile":
-            env_vars["COMPILE_ID"] = test_id
+            bare_id = test_id.replace("compile_", "", 1)
+            env_vars["COMPILE_ID"] = bare_id
+            env_filename = f"compile_{bare_id}.env"
 
-        # Run tasks need TEST_NAME + PARENT_COMPILE_ID
-        if test_type == "run":
+        # ------------------------------------------------------------------
+        # Run tasks: TEST_NAME + PARENT_COMPILE_ID
+        # ------------------------------------------------------------------
+        elif test_type == "run":
             env_vars["TEST_NAME"] = test_id
             env_vars["PARENT_COMPILE_ID"] = parent
+            env_filename = f"run_test_{test_id}.env"
+
+        # ------------------------------------------------------------------
+        # Fallback (rare)
+        # ------------------------------------------------------------------
+        else:
+            env_filename = f"{test_id}.env"
 
         # User-specified config overrides
         env_vars.update(ctx.extra_vars)
@@ -134,7 +149,8 @@ def setup_experiment_env(ctx):
             for k, v in t["config"].items():
                 env_vars[k.upper()] = v
 
-        env_path = rundir_root / f"{test_id}.env"
+        # Write the env file
+        env_path = rundir_root / env_filename
         write_env_file(env_path, env_vars)
 
     return ctx
