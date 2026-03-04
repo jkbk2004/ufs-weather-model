@@ -308,23 +308,35 @@ submit_and_wait() {
     case ${SCHEDULER} in
       pbs)
         set +e
-        job_info=$( qstat "${jobid}" )
+        pbs_output=$( qstat "${jobid}" 2>&1 )
         set -e
-        if grep -q "${jobid}" <<< "${job_info}"; then
-          job_running=true
-          # Getting the status letter from scheduler info
-          status=$( grep "${jobid}" <<< "${job_info}" )
-          status=$( awk '{print $5}' <<< "${status}" )
+
+        # Active queue: <jobid>.desched1 ...
+        if echo "${pbs_output}" | awk '{print $1}' | grep -q "^${jobid}\."; then
+            job_running=true
+            status=$(echo "${pbs_output}" | awk -v id="${jobid}" '$1 ~ ("^" id "\\.") {print $5}')
         else
-          job_running=false
-          status='COMPLETED'
-	  sleep 60
-          set +e
-          exit_status=$( qstat "${jobid}" -x -f | grep Exit_status | awk '{print $3}')
-          set -e
-          if [[ ${exit_status} != 0 ]]; then
-            status='FAILED'
-          fi
+            job_running=false
+            if echo "${pbs_output}" | grep -q "Job has finished"; then
+                hist=$(qstat -x -f "${jobid}" 2>/dev/null)
+                # Derecho PBS-Pro race condition: job_state may still be R.
+                exit_status=$(echo "${hist}" | awk '/Exit_status/ {print $3}')
+                if [[ -z "${exit_status}" || "${exit_status}" == "0" ]]; then
+                    status="COMPLETED"
+                else
+                    status="FAILED"
+                fi
+            elif echo "${pbs_output}" | grep -q "Unknown Job Id"; then
+                hist=$(qstat -x -f "${jobid}" 2>/dev/null)
+                exit_status=$(echo "${hist}" | awk '/Exit_status/ {print $3}')
+                if [[ -z "${exit_status}" || "${exit_status}" == "0" ]]; then
+                    status="COMPLETED"
+                else
+                    status="FAILED"
+                fi
+            else
+                status="FAILED"
+            fi
         fi
         ;;
       slurm)
