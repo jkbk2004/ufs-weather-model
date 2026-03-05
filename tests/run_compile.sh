@@ -63,7 +63,7 @@ export RT_LOG=${LOG_DIR}/${JBNME}.log
 source rt_utils.sh
 source atparse.bash
 
-rm -rf "${RUNDIR}"
+rm -rf "${RUNDIR}" || true
 mkdir -p "${RUNDIR}"
 cd "${RUNDIR}"
 
