@@ -307,37 +307,45 @@ submit_and_wait() {
   do
     case ${SCHEDULER} in
       pbs)
-        set +e
-        pbs_output=$( qstat "${jobid}" 2>&1 )
-        set -e
+          set +e
+          pbs_output=$( qstat "${jobid}" 2>&1 )
+          set -e
 
-        # Active queue: <jobid>.desched1 ...
-        if echo "${pbs_output}" | awk '{print $1}' | grep -q "^${jobid}\."; then
-            job_running=true
-            status=$(echo "${pbs_output}" | awk -v id="${jobid}" '$1 ~ ("^" id "\\.") {print $5}')
-        else
-            job_running=false
-            if echo "${pbs_output}" | grep -q "Job has finished"; then
-                hist=$(qstat -x -f "${jobid}" 2>/dev/null)
-                # Derecho PBS-Pro race condition: job_state may still be R.
-                exit_status=$(echo "${hist}" | awk '/Exit_status/ {print $3}')
-                if [[ -z "${exit_status}" || "${exit_status}" == "0" ]]; then
-                    status="COMPLETED"
-                else
-                    status="FAILED"
-                fi
-            elif echo "${pbs_output}" | grep -q "Unknown Job Id"; then
-                hist=$(qstat -x -f "${jobid}" 2>/dev/null)
-                exit_status=$(echo "${hist}" | awk '/Exit_status/ {print $3}')
-                if [[ -z "${exit_status}" || "${exit_status}" == "0" ]]; then
-                    status="COMPLETED"
-                else
-                    status="FAILED"
-                fi
-            else
-                status="FAILED"
-            fi
-        fi
+          # Active queue: <jobid>.desched1 ...
+          if echo "${pbs_output}" | awk '{print $1}' | grep -q "^${jobid}\."; then
+              job_running=true
+              status=$(echo "${pbs_output}" | awk -v id="${jobid}" '$1 ~ ("^" id "\\.") {print $5}')
+          else
+              job_running=false
+
+              if echo "${pbs_output}" | grep -q "Job has finished"; then
+                  hist=$(qstat -x -f "${jobid}" 2>/dev/null)
+                  exit_status=$(echo "${hist}" | awk '/Exit_status/ {print $3}')
+                  if [[ -z "${exit_status}" || "${exit_status}" == "0" ]]; then
+                      status="COMPLETED"
+                  else
+                      status="FAILED"
+                  fi
+
+              elif echo "${pbs_output}" | grep -q "Unknown Job Id"; then
+                  hist=$(qstat -x -f "${jobid}" 2>/dev/null)
+
+                  # Derecho: job purged before polling → assume success
+                  if echo "${hist}" | grep -q "Unknown Job Id"; then
+                      status="COMPLETED"
+                  else
+                      exit_status=$(echo "${hist}" | awk '/Exit_status/ {print $3}')
+                      if [[ -z "${exit_status}" || "${exit_status}" == "0" ]]; then
+                          status="COMPLETED"
+                      else
+                          status="FAILED"
+                      fi
+                  fi
+
+              else
+                  status="FAILED"
+              fi
+          fi
         ;;
       slurm)
         job_info=$( squeue -u "${USER}" -j "${jobid}" -o '%i %T' )
