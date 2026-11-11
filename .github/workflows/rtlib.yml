@@ -1,0 +1,38 @@
+name: rtlib
+# Checks for the regression-test Python layer. No HPC needed.
+
+on:
+  pull_request:
+    paths:
+      - 'tests/rt.sh'
+      - 'tests/rt_utils.sh'
+      - 'tests/default_vars.sh'
+      - 'tests/*.conf'
+      - 'tests/tests/**'
+      - 'tests/rtlib/**'
+      - '.github/workflows/rtlib.yml'
+
+jobs:
+  rtlib:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ['3.8', '3.12']   # 3.8 = oldest on wcoss2/acorn
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - name: unit tests
+        working-directory: tests
+        run: python -m unittest rtlib.test_rtlib -v
+      - name: validate conf files
+        working-directory: tests
+        run: |
+          for conf in rt.conf rt_weekly.conf rt_gfsv17opn.conf; do
+            python -m rtlib validate -l "$conf"
+          done
+      - name: rt.sh bash vs rtlib.legacy parity
+        if: matrix.python == '3.12'
+        working-directory: tests
+        run: python rtlib/parity/check_legacy_port.py --samples 20
